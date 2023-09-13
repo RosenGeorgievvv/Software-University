@@ -2,13 +2,11 @@
 
 //Solution:
 
-function isExcellent(input){
-
-    if(input >=5.50){
-        console.log("Excellent")
-    }else{
-        console.log("Not excellent")
-    }
-
+function isExcellent(input) {
+  if (input >= 5.5) {
+    console.log("Excellent");
+  } else {
+    console.log("Not excellent");
+  }
 }
-isExcellent('5.49')
+isExcellent("5.49");
