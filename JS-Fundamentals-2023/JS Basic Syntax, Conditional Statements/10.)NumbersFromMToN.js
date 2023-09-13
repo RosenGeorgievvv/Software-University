@@ -11,6 +11,5 @@ function numsFromMToN(num1, num2){
         console.log(startingNum);
         startingNum--;
     }
-
 }
 numsFromMToN("6", "2");
