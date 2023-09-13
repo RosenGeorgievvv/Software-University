@@ -2,14 +2,12 @@
 
 //Solution:
 
-function whileLoop(n){
+function whileLoop(n) {
+  let num = Number(n);
 
-let num = Number(n);
-
-while(num >= 1){
+  while (num >= 1) {
     console.log(num);
     num--;
-}
-
+  }
 }
 whileLoop("5");
