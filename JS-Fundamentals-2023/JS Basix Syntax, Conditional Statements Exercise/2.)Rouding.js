@@ -6,19 +6,16 @@
 
 // The output should be printed to the console. Do not print insignificant decimals.
 
-
 //Solution:
 
-function rounding(num1, num2){
+function rounding(num1, num2) {
+  let firstNum = Number(num1);
+  let secondNum = Number(num2);
 
-let firstNum = Number(num1);
-let secondNum = Number(num2);
-
-if(secondNum > 15){
+  if (secondNum > 15) {
     secondNum = 15;
+  }
+  firstNum = firstNum.toFixed(secondNum);
+  console.log(parseFloat(firstNum));
 }
-firstNum = firstNum.toFixed(secondNum);
-console.log(parseFloat(firstNum))
-
-}
-rounding("3.1415926535897932384626433832795","2")
+rounding("3.1415926535897932384626433832795", "2");
