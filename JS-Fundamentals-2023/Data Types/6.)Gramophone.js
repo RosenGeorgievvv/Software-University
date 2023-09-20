@@ -24,13 +24,10 @@
 
 function gramophone(bandName, albumName, songName) {
 
+  let durationInSeconds = (bandName.length * albumName.length * songName.length) / 2;
 
-    
-
-
+  let fullRotation = Math.ceil(durationInSeconds / 2.5);
+  
+  console.log(`The plate was rotated ${fullRotation} times.`);
 }
-gramophone(
-  "Black Sabbath",
-  "Paranoid",
-  "War Pigs"
-);
+gramophone("Black Sabbath", "Paranoid", "War Pigs");
