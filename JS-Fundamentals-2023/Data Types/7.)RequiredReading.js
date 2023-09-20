@@ -13,9 +13,8 @@
 //Solution:
 
 function requiredReading(pages, pageForHour, daysCount) {
-
-
-
-    
+  let totalTime = pages / pageForHour;
+  let output = totalTime / daysCount;
+  console.log(output);
 }
 requiredReading(212, 20, 2);
