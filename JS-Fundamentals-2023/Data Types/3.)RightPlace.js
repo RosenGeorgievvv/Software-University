@@ -3,3 +3,12 @@
 // If they are equals, you should print "Matched", otherwise print "Not Matched".
 
 //Solution:
+
+function rightPlace(str, char, result){
+
+    let res = str.replace('_', char);
+    let final = res === result? "Matched" : "Not Matched";
+    console.log(final);
+
+}
+rightPlace('Str_ng', 'I','Strong')
