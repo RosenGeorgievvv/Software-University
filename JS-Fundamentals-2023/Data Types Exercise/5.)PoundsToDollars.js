@@ -8,6 +8,5 @@ function cash(pounds){
 
     let converted = pounds * 1.31;
     console.log(converted.toFixed(3));
-
 }
 cash(80)
