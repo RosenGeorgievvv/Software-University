@@ -3,10 +3,8 @@
 //Solution:
 
 function reversedChars(char1, char2, char3) {
-
-    let print = char3 + " " + char2 + " " + char1;
-console.log(print);
-
+  let print = char3 + " " + char2 + " " + char1;
+  console.log(print);
 }
 reversedChars(
   "A",
