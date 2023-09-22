@@ -2,8 +2,7 @@
 
 //Solution:
 
-function sumElements(input){
-
-
+function sumElements(input) {
+  console.log(input[0] + input[input.length - 1]);
 }
 sumElements([20, 30, 40]);
