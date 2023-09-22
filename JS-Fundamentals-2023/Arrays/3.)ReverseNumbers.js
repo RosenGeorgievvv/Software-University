@@ -2,15 +2,12 @@
 
 //Solution:
 
-function reverse(n, arr){
-
-    let reversedArr = [];
-    for(let i = 0; i < n; i++){
-        reversedArr.push(arr[i]);
-
-    }
-   let fixed = reversedArr.reverse();
-   console.log(fixed.join(" "))
-
+function reverse(n, arr) {
+  let reversedArr = [];
+  for (let i = 0; i < n; i++) {
+    reversedArr.push(arr[i]);
+  }
+let fixed = reversedArr.reverse().join(" ");
+  console.log(fixed);
 }
-reverse(3, [10, 20, 30, 40, 50])
+reverse(3, [10, 20, 30, 40, 50]);
