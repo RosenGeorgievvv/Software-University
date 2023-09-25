@@ -3,22 +3,15 @@
 //Solution:
 
 function commonElements(arr1, arr2) {
-
-    let newArr = []
-    for(let i = 0; i < arr1.length; i++){
-        for(let k = 0; k < arr2.length; k++){
-            if(arr1[i] === arr2[k]){
-                newArr.push(arr1[i]);
-                
-            }
-        }
-       
+  let newArr = [];
+  for (let i = 0; i < arr1.length; i++) {
+    for (let k = 0; k < arr2.length; k++) {
+      if (arr1[i] === arr2[k]) {
+        newArr.push(arr1[i]);
+      }
     }
-    console.log(newArr.join('\n'))
-    
-
-
-
+  }
+  console.log(newArr.join("\n"));
 }
 commonElements(
   ["Hey", "hello", 2, 4, "Peter", "e"],
