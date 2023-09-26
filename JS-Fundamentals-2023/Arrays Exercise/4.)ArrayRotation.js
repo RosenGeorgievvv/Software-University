@@ -6,5 +6,12 @@
 
 // Print the resulting array elements separated by a single space.
 
-
 //Solution:
+
+function rotateArray(arr, rotations) {
+
+    let actualRotations = rotations % arr.length;
+    let rotatedArr = [...arr.slice(actualRotations, arr.length), ...arr.slice(0, actualRotations)];
+    console.log(rotatedArr.join(' '));
+}
+rotateArray([51, 47, 32, 61, 21], 2);
