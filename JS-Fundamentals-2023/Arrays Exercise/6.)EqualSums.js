@@ -4,5 +4,17 @@
 
 // Print the index that satisfies the required condition or "no" if there is no such index.
 
-
 //Solution:
+
+function equalSums(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let leftSum = arr.slice(0, i).reduce((acc, val) => acc + val, 0);
+    let rightSum = arr.slice(i + 1).reduce((acc, val) => acc + val, 0);
+
+    if (leftSum === rightSum) {
+      return i;
+    }
+  }
+  return "no";
+}
+console.log(equalSums([1, 2, 3, 3]));
