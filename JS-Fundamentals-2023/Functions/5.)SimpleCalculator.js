@@ -7,3 +7,5 @@
 // Input
 
 // The input comes as parameters named numOne, numTwo, operator.
+
+//Solution:
