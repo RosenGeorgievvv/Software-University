@@ -2,21 +2,21 @@
 
 //Solution:
 
-function charBetween(char1, char2){
+function charBetween(char1, char2) {
+  let firstChar = char1.charCodeAt(0);
+  let secondChar = char2.charCodeAt(0);
 
-    let firstChar = char1.charCodeAt(0);
-    let secondChar = char2.charCodeAt(0);
+  let start = Math.min(firstChar, secondChar);
+  let end = Math.max(firstChar, secondChar);
 
-    let start = Math.min(firstChar, secondChar);
-    let end = Math.max(firstChar,secondChar);
-
-    let result = '';
-    for(let i = start + 1; i < end; i++){
-        result+= String.fromCharCode(i) + ' ';
-       
-    }
-    console.log(result)
+  let result = "";
+  for (let i = start + 1; i < end; i++) {
+    result += String.fromCharCode(i) + " ";
+  }
+  console.log(result);
 }
-charBetween('a',
+charBetween(
+  "a",
 
-'d')
+  "d"
+);
