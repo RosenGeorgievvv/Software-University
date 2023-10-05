@@ -4,8 +4,7 @@
 
 function pali(arr){
 
-let toStr = arr.toString(" ");
-console.log(toStr)
+
 
 
 }
