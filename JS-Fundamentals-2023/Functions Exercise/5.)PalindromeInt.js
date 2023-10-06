@@ -4,7 +4,10 @@
 
 function pali(arr) {
 
-    
+    for(let num of arr){
+        let isPalindrome = checkPalindrome(num);
+        console.log(isPalindrome);
+    }
 
   function checkPalindrome(num) {
     let numAsString = String(num);
