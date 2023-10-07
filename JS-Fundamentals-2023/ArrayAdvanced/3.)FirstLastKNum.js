@@ -8,7 +8,12 @@
 
 function kNums(arr) {
 
+let k = arr.shift();
 
-    
+let firstArr = arr.slice(0, k).join(' ');
+let secondArr = arr.slice(arr.length - k, arr.length).join(' ');
+console.log(firstArr)
+console.log(secondArr);
+
 }
 kNums([2,7, 8, 9,]);
