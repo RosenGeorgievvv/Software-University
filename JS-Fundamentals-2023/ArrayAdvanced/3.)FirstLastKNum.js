@@ -4,5 +4,11 @@
 
 // The output is printed on the console on two lines. On the first line, print the first k elements, separated by space. On the second line, print the last k elements, separated by space.
 
-
 //Solution:
+
+function kNums(arr) {
+
+
+    
+}
+kNums([2,7, 8, 9,]);
