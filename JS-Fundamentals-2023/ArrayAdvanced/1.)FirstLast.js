@@ -8,7 +8,9 @@
 
 function sumFirstAndLast(arr) {
   arr = arr.map(Number);
+
   console.log(arr.shift() + arr.pop());
+  
 }
 
 sumFirstAndLast(["20", "30", "40"]);
