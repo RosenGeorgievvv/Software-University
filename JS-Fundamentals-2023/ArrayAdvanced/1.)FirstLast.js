@@ -4,13 +4,11 @@
 
 // The output is printed on the console.
 
-
 //Solution:
 
-function sumFirstAndLast(arr){
-
-arr = arr.map(Number);
-console.log(arr.shift() + arr.pop());
+function sumFirstAndLast(arr) {
+  arr = arr.map(Number);
+  console.log(arr.shift() + arr.pop());
 }
 
-sumFirstAndLast(['20', '30', '40']);
+sumFirstAndLast(["20", "30", "40"]);
