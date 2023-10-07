@@ -5,3 +5,10 @@
 // The output is printed on the console, each element on a new line.
 
 //Solution:
+
+function fromNegativeToPositive(arr){
+
+
+
+}
+fromNegativeToPositive(['7', '-2', '8', '9']);
