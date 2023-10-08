@@ -12,3 +12,12 @@
 
 
 //Solution:
+
+
+function kSequence(n, k){
+
+
+
+
+}
+kSequence(6, 3);
