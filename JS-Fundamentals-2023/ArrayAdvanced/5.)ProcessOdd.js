@@ -5,3 +5,9 @@
 // The output is printed on the console on a single line, separated by space.
 
 //Solution:
+
+function oddNumbers(arr){
+
+
+}
+oddNumbers([10, 15, 20, 25]);
