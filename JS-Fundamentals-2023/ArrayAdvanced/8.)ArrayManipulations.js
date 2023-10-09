@@ -16,17 +16,42 @@
 
 //Solution:
 
-function arrManilupations(arr) {
+function arrManipulations(arr) {
 
     let arrToNum = arr.shift().split(' ').map(Number);
 
     for(let i = 0; i < arr.length; i++){
-        
+        let [command, firstNum, secondNum] = arr[i].split(' ');
+        firstNum = Number(firstNum);
+        secondNum = Number(secondNum);
+
+        switch(command){
+            case "Add": add(firstNum); break;
+            case "Remove": remove(firstNum); break;
+            case "RemoveAt": removeAt(firstNum); break;
+            case "Insert": insert(firstNum, secondNum); break;
+        }
     }
 
+    function add(el){
+        arrToNum.push(el);
+    }
+
+    function remove(num){
+        arrToNum = arrToNum.filter(el => el !== num);
+    }
+
+    function removeAt(index){
+        arrToNum.splice(index, 1);
+    }
+    function insert(num, index){
+        arrToNum.splice(index, 0, num);
+    }
+
+    console.log(arrToNum.join(' '))
 
 }
-arrManilupations([
+arrManipulations([
   "4 19 2 53 6 43",
   "Add 3",
   "Remove 2",
