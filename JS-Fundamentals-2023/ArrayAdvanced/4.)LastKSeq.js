@@ -10,14 +10,21 @@
 
 // The output is printed on the console on a single line, separated by space.
 
-
 //Solution:
 
+function kSequence(n, k) {
+  let seq = [1];
+  for (let i = 1; i < n; i++) {
+    let start = Math.max(0, i - k);
+    let end = i - 1;
+    let sum = 0;
 
-function kSequence(n, k){
-
-
-
-
+    for (let j = start; j <= end; j++) {
+      sum += seq[j];
+    }
+    seq[i] = sum;
+    ("");
+  }
+  console.log(seq.join(" "));
 }
 kSequence(6, 3);
