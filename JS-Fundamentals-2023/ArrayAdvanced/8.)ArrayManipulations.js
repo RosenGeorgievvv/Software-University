@@ -18,8 +18,13 @@
 
 function arrManilupations(arr) {
 
+    let arrToNum = arr.shift().split(' ').map(Number);
 
-    
+    for(let i = 0; i < arr.length; i++){
+        
+    }
+
+
 }
 arrManilupations([
   "4 19 2 53 6 43",
