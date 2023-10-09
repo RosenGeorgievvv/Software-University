@@ -44,12 +44,11 @@ function arrManipulations(arr) {
     function removeAt(index){
         arrToNum.splice(index, 1);
     }
+
     function insert(num, index){
         arrToNum.splice(index, 0, num);
     }
-
     console.log(arrToNum.join(' '))
-
 }
 arrManipulations([
   "4 19 2 53 6 43",
