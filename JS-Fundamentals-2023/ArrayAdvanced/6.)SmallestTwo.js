@@ -12,6 +12,5 @@ function smallestTwoNums(arr) {
     .slice(0, 2)
     .join(" ");
   console.log(sortedArr);
-  
 }
 smallestTwoNums([30, 15, 50, 5]);
