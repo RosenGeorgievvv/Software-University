@@ -16,7 +16,6 @@
 
 function houseParty(arr) {
   let list = [];
-  let guestName = " ";
 
   for (let i = 0; i < arr.length; i++) {
     let curr = arr[i].split(" ");
