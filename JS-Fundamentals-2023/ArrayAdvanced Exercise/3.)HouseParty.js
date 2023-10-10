@@ -12,19 +12,39 @@
 
 // At the end print all the guests each on a separate line.
 
-
 //Solution:
 
+function houseParty(arr) {
+  let list = [];
+  let guestName = " ";
 
-function houseParty(arr){
+  for (let i = 0; i < arr.length; i++) {
+    let curr = arr[i].split(" ");
+    let currName = curr[0];
+    let command = curr[2];
 
-
-
+    if(command != "not"){
+        if(list.includes(currName) === true){
+            console.log(`${currName} is already in the list!`);
+            continue;
+        }
+        list.push(currName)
+    }else{
+        if(list.includes(currName) === false){
+            console.log(`${currName} is not in the list! `);
+            continue;
+        }
+        list = list.filter(x => x != currName);
+    }
+  }
+  console.log(list.join('\n'));
 }
-houseParty(['Allie is going!',
+houseParty([
+  "Allie is going!",
 
-'George is going!',
+  "George is going!",
 
-'John is not going!',
+  "John is not going!",
 
-'George is not going!'])
+  "George is not going!",
+]);
