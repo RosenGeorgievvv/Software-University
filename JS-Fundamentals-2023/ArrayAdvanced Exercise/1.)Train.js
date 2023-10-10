@@ -15,28 +15,29 @@
 //Solution:
 
 function train(arr) {
+  let wagons = arr
+    .shift()
+    .split(" ")
+    .map((x) => Number(x));
+  let maxCapacity = arr.shift();
 
-    let wagons = arr.shift().split(' ').map((x) => Number(x));
-    let maxCapacity = arr.shift();
+  for (let i = 0; i < arr.length; i++) {
+    let splittedArr = arr[i].split(" ");
+    let command = splittedArr[0];
+    let value = splittedArr[1];
 
-    for(let i = 0; i < arr.length; i++){
-        let splittedArr = arr[i].split(' ');
-        let command = splittedArr[0];
-        let value = splittedArr[1];
-
-        if(splittedArr.length === 2 && command === "Add"){
-            wagons.push(value)
-        }else{
-            let people = Number(splittedArr[0]);
-            for(let m = 0; m < wagons.length; m++){
-                if(people + wagons[m] <= maxCapacity){
-                    wagons[m] += people;
-                    break;
-                }
-            }
+    if (splittedArr.length === 2 && command === "Add") {
+      wagons.push(value);
+    } else {
+      let people = Number(splittedArr[0]);
+      for (let m = 0; m < wagons.length; m++) {
+        if (people + wagons[m] <= maxCapacity) {
+          wagons[m] += people;
+          break;
         }
+      }
     }
-    
-console.log(wagons.join(' '));
+  }
+  console.log(wagons.join(" "));
 }
 train(["32 54 21 12 4 0 23", "75", "Add 10", "Add 0", "30", "10", "75"]);
