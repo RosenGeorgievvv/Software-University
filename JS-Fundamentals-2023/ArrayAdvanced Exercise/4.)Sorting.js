@@ -3,3 +3,9 @@
 // Print the elements on one row, separated by a single space.
 
 //Solution:
+
+function sortingArr(arr){
+
+
+}
+sortingArr([1, 21, 3, 52, 69, 63, 31, 2, 18, 94])
