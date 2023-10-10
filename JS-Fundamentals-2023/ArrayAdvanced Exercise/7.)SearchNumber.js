@@ -14,6 +14,10 @@
 
 function searchNum(arr, count){
 
-
+let [save, del , search] = count;
+let newElement = arr.slice(0, save);
+newElement.splice(0, del);
+let result = newElement.filter(num => num === search).length;
+console.log(`Number ${search} occurs ${result} times.`);
 }
 searchNum([5, 2, 3, 4, 1, 6], [5, 2, 3])
