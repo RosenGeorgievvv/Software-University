@@ -18,3 +18,9 @@ kNums([2, 7, 8, 9]);
 
 
 //second way:
+
+function solve(arr){
+
+
+}
+solve([2, 7, 8, 9])
