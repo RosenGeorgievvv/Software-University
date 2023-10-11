@@ -15,3 +15,6 @@ function kNums(arr) {
   console.log(secondArr);
 }
 kNums([2, 7, 8, 9]);
+
+
+//second way:
