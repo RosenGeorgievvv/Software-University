@@ -47,3 +47,6 @@
 // · The damage will be an integer in the range [1….1000]
 
 // · The health will be an integer in the range [1….1000]
+
+
+//Solution:
