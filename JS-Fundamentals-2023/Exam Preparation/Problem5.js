@@ -51,3 +51,4 @@
 // · The count will be an integer in the range [1….100]\
 
 
+//Solution:
