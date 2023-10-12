@@ -17,3 +17,5 @@
 // · All input numbers are integers in the range [-1 000 000 … 1 000 000].
 
 // · The count of numbers is in the range [1…10 000].
+
+//Solution:
