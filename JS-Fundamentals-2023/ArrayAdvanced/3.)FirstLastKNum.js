@@ -13,6 +13,7 @@ function kNums(arr) {
   let secondArr = arr.slice(arr.length - k, arr.length).join(" ");
   console.log(firstArr);
   console.log(secondArr);
+  
 }
 kNums([2, 7, 8, 9]);
 
