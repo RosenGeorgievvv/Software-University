@@ -10,7 +10,6 @@ function sumFirstAndLast(arr) {
   arr = arr.map(Number);
 
   console.log(arr.shift() + arr[arr.length - 1]);
-
 }
 
 sumFirstAndLast(["20", "30", "40"]);
