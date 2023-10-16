@@ -19,3 +19,16 @@
 // · The count of numbers is in the range [1…10 000].
 
 //Solution:
+
+function numbers(str){
+
+let nums = str.split(' ').map(Number);
+let sum = nums.reduce((acc, num) => acc + num, 0);
+let average = sum / nums.length;
+
+let topNumbers = nums.filter(num => num > average).sort((a, b) => b - a).slice(0, 5);
+
+return topNumbers.length > 0 ? topNumbers.join(' '): "No";
+
+}
+console.log(numbers('10 20 30 40 50'));
