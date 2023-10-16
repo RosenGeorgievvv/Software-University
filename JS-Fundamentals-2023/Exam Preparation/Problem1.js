@@ -32,7 +32,8 @@
 //Solution:
 
 
-function solve(){
+function solve(food, hay, cover, weight){
+
 
 }
 solve(10,5,5.2,1);
