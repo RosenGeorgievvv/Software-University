@@ -30,3 +30,9 @@
 
 
 //Solution:
+
+
+function solve(){
+
+}
+solve(10,5,5.2,1);
