@@ -54,10 +54,51 @@
 //Solution:
 
 
-function treasureHunt(arr){
+function treasureHunt(array) {
+    let treasureChest = array.shift().split('|');
+    let total = 0;
 
+    let isValidIndex = (index, arr) => index >= 0 && index < arr.length;
 
+    for (let line of array) {
+        let [command, ...elements] = line.split(' ');
 
+        if (command === 'Yohoho!') {
+            break;
+        }
+
+        switch (command) {
+            case 'Loot':
+                for (let item of elements) {
+                    if (!treasureChest.includes(item)) {
+                        treasureChest.unshift(item);
+                    }
+                }
+                break;
+            case 'Drop':
+                let index = Number(elements[0]);
+                if (isValidIndex(index, treasureChest)) {
+                    let dropped = treasureChest.splice(index, 1);
+                    treasureChest.push(...dropped);
+                }
+                break;
+            case 'Steal':
+                let stealIndex = Number(elements[0]);
+                let stolenTreasure = treasureChest.splice(-stealIndex);
+                console.log(stolenTreasure.join(', '));
+                break;
+            default:
+                break;
+        }
+    }
+
+    total = treasureChest.reduce((sum, item) => sum + item.length, 0) / treasureChest.length;
+
+    if (treasureChest.length > 0) {
+        return `Average treasure gain: ${total.toFixed(2)} pirate credits.`;
+    } else {
+        return "Failed treasure hunt.";
+    }
 }
 treasureHunt(["Gold|Silver|Bronze|Medallion|Cup",
 
