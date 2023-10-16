@@ -35,3 +35,27 @@
 // You receive a string representing the dungeon's rooms, separated with '|' (vertical bar): "room1|room2|room3…".
 
 //Solution:
+
+
+function computerStore(input){
+
+    
+
+}
+computerStore([
+
+    '1050',
+    
+    '200',
+    
+    '450',
+    
+    '2',
+    
+    '18.50',
+    
+    '16.86',
+    
+    'special'
+    
+    ])

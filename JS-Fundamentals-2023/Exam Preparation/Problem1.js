@@ -32,8 +32,34 @@
 //Solution:
 
 
-function solve(food, hay, cover, weight){
+function solve(food, hay, cover, weight) {
 
+    let totalFood = food * 1000;
+    let totalHay = hay * 1000;
+    let totalCover = cover * 1000;
+    let totalWeight = weight * 1000;
+    let count = 1;
 
+    while (count <= 30) {
+
+        totalFood -= 300;
+        if (count % 2 === 0) {
+            totalHay -= (totalFood * 5) / 100;
+        }
+        if (count % 3 === 0) {
+            totalCover -= totalWeight * 0.3333;
+        }
+
+        count++;
+    }
+    let foodKg = totalFood / 1000;
+    let hayKg = totalHay / 1000;
+    let coverKg = totalCover / 1000;
+
+    if (foodKg >= 0 && hayKg >= 0 && coverKg >= 0) {
+        console.log(`Everything is fine! Puppy is happy! Food: ${foodKg.toFixed(2)}, Hay: ${hayKg.toFixed(2)}, Cover: ${coverKg.toFixed(2)}.`);
+    } else if (foodKg < 0 || hayKg < 0 || coverKg < 0) {
+        console.log('Merry must go to the pet store!');
+    }
 }
 solve(10,5,5.2,1);
