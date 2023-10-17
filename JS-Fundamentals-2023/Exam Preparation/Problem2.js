@@ -36,4 +36,39 @@
 
 //Solution:
 
-
+function muOnline(input) {
+    let initialHealth = 100;
+    let initialBitcoins = 0;
+    let currentRoom = 0;
+    let rooms = input.split("|");
+  
+    for (let i = 0; i < rooms.length; i++) {
+      currentRoom++;
+      let [command, amount] = rooms[i].split(" ");
+      amount = parseInt(amount);
+  
+      if (command === "potion") {
+        let healAmount = Math.min(amount, 100 - initialHealth);
+        initialHealth += healAmount;
+        console.log(`You healed for ${healAmount} hp.`);
+        console.log(`Current health: ${initialHealth} hp.`);
+      } else if (command === "chest") {
+        initialBitcoins += amount;
+        console.log(`You found ${amount} bitcoins.`);
+      } else {
+        initialHealth -= amount;
+        if (initialHealth <= 0) {
+          console.log(`You died! Killed by ${command}.`);
+          console.log(`Best room: ${currentRoom}`);
+          return;
+        } else {
+          console.log(`You slayed ${command}.`);
+        }
+      }
+    }
+  
+    console.log(`You've made it!`);
+    console.log(`Bitcoins: ${initialBitcoins}`);
+    console.log(`Health: ${initialHealth}`);
+  }
+solve(["rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000"]);
