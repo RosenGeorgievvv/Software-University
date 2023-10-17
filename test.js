@@ -1,7 +1,7 @@
 function solve(input) {
   let pirate = input.shift().split(">").map(Number);
   let warship = input.shift().split(">").map(Number);
-  let maxHp = input.shift().map(Number);
+  let maxHp = Number(input.shift());
 
   for (let current of input) {
     let tokens = current.split(" ");
@@ -9,23 +9,51 @@ function solve(input) {
 
     if (command == "Retire") {
       break;
-    } else if(command == "Fire"){
-        let index = Number(tokens[0]);
-        let damage = Number(tokens[1]);
+    } else if (command == "Fire") {
+      let index = Number(tokens[0]);
+      let damage = Number(tokens[1]);
 
-        if(index < 0 || index >= warship.length){
+      if (index < 0 || index >= warship.length) {
+        continue;
+      }
+      warship[index] -= damage;
+      if (warship[index] <= 0) {
+        console.log("You won! The enemy ship has sunken.");
+        return;
+      }
+    } else if (command == "Defend") {
+      let start = Number(tokens[0]);
+      let end = Number(tokens[1]);
+      let damage = Number(tokens[2]);
+
+      if (
+        start < 0 ||
+        start >= pirate.length ||
+        end < 0 ||
+        end >= pirate.length
+      ) {
+        continue;
+      }
+
+      for (let i = start; i <= end; i++) {
+        pirate[i] -= damage;
+        if (pirate[i] <= 0) {
+          console.log("You lost! The pirate ship has sunken.");
+          return;
+        }
+      }
+    } else if (command == "Repair") {
+
+        let index = Number(tokens[0]);
+        let hp = Number(tokens[1]);
+
+        if(index < 0 || index >= pirate.length){
             continue;
         }
-        warship[index] -= damage;
-        if(warship[index] <= 0){
-            console.log("You won! The enemy ship has sunken.");
-            return;
-        }
-    } else if (command == "Defend") {
-    } else if (command == "Repair") {
     } else if (command == "Status") {
     }
   }
+  console.log(warship);
 }
 
 solve([
