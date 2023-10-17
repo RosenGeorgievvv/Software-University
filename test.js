@@ -4,12 +4,17 @@ function solve(input) {
   let rooms = input.split("|");
 
   for (let i = 0; i < rooms.length; i++) {
-    let room = rooms[0].split(" ");
+    let room = rooms[i].split(" ");
     let type = room[0];
     let num = Number(room[1]);
 
     if (type == "potion") {
-      console.log();
+        if(hp + num > 100){
+            num = 100 - hp;
+        }
+      hp += num;
+      console.log(`You healed for ${num} hp.`);
+      console.log(`Current health: ${hp} hp.`);
     } else if (type == "chest") {
       loot += num;
       console.log(`You found ${num} bitcoins.`);
@@ -18,6 +23,7 @@ function solve(input) {
         if(hp <= 0){
             console.log(`You died! Killed by ${type}`);
             console.log(`Best room: ${i + 1}`);
+            return;
         }else{
             console.log(`You slayed ${type}`);
         }
