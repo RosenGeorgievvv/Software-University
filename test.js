@@ -16,6 +16,11 @@ function solve(input) {
         if(index < 0 || index >= warship.length){
             continue;
         }
+        warship[index] -= damage;
+        if(warship[index] <= 0){
+            console.log("You won! The enemy ship has sunken.");
+            return;
+        }
     } else if (command == "Defend") {
     } else if (command == "Repair") {
     } else if (command == "Status") {
