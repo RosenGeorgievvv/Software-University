@@ -2,6 +2,7 @@ function solve(input) {
   let pirate = input.shift().split(">").map(Number);
   let warship = input.shift().split(">").map(Number);
   let maxHp = Number(input.shift());
+  let critical = maxHp * 0.2;
 
   for (let current of input) {
     let tokens = current.split(" ");
@@ -43,17 +44,33 @@ function solve(input) {
         }
       }
     } else if (command == "Repair") {
+      let index = Number(tokens[0]);
+      let hp = Number(tokens[1]);
 
-        let index = Number(tokens[0]);
-        let hp = Number(tokens[1]);
+      if (index < 0 || index >= pirate.length) {
+        continue;
+      }
 
-        if(index < 0 || index >= pirate.length){
-            continue;
-        }
+      pirate[index] += hp;
+      if (pirate[index] > maxHp) {
+        pirate[index] = maxHp;
+      }
     } else if (command == "Status") {
+      let damaged = pirate.filter((section) => section < critical).length;
+      console.log(`${damaged} sections need repair.`);
     }
   }
-  console.log(warship);
+  let warshipStatus = 0;
+  let pirateStatus = 0;
+
+  for (let section of pirate) {
+    pirateStatus += section;
+  }
+  for (let section of warship) {
+    warshipStatus += section;
+  }
+  console.log(`Pirate ship status: ${pirateStatus}`);
+  console.log(`Warship status: ${warshipStatus}`)
 }
 
 solve([
