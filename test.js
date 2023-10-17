@@ -1,36 +1,37 @@
 function solve(input) {
-  let hp = 100;
-  let loot = 0;
-  let rooms = input.split("|");
+  let pirate = input.shift().split(">").map(Number);
+  let warship = input.shift().split(">").map(Number);
+  let maxHp = input.shift().map(Number);
 
-  for (let i = 0; i < rooms.length; i++) {
-    let room = rooms[i].split(" ");
-    let type = room[0];
-    let num = Number(room[1]);
+  for (let current of input) {
+    let tokens = current.split(" ");
+    let command = tokens.shift();
 
-    if (type == "potion") {
-      if (hp + num > 100) {
-        num = 100 - hp;
-      }
-      hp += num;
-      console.log(`You healed for ${num} hp.`);
-      console.log(`Current health: ${hp} hp.`);
-    } else if (type == "chest") {
-      loot += num;
-      console.log(`You found ${num} bitcoins.`);
-    } else {
-      hp -= num;
-      if (hp <= 0) {
-        console.log(`You died! Killed by ${type}.`);
-        console.log(`Best room: ${i + 1}`);
-        return;
-      } else {
-        console.log(`You slayed ${type}.`);
-      }
+    if (command == "Retire") {
+      break;
+    } else if(command == "Fire"){
+        let index = Number(tokens[0]);
+        let damage = Number(tokens[1]);
+
+        if(index < 0 || index >= warship.length){
+            continue;
+        }
+    } else if (command == "Defend") {
+    } else if (command == "Repair") {
+    } else if (command == "Status") {
     }
   }
-  console.log("You've made it!");
-  console.log(`Bitcoins: ${loot}`);
-  console.log(`Health: ${hp}`);
 }
-solve("rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000");
+
+solve([
+  "12>13>11>20>66",
+  "12>22>33>44>55>32>18",
+  "70",
+  "Fire 2 11",
+  "Fire 8 100",
+  "Defend 3 6 11",
+  "Defend 0 3 5",
+  "Repair 1 33",
+  "Status",
+  "Retire",
+]);
