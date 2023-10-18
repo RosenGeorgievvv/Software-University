@@ -4,3 +4,4 @@
 
 // Loop through all the keys and print them with their values in format: "{key} -> {value}"
 
+//Solution:
