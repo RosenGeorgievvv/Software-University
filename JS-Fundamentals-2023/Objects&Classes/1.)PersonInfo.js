@@ -3,3 +3,4 @@
 // The input comes as 3 separate strings in the following order: firstName, lastName, age.
 
 
+//Solution:
