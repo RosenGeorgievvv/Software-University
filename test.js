@@ -1,87 +1,37 @@
 function solve(input) {
-  let pirate = input.shift().split(">").map(Number);
-  let warship = input.shift().split(">").map(Number);
-  let maxHp = Number(input.shift());
-  let critical = maxHp * 0.2;
 
-  for (let current of input) {
-    let tokens = current.split(" ");
-    let command = tokens.shift();
+let noTaxes = 0;
+let withTaxes = 0;
+let totalPrice = 0;
 
-    if (command == "Retire") {
-      break;
-    } else if (command == "Fire") {
-      let index = Number(tokens[0]);
-      let damage = Number(tokens[1]);
+let command = input.pop().toLowerCase();
 
-      if (index < 0 || index >= warship.length) {
+for(let price of input){
+    let currentPrice = Number(price);
+
+    if(price > 0){
+        noTaxes += currentPrice;
+    }else{
+        console.log("Invalid price!");
         continue;
-      }
-      warship[index] -= damage;
-      if (warship[index] <= 0) {
-        console.log("You won! The enemy ship has sunken.");
-        return;
-      }
-    } else if (command == "Defend") {
-      let start = Number(tokens[0]);
-      let end = Number(tokens[1]);
-      let damage = Number(tokens[2]);
-
-      if (
-        start < 0 ||
-        start >= pirate.length ||
-        end < 0 ||
-        end >= pirate.length
-      ) {
-        continue;
-      }
-
-      for (let i = start; i <= end; i++) {
-        pirate[i] -= damage;
-        if (pirate[i] <= 0) {
-          console.log("You lost! The pirate ship has sunken.");
-          return;
-        }
-      }
-    } else if (command == "Repair") {
-      let index = Number(tokens[0]);
-      let hp = Number(tokens[1]);
-
-      if (index < 0 || index >= pirate.length) {
-        continue;
-      }
-
-      pirate[index] += hp;
-      if (pirate[index] > maxHp) {
-        pirate[index] = maxHp;
-      }
-    } else if (command == "Status") {
-      let damaged = pirate.filter((section) => section < critical).length;
-      console.log(`${damaged} sections need repair.`);
     }
-  }
-  let warshipStatus = 0;
-  let pirateStatus = 0;
-
-  for (let section of pirate) {
-    pirateStatus += section;
-  }
-  for (let section of warship) {
-    warshipStatus += section;
-  }
-  console.log(`Pirate ship status: ${pirateStatus}`);
-  console.log(`Warship status: ${warshipStatus}`)
 }
+if(input.length === 0){
+   return console.log("Invalid order!");
+}
+if(noTaxes === 0) {
+    return console.log("Invalid order!");
+}
+withTaxes = noTaxes * 0.2;
+totalPrice = withTaxes + noTaxes;
 
-solve([
-  "12>13>11>20>66",
-  "12>22>33>44>55>32>18",
-  "70",
-  "Fire 2 11",
-  "Fire 8 100",
-  "Defend 3 6 11",
-  "Defend 0 3 5",
-  "Repair 1 33",
-  "Status",
-  "Retire",
-]);
+if(command === 'special'){
+    totalPrice = totalPrice - (totalPrice * 0.1);
+}
+console.log(`Congratulations you've just bought a new computer!`);
+    console.log(`Price without taxes: ${noTaxes.toFixed(2)}$`);
+    console.log(`Taxes: ${withTaxes.toFixed(2)}$`);
+    console.log("-----------");
+    console.log(`Total price: ${totalPrice.toFixed(2)}$`);
+}
+solve(["1050", "200", "450", "2", "18.50", "16.86", "special"]);
