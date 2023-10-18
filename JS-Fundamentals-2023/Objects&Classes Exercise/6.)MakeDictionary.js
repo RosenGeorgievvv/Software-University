@@ -7,3 +7,5 @@
 // `Term: ${term} => Definition: ${definition}`
 
 // Don't forget to sort the dictionary alphabetically by the terms as in real dictionaries.
+
+//Solution:
