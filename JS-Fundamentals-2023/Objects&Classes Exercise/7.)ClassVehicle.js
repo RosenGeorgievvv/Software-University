@@ -19,3 +19,5 @@
 // The constructor should receive the type, the model, the parts as an object, and the fuel
 
 // In judge post your class (Note: all names should be as described)
+
+//Solution:
