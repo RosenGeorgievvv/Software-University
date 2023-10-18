@@ -32,3 +32,5 @@ return topNumbers.length > 0 ? topNumbers.join(' '): "No";
 
 }
 console.log(numbers('10 20 30 40 50'));
+
+//second way:

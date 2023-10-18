@@ -1,8 +1,15 @@
-function solve(arr){
+function numbers(str) {
+  let nums = str.split(" ").map(Number);
+  let avg = nums.reduce((acc, val) => acc + val) / nums.length;
+  let topFive = nums
+    .filter((num) => num > avg)
+    .sort((a, b) => b - a)
+    .slice(0, 5);
 
-    let filtered = arr.filter((x) => x > 4)
-
-    console.log(filtered);
-
+  if (topFive.length == 0) {
+    console.log("No");
+  }else{
+    console.log(topFive.join(' '));
+  }
 }
-solve([2, 3, 4, 5, 6])
+numbers("10 20 30 40 50");
