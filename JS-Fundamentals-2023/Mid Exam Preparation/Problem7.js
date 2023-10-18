@@ -13,3 +13,6 @@
 // "There isn't enough space! {people} people in a queue!
 // {wagons separated by ' '}"
 // •	If the lift is full and there are no more people in the queue, you should print only the wagons separated by " ".
+
+
+//Solution:
