@@ -1,4 +1,4 @@
-//Task: Write a program that finds a place for the tourist on a lift. 
+//Task: Write a program that finds a place for the tourist on a lift.
 // Every wagon should have a maximum of 4 people on it. If a wagon is full, you should direct the people to the next one with space available.
 // Input
 // •	On the first line, you will receive how many people are waiting to get on the lift
@@ -14,5 +14,37 @@
 // {wagons separated by ' '}"
 // •	If the lift is full and there are no more people in the queue, you should print only the wagons separated by " ".
 
-
 //Solution:
+
+function lift(input) {
+
+let people = Number(input.shift());
+let state = input.shift().split(' ').map((x) => Number(x));
+let isFinished = false;
+
+for(let i = 0; i < state.length; i++){
+    if(state[i] < 4){
+        if(people >= 4 - state[i]){
+            people -= 4 - state[i];
+            state[i] = 4;
+        }else{
+            state[i] += people;
+            people = 0;
+        }
+    }
+}
+for(let i = 0; i < state.length; i++){
+    let current = state[i];
+    if(current < 4){
+        isFinished = true;
+    }
+}
+if(!isFinished && people > 0){
+    console.log(`There isn't enough space! ${people} people in a queue!`);
+}
+if(isFinished && people == 0){
+    console.log(`The lift has empty spots!`);
+}
+console.log(state.join(' '));
+}
+lift(["15", "0 0 0 0 0"]);
