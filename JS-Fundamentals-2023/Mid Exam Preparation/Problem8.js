@@ -21,8 +21,46 @@
 // •	All elements in the sequence will always have a matching element.
 
 function solve(input) {
+  let SeqOfElements = input.shift().trim().split(" ");
+  let steps = 0;
 
+  while (SeqOfElements.length > 1 && input[0].toLowerCase() !== "end") {
+    let [first, second] = input
+      .shift()
+      .split(" ")
+      .map((x) => Number(x));
 
+    steps++;
 
+    if (
+      first < 0 ||
+      first >= SeqOfElements.length ||
+      first === second ||
+      second < 0 ||
+      second >= SeqOfElements.length
+    ) {
+      let index = Math.trunc(SeqOfElements.length / 2);
+      let symbol = `-${steps}a`;
+      SeqOfElements.splice(index, 0, symbol, symbol);
+      console.log("Invalid input! Adding additional elements to the board");
+    } else {
+      let numOne = SeqOfElements[first];
+      let numTwo = SeqOfElements[second];
+      if (numOne === numTwo) {
+        SeqOfElements.splice(first, 1);
+        second = SeqOfElements.indexOf(numTwo);
+        SeqOfElements.splice(second, 1);
+        console.log(`Congrats! You have found matching elements - ${numOne}!`);
+      } else if (numOne !== numTwo) {
+        console.log("Try again!");
+      }
+    }
+  }
+  if (SeqOfElements.length === 0 || SeqOfElements.length === 1) {
+    console.log(`You have won in ${steps} turns!`);
+  } else {
+    console.log(`Sorry you lose :(`);
+    console.log(`${SeqOfElements.join(" ")}`);
+  }
 }
 solve(["1 1 2 2 3 3 4 4 5 5", "1 0", "-1 0", "1 0", "1 0", "1 0", "end"]);
