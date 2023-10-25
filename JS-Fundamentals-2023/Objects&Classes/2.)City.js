@@ -12,7 +12,6 @@ function cityInfo(city) {
         for(let [key, value] of entries){
             console.log(`${key} -> ${value}`);
         }
-
 }
 cityInfo({
   name: "Plovdiv",
