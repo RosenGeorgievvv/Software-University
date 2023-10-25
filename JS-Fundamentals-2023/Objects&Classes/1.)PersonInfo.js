@@ -4,3 +4,9 @@
 
 
 //Solution:
+
+function personInfo(){
+
+
+}
+personInfo()
