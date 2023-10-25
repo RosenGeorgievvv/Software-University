@@ -2,11 +2,16 @@
 
 // The input comes as 3 separate strings in the following order: firstName, lastName, age.
 
-
 //Solution:
 
-function personInfo(){
+function personInfo(firstName, LastName, age) {
 
+    let person = {};
 
+    person.firstName = firstName;
+    person.LastName = LastName;
+    person.age = age;
+
+    return person;
 }
-personInfo()
+console.log(personInfo("Peter", "Pan", "20"));
