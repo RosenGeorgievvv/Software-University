@@ -4,12 +4,12 @@
 
 //Solution:
 
-function personInfo(firstName, LastName, age) {
+function personInfo(firstName, lastName, age) {
 
     let person = {};
 
     person.firstName = firstName;
-    person.LastName = LastName;
+    person.lastName = lastName;
     person.age = age;
 
     return person;
