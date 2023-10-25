@@ -5,3 +5,13 @@
 // Input is provided as 3 single strings in the order stated above.
 
 //Solution:
+
+function convertToJSON(name, lastName, hairColor) {
+
+    
+}
+convertToJSON(
+  "George",
+  "Jones",
+  "Brown"
+);
