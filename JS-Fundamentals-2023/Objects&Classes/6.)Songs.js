@@ -14,6 +14,7 @@ function songsTask(arr) {
       this.name = name;
       this.time = time;
     }
+    
   }
 
   let songs = [];
