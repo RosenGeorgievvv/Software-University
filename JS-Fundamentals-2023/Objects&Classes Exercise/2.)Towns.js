@@ -9,8 +9,29 @@
 //Solution:
 
 function townsTask(arr) {
+  class Town {
+    constructor(town, latitude, longitude) {
+      this.town = town;
+      this.latitude = latitude.toFixed(2);
+      this.longitude = longitude.toFixed(2);
+    }
 
+    printInfo() {
+        console.log(`{ town: '${this.town}', latitude: '${this.latitude}', longitude: '${this.longitude}' }`);
+    }
+  }
 
-    
+  let townInfo = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    let current = arr[i].split(" | ");
+    let town = current[0];
+    let latitude = Number(current[1]);
+    let longitude = Number(current[2]);
+
+    let info = new Town(town, latitude, longitude);
+    townInfo.push(info);
+  }
+  townInfo.forEach((i) => i.printInfo());
 }
 townsTask(["Sofia | 42.696552 | 23.32601", "Beijing | 39.913818 | 116.363625"]);
