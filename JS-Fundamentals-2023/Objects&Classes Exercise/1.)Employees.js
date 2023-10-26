@@ -9,3 +9,18 @@
 // "Name: {employeeName} -- Personal Number: {personalNum}"
 
 //Solution:
+
+function employeesTask(arr) {
+
+
+    
+}
+employeesTask([
+  "Silas Butler",
+
+  "Adnaan Buckley",
+
+  "Juan Peterson",
+
+  "Brendan Villarreal",
+]);
