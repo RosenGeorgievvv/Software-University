@@ -11,9 +11,25 @@
 //Solution:
 
 function employeesTask(arr) {
+  class Person {
+    constructor(name, id) {
+      this.name = name;
+      this.id = id;
+    }
+    printInfo() {
+      console.log(`Name: ${this.name} -- Personal Number: ${this.id}`);
+    }
+  }
 
+  let personDetails = [];
 
-    
+  for (let i = 0; i < arr.length; i++) {
+    let name = arr[i];
+    let id = name.length;
+    let currentPerson = new Person(name, id);
+    personDetails.push(currentPerson);
+  }
+  personDetails.forEach((i) => i.printInfo());
 }
 employeesTask([
   "Silas Butler",
