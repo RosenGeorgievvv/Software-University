@@ -7,3 +7,10 @@
 // The output should be objects. Latitude and longitude must be parsed to numbers and formatted to the second decimal point!
 
 //Solution:
+
+function townsTask(arr) {
+
+
+    
+}
+townsTask(["Sofia | 42.696552 | 23.32601", "Beijing | 39.913818 | 116.363625"]);
