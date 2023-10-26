@@ -8,9 +8,29 @@
 
 //Solution:
 function songsTask(arr) {
+  class Song {
+    constructor(type, name, time) {
+      this.type = type;
+      this.name = name;
+      this.time = time;
+    }
+  }
 
-class
+  let songs = [];
+  let numberOfSongs = arr.shift();
+  let typeofSong = arr.pop();
 
+  for (let i = 0; i < numberOfSongs; i++) {
+    let [type, name, time] = arr[i].split("_");
+    let currentSong = new Song(type, name, time);
+    songs.push(currentSong);
+  }
+  if(typeofSong === 'all'){
+    songs.forEach((i) => console.log(i.name));
+  }else{
+    let filtered = songs.filter((i) => i.type === typeofSong);
+    filtered.forEach((i) => console.log(i.name));
+  }
 }
 songsTask([
   3,
