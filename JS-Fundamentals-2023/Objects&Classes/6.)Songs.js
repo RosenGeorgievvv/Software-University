@@ -7,12 +7,12 @@
 // Print only the names of the songs, which have the same typeList (obtained as the last parameter). If the value of the last element is "all", print the names of all the songs.
 
 //Solution:
-function songs(arr) {
+function songsTask(arr) {
 
+class
 
-    
 }
-songs([
+songsTask([
   3,
 
   "favourite_DownTown_3:14",
