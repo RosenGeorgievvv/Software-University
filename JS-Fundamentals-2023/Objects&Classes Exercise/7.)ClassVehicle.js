@@ -35,6 +35,7 @@ class Vehicle {
     this.fuel -= fuelLoss;
   }
 }
+
 let parts = { engine: 6, power: 100 };
 let vehicle = new Vehicle("a", "b", parts, 200);
 vehicle.drive(100);
