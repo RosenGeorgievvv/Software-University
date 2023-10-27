@@ -18,9 +18,16 @@ for(let i = 0; i < stock.length; i += 2){
 
     products[productName] = qty;
 }    
+for(let i = 0; i < orderedProducts.length; i += 2){
+    let productName = orderedProducts[i];
+    let qty = Number(orderedProducts[i + 1]);
 
-
-
+    if( productName in products){
+        products[productName] += qty;
+    }else{
+        products[productName] = qty;
+    }
+}
 
 }
 storeProvision(
