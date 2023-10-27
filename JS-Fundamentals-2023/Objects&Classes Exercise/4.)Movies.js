@@ -23,6 +23,10 @@ function manageMovies(arr) {
 
         }else if(command.includes('directedBy')){
 
+            let [movieName, director] = command.split(' directedBy ');
+            let movie = movies.find(movie => movie.name == movieName);
+            
+            
 
         }else if(command.includes("onDate")){
 
