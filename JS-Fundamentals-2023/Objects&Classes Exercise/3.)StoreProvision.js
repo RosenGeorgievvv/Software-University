@@ -21,6 +21,7 @@ function storeProvision(stock, orderedProducts) {
     let productName = orderedProducts[i];
     let qty = Number(orderedProducts[i + 1]);
 
+    //проверка за обекти
     if (productName in products) {
       products[productName] += qty;
     } else {
