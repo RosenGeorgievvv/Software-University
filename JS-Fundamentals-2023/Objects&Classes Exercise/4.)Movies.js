@@ -11,29 +11,23 @@
 //Solution:
 
 function manageMovies(arr) {
+  let movies = [];
 
-    let movies = [];
+  for (let command of arr) {
+    if (command.includes("addMovie")) {
+      let movieName = command.split("addMovie ")[1];
+      let movieObj = { name: movieName };
+      movies.push(movieObj);
+    } else if (command.includes("directedBy")) {
+      let [movieName, director] = command.split(" directedBy ");
+      let movie = movies.find((movie) => movie.name == movieName);
 
-    for(let command of arr){
-        if(command.includes("addMovie")){
-
-            let movieName = command.split("addMovie ")[1];
-            let movieObj = {name: movieName};
-            movies.push(movieObj);
-
-        }else if(command.includes('directedBy')){
-
-            let [movieName, director] = command.split(' directedBy ');
-            let movie = movies.find(movie => movie.name == movieName);
-            
-            
-
-        }else if(command.includes("onDate")){
-
-        }
+      if (movie) {
+        movie.director = director;
+      }
+    } else if (command.includes("onDate")) {
     }
-
-
+  }
 }
 manageMovies([
   "addMovie Fast and Furious",
