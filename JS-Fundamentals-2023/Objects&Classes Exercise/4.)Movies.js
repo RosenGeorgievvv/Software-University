@@ -20,6 +20,7 @@ function manageMovies(arr) {
       movies.push(movieObj);
     } else if (command.includes("directedBy")) {
       let [movieName, director] = command.split(" directedBy ");
+      //if statement for arrays
       let movie = movies.find((movie) => movie.name == movieName);
 
       if (movie) {
@@ -27,6 +28,7 @@ function manageMovies(arr) {
       }
     } else if (command.includes("onDate")) {
       let [movieName, date] = command.split(" onDate ");
+      //if statement for arrays
       let movie = movies.find((movie) => movie.name == movieName);
 
       if (movie) {
@@ -34,9 +36,9 @@ function manageMovies(arr) {
       }
     }
   }
-  for(let movie of movies){
-    if(movie.name && movie.director && movie.date){
-        console.log(JSON.stringify(movie));
+  for (let movie of movies) {
+    if (movie.name && movie.director && movie.date) {
+      console.log(JSON.stringify(movie));
     }
   }
 }
