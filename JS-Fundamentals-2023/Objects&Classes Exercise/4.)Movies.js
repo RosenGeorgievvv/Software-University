@@ -10,12 +10,15 @@
 
 //Solution:
 
-function movies() {
+function manageMovies(arr) {
 
+    let movies = [];
 
     
+
+
 }
-movies([
+manageMovies([
   "addMovie Fast and Furious",
 
   "addMovie Godfather",
