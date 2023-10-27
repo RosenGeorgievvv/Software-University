@@ -17,10 +17,13 @@ function manageMovies(arr) {
     for(let command of arr){
         if(command.includes("addMovie")){
 
+            let movieName = command.split("addMovie ")[1];
+            let movieObj = {name: movieName};
+            movies.push(movieObj);
 
         }else if(command.includes('directedBy')){
 
-            
+
         }else if(command.includes("onDate")){
 
         }
