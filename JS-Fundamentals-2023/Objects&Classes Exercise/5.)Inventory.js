@@ -15,3 +15,15 @@
 // Items => {item1}, {item2}, {item3}
 
 //Solution:
+
+function inventoryTask(arr) {
+
+
+}
+inventoryTask([
+  "Isacc / 25 / Apple, GravityGun",
+
+  "Derek / 12 / BarrelVest, DestructionSword",
+
+  "Hes / 1 / Desolator, Sentinel, Antara",
+]);
