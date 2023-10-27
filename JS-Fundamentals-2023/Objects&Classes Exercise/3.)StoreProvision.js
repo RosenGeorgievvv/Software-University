@@ -8,11 +8,20 @@
 
 //Solution:
 
-function storeProvision(arr1, arr2) {
+function storeProvision(stock, orderedProducts) {
+
+    let products = {};
+
+for(let i = 0; i < stock.length; i += 2){
+    let productName = stock[i];
+    let qty = Number(stock[i + 1]);
+
+    products[productName] = qty;
+}    
 
 
 
-    
+
 }
 storeProvision(
   ["Chips", "5", "CocaCola", "9", "Bananas", "14", "Pasta", "4", "Beer", "2"],
