@@ -25,6 +25,7 @@ function createDictionary(terms) {
   for (let term of sortedTerms) {
     console.log(`Term: ${term} => Definition: ${dictionary[term]}`);
   }
+  
 }
 createDictionary([
   '{"Coffee":"A hot drink made from the roasted and ground seeds (coffee beans) of a tropical shrub."}',
