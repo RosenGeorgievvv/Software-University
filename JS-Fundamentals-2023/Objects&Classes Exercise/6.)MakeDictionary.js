@@ -16,7 +16,6 @@ function createDictionary(terms) {
   for (let termDefinition of terms) {
     let parsedData = JSON.parse(termDefinition);
 
-    
     for (let term in parsedData) {
       dictionary[term] = parsedData[term];
     }
