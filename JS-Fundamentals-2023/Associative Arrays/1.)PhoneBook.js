@@ -15,7 +15,6 @@ function assocArr(arr) {
     for(let key in phonebookList){
         console.log(`${key} -> ${phonebookList[key]}`);
     }
-
 }
 assocArr([
   "Tim 0834212554",
