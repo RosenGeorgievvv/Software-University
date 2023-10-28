@@ -19,6 +19,7 @@ function createDictionary(terms) {
     for (let term in parsedData) {
       dictionary[term] = parsedData[term];
     }
+    
   }
   let sortedTerms = Object.keys(dictionary).sort();
 
