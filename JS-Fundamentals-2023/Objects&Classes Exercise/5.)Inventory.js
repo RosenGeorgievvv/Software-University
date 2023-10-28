@@ -16,31 +16,34 @@
 
 //Solution:
 
-function inventoryTask(arr) {
+function createHeroRegister(input) {
   let heroes = [];
 
-  arr
-    .map((x) => x.split("/"))
-    .map((x) =>
-      heroes.push({
-        name: x[0],
-        level: +x[1],
-        items: x[2]
-          .split(", ")
-          .sort((a, b) => a.localeCompare(b))
-          .join(", "),
-      })
-    );
-  heroes
-    .sort((a, b) => a.level - b.level)
-    .map((x) =>
-      console.log(`Hero: ${x.name}\nlevel => ${x.level}\nitems => ${x.items}`)
-    );
+  for (let data of input) {
+    let [name, level, itemsData] = data.split(' / ');
+    let hero = {
+      name: name,
+      level: Number(level),
+      items: itemsData ? itemsData.split(', ').join(', ') : '', // Format the items
+    };
+
+    heroes.push(hero);
+  }
+
+  // Sort heroes by level in ascending order
+  heroes.sort((a, b) => a.level - b.level);
+
+  // Print the result
+  for (let hero of heroes) {
+    console.log(`Hero: ${hero.name}`);
+    console.log(`level => ${hero.level}`);
+    console.log(`items => ${hero.items}`);
+  }
 }
-inventoryTask([
-  "Isacc / 25 / Apple, GravityGun",
-
-  "Derek / 12 / BarrelVest, DestructionSword",
-
-  "Hes / 1 / Desolator, Sentinel, Antara",
-]);
+createHeroRegister([
+    "Isacc / 25 / Apple, GravityGun",
+  
+    "Derek / 12 / BarrelVest, DestructionSword",
+  
+    "Hes / 1 / Desolator, Sentinel, Antara",
+  ]);
