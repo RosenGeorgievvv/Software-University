@@ -2,12 +2,10 @@
 
 //Solution:
 
-function intAndFloat(firstNum, secondNum, thirdNum){
+function intAndFloat(firstNum, secondNum, thirdNum) {
+  let sum = firstNum + secondNum + thirdNum;
 
-    let sum = firstNum + secondNum + thirdNum;
-    
-    let output = sum % 1 === 0 ? sum += " - Integer" : sum += " - Float";
-    console.log(output)
-
+  let output = sum % 1 === 0 ? (sum += " - Integer") : (sum += " - Float");
+  console.log(output);
 }
-intAndFloat(9, 100, 1.1)
+intAndFloat(9, 100, 1.1);
