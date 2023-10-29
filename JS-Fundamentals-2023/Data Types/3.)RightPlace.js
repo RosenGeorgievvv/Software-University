@@ -4,11 +4,9 @@
 
 //Solution:
 
-function rightPlace(str, char, result){
-
-    let res = str.replace('_', char);
-    let final = res === result? "Matched" : "Not Matched";
-    console.log(final);
-
+function rightPlace(str, char, result) {
+  let res = str.replace("_", char);
+  let final = res === result ? "Matched" : "Not Matched";
+  console.log(final);
 }
-rightPlace('Str_ng', 'I','Strong')
+rightPlace("Str_ng", "I", "Strong");
