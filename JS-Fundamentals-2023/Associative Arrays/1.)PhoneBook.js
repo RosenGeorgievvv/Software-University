@@ -3,19 +3,18 @@
 //Solution:
 
 function assocArr(arr) {
+  let phonebookList = {};
 
-    let phonebookList = {};
+  for (let line of arr) {
+    let tokens = line.split(" ");
+    let name = tokens[0];
+    let number = tokens[1];
+    phonebookList[name] = number;
+  }
 
-    for(let line of arr){
-        let tokens = line.split(' ');
-        let name = tokens[0];
-        let number = tokens[1];
-        phonebookList[name] = number;
-    }
-    
-    for(let key in phonebookList){
-        console.log(`${key} -> ${phonebookList[key]}`);
-    }
+  for (let key in phonebookList) {
+    console.log(`${key} -> ${phonebookList[key]}`);
+  }
 }
 assocArr([
   "Tim 0834212554",
