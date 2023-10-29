@@ -11,7 +11,6 @@ function echo(input) {
 
     let param = typeof input;
     console.log(param);
-
     if(param === "string" || param === "number"){
         console.log(input)
     }else{
