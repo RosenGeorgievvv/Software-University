@@ -3,11 +3,6 @@
 //Solution:
 
 function concatNames(firstName, lastName, del) {
-
-    console.log(`${firstName}${del}${lastName}`)
+  console.log(`${firstName}${del}${lastName}`);
 }
-concatNames(
-  "John",
-  "Smith",
-  "->"
-);
+concatNames("John", "Smith", "->");
