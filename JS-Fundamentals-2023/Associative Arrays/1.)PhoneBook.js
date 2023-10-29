@@ -12,6 +12,7 @@ function assocArr(arr) {
         let number = tokens[1];
         phonebookList[name] = number;
     }
+    
     for(let key in phonebookList){
         console.log(`${key} -> ${phonebookList[key]}`);
     }
