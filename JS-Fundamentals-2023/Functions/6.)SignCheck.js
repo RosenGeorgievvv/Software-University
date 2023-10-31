@@ -13,18 +13,17 @@
 //Solution:
 
 function signCheck(num1, num2, num3) {
-
-    let negativeCount = [num1, num2, num3].reduce((count, num) =>{
-        if(num < 0){
-            return count + 1;
-        }
-        return count;
-    }, 0);
-
-    if(negativeCount % 2 !== 0){
-        console.log("Negative");
-    }else{
-        console.log("Positive")
+  let negativeCount = [num1, num2, num3].reduce((count, num) => {
+    if (num < 0) {
+      return count + 1;
     }
+    return count;
+  }, 0);
+
+  if (negativeCount % 2 !== 0) {
+    console.log("Negative");
+  } else {
+    console.log("Positive");
+  }
 }
-signCheck(5,12,-15);
+signCheck(5, 12, -15);
