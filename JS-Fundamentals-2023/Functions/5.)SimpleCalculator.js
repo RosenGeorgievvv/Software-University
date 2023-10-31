@@ -21,7 +21,7 @@ function calc(a, b, operator) {
       console.log(divide(a, b));
       break;
     case "add":
-      let add =(a, b) => a + b;
+      let add = (a, b) => a + b;
       console.log(add(a, b));
       break;
     case "subtract":
