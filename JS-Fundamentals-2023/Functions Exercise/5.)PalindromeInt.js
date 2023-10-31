@@ -3,19 +3,18 @@
 //Solution:
 
 function pali(arr) {
-
-    for(let num of arr){
-        let isPalindrome = checkPalindrome(num);
-        console.log(isPalindrome);
-    }
+  for (let num of arr) {
+    let isPalindrome = checkPalindrome(num);
+    console.log(isPalindrome);
+  }
 
   function checkPalindrome(num) {
     let numAsString = String(num);
     let reversedNumStr = "";
 
-    for(let i = numAsString.length - 1; i >= 0; i--){
-        let curChar = numAsString[i];
-        reversedNumStr += curChar;
+    for (let i = numAsString.length - 1; i >= 0; i--) {
+      let curChar = numAsString[i];
+      reversedNumStr += curChar;
     }
     let isPalindrome = numAsString == reversedNumStr;
     return isPalindrome;
