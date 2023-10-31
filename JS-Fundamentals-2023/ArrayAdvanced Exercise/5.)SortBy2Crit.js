@@ -6,16 +6,14 @@
 
 //Solution:
 
-function sortBy2Crit(arr){
-
-let sorted = (a, b) =>{
-    if(a.length !== b.length){
-        return a.length - b.length;
+function sortBy2Crit(arr) {
+  let sorted = (a, b) => {
+    if (a.length !== b.length) {
+      return a.length - b.length;
     }
     return a.toLowerCase().localeCompare(b.toLowerCase());
+  };
+  arr.sort(sorted);
+  console.log(arr.join("\n"));
 }
-arr.sort(sorted);
-console.log(arr.join('\n'));
-
-}
-sortBy2Crit(['alpha','beta','gamma'])
+sortBy2Crit(["alpha", "beta", "gamma"]);
