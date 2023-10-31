@@ -22,21 +22,21 @@ function houseParty(arr) {
     let currName = curr[0];
     let command = curr[2];
 
-    if(command != "not"){
-        if(list.includes(currName) === true){
-            console.log(`${currName} is already in the list!`);
-            continue;
-        }
-        list.push(currName)
-    }else{
-        if(list.includes(currName) === false){
-            console.log(`${currName} is not in the list! `);
-            continue;
-        }
-        list = list.filter(x => x != currName);
+    if (command != "not") {
+      if (list.includes(currName) === true) {
+        console.log(`${currName} is already in the list!`);
+        continue;
+      }
+      list.push(currName);
+    } else {
+      if (list.includes(currName) === false) {
+        console.log(`${currName} is not in the list! `);
+        continue;
+      }
+      list = list.filter((x) => x != currName);
     }
   }
-  console.log(list.join('\n'));
+  console.log(list.join("\n"));
 }
 houseParty([
   "Allie is going!",
