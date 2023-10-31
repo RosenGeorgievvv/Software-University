@@ -2,14 +2,13 @@
 
 //Solution:
 
-function reverseInPlace(arr){
-
-    for(let i = 0; i < arr.length / 2; i++){
-        let firstElement = arr[i];
-        let index = arr.length - 1 - i;
-        arr[i] = arr[index];
-        arr[index] = firstElement;
-    }
-    console.log(arr.join(' '));
+function reverseInPlace(arr) {
+  for (let i = 0; i < arr.length / 2; i++) {
+    let firstElement = arr[i];
+    let index = arr.length - 1 - i;
+    arr[i] = arr[index];
+    arr[index] = firstElement;
+  }
+  console.log(arr.join(" "));
 }
-reverseInPlace(['a', 'b', 'c', 'd', 'e'])
+reverseInPlace(["a", "b", "c", "d", "e"]);
