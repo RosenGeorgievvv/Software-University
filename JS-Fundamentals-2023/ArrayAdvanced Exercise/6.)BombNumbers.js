@@ -8,22 +8,21 @@
 
 //Solution:
 
-function bombNums(seq, bomb){
+function bombNums(seq, bomb) {
+  let specialNum = bomb[0];
+  let power = bomb[1];
 
-    let specialNum = bomb[0];
-    let power = bomb[1];
+  while (seq.includes(specialNum)) {
+    let current = seq.indexOf(specialNum);
+    let removedElements = power * 2 + 1;
+    let startIndx = current - power;
 
-    while(seq.includes(specialNum)){
-        let current = seq.indexOf(specialNum);
-        let removedElements = power * 2 + 1;
-        let startIndx =current - power;
-
-        if(startIndx < 0) {
-            removedElements += startIndx;
-            startIndx = 0
-        }
-        seq.splice(startIndx, removedElements);
+    if (startIndx < 0) {
+      removedElements += startIndx;
+      startIndx = 0;
     }
-    console.log(seq.reduce((a, b) => a + b, 0));
+    seq.splice(startIndx, removedElements);
+  }
+  console.log(seq.reduce((a, b) => a + b, 0));
 }
-bombNums([1, 4, 4, 2, 8, 9, 1], [9, 3])
+bombNums([1, 4, 4, 2, 8, 9, 1], [9, 3]);
