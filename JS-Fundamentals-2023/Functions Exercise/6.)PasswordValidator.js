@@ -19,15 +19,13 @@
 //Solution:
 
 function passwordValidator(pass) {
+  let isValidLength = checkValidPassLength(pass);
+  let isOnlyLettersDigits = checkOnlyLettersDigits(pass);
+  let isMin2Digits = checkMin2Digits(pass);
 
-let isValidLength = checkValidPassLength(pass);
-let isOnlyLettersDigits = checkOnlyLettersDigits(pass);
-let isMin2Digits = checkMin2Digits(pass);
-
-if(isValidLength && isOnlyLettersDigits && isMin2Digits){
+  if (isValidLength && isOnlyLettersDigits && isMin2Digits) {
     console.log("Password is valid");
-}
-
+  }
 
   function checkValidPassLength(pass) {
     if (pass.length >= 6 && pass.length <= 10) {
@@ -56,20 +54,20 @@ if(isValidLength && isOnlyLettersDigits && isMin2Digits){
     return true;
   }
 
-  function checkMin2Digits(pass){
+  function checkMin2Digits(pass) {
     let digitsCounter = 0;
 
-    for(let curChar of pass){
-        let code = curChar.charCodeAt(0);
-        if(code >= 48 && code <= 57){
-            digitsCounter++;
-        }
+    for (let curChar of pass) {
+      let code = curChar.charCodeAt(0);
+      if (code >= 48 && code <= 57) {
+        digitsCounter++;
+      }
     }
-    if(digitsCounter < 2) {
-        console.log("Password must have at least 2 digits");
-        return false;
-    }else{
-        return true;
+    if (digitsCounter < 2) {
+      console.log("Password must have at least 2 digits");
+      return false;
+    } else {
+      return true;
     }
   }
 }
