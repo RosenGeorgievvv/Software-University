@@ -7,7 +7,7 @@ function reverse(n, arr) {
   for (let i = 0; i < n; i++) {
     reversedArr.push(arr[i]);
   }
-let fixed = reversedArr.reverse().join(" ");
+  let fixed = reversedArr.reverse().join(" ");
   console.log(fixed);
 }
 reverse(3, [10, 20, 30, 40, 50]);
