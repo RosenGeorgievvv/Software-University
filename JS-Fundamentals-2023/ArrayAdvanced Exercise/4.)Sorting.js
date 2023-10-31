@@ -4,18 +4,17 @@
 
 //Solution:
 
-function sortingArr(arr){
-
+function sortingArr(arr) {
   arr.sort((a, b) => b - a);
   let arrLength = arr.length;
   let result = [];
 
-  for(let i = 0; i < Math.ceil(arrLength / 2); i++){
+  for (let i = 0; i < Math.ceil(arrLength / 2); i++) {
     result.push(arr[i]);
-    if(i !== arrLength - 1 - i){
-        result.push(arr[arrLength - 1 - i]);
+    if (i !== arrLength - 1 - i) {
+      result.push(arr[arrLength - 1 - i]);
     }
   }
-  console.log(result.join(' '));
+  console.log(result.join(" "));
 }
-sortingArr([1, 21, 3, 52, 69, 63, 31, 2, 18, 94])
+sortingArr([1, 21, 3, 52, 69, 63, 31, 2, 18, 94]);
