@@ -22,6 +22,6 @@ function maxNumber(arr) {
       topInt.push(arr[i]);
     }
   }
-  console.log(topInt.join(' '))
+  console.log(topInt.join(" "));
 }
 maxNumber([1, 4, 3, 2]);
