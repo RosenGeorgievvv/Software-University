@@ -11,5 +11,4 @@ function sumDigits(input) {
   }
   console.log(sum);
 }
-
 sumDigits(245678);
