@@ -2,10 +2,21 @@
 
 //Solution:
 
-function meetings() {
+function meetings(arr) {
+  let calendar = {};
 
-    
+  for (let item of arr) {
+    let [day, name] = item.split(" ");
 
-    
+    if (calendar.hasOwnProperty(day)) {
+      console.log(`Conflict on ${day}!`);
+      continue;
+    }
+    calendar[day] = name;
+    console.log(`Scheduled for ${day}`);
+  }
+  for(let person in calendar){
+    console.log(`${person} -> ${calendar[person]}`);
+  }
 }
 meetings(["Monday Peter", "Wednesday Bill", "Monday Tim", "Friday Tim"]);
