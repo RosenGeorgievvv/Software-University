@@ -10,7 +10,6 @@ function addressBook(arr) {
 
     book[name] = address;
   }
-
   let entries = Object.entries(book);
   entries.sort((a, b) => a[0].localeCompare(b[0]));
 
