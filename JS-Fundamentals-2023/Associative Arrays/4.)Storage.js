@@ -14,7 +14,6 @@ function storage(arr) {
       myMap.set(item, parseInt(quantity, 10));
     }
   }
-  
   for (let [item, quantity] of myMap) {
     console.log(`${item} -> ${quantity}`);
   }
