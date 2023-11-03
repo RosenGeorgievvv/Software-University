@@ -7,3 +7,9 @@
 // The quantities inputs will be in the range [1 … 2 000 000 000].
 
 //Solution:
+
+function minerTask(arr) {
+
+    
+}
+minerTask(["Gold", "155", "Silver", "10", "Copper", "17"]);
