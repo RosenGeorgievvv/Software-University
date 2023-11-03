@@ -8,7 +8,14 @@
 
 function wordsTracker(arr) {
 
-    
+ let searchedWords = arr.shift().split(' ');
+ let occurrences = {};
+
+ 
+
+
+
+
 
 }
 wordsTracker([
