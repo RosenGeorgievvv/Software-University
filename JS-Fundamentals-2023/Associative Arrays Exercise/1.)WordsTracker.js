@@ -4,5 +4,37 @@
 
 // Print for each word how many times it occurs. The words should be sorted by count in descending.
 
-
 //Solution:
+
+function wordsTracker(arr) {
+
+    
+
+}
+wordsTracker([
+  "this sentence",
+
+  "In",
+  "this",
+  "sentence",
+  "you",
+  "have",
+
+  "to",
+  "count",
+  "the",
+  "occurrences",
+  "of",
+
+  "the",
+  "words",
+  "this",
+  "and",
+  "sentence",
+
+  "because",
+  "this",
+  "is",
+  "your",
+  "task",
+]);
