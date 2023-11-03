@@ -20,5 +20,15 @@
 
 // · The input always will be valid.
 
-
 //Solution:
+
+function companyUsers(arr) {
+
+    
+}
+companyUsers([
+  "SoftUni -> AA12345",
+  "SoftUni -> BB12345",
+  "Microsoft -> CC12345",
+  "HP -> BB12345",
+]);
