@@ -7,23 +7,22 @@
 //Solution:
 
 function wordsTracker(arr) {
+  let searchedWords = arr.shift().split(" ");
+  let occurrences = {};
 
- let searchedWords = arr.shift().split(' ');
- let occurrences = {};
-
- for(let word of searchedWords){
+  for (let word of searchedWords) {
     occurrences[word] = 0;
- }
-for(let word of arr){
-    if(word in occurrences){
-        occurrences[word]++;
+  }
+  for (let word of arr) {
+    if (word in occurrences) {
+      occurrences[word]++;
     }
-}
-let entries = Object.entries(occurrences).sort((a, b) => b[1] - a[1]);
+  }
+  let entries = Object.entries(occurrences).sort((a, b) => b[1] - a[1]);
 
-for(let [word, repeats] of entries){
+  for (let [word, repeats] of entries) {
     console.log(`${word} - ${repeats}`);
-}
+  }
 }
 wordsTracker([
   "this sentence",
