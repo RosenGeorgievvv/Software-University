@@ -1,33 +1,18 @@
 function solve(input) {
 
-  let addressBook = {};
+  let myMap = new Map();
 
-  for(let item of input){
-    let [name, address] = item.split(':');
+  for(let items of input){
+    let [item, quantity] = items.split(' ');
 
-    addressBook[name] = address;
+    if(myMap.has(item)){
+      myMap.set(item, myMap.get(item) + parseInt(quantity, 10));
+    }else{
+      myMap.set(item, parseInt(quantity, 10));
+    }
   }
- 
-  let arr = Object.entries(addressBook);
-  arr.sort((a, b) => a[0].localeCompare(b[0]));
-
-  let book = {};
-
-  for(let [name, address] of arr){
-    book[name] = address;
+  for(let [item, quantity] of myMap){
+    console.log(`${item} -> ${quantity}`);
   }
-  for(let key in book){
-    console.log(`${key} -> ${book[key]} `);
-  }
-  
-
 }
-solve([
-  "Tim:Doe Crossing",
-
-  "Bill:Nelson Place",
-
-  "Peter:Carlyle Ave",
-
-  "Bill:Ornery Rd",
-]);
+solve(["tomatoes 10", "coffee 5", "olives 100", "coffee 40"]);
