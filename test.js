@@ -1,23 +1,33 @@
-function inventory(arr) {
-  let heroes = [];
-  arr.forEach((x) => {
-    const [name, level, items] = x.split("/");
-    heroes.push({
-      name,
-      level: Number(level),
-      items: items
-        .split(", ")
-        .map((x) => x.trim())
-        .sort((x, y) => x.localeCompare(y))
-        .join(", "),
-    });
-  });
+function solve(input) {
 
-  heroes
-    .sort((y, x) => x.level - y.level)
-    .forEach((x) =>
-      console.log(`Hero: ${x.name}
-level => ${x.level}
-items => ${x.items}`)
-    );
+  let addressBook = {};
+
+  for(let item of input){
+    let [name, address] = item.split(':');
+
+    addressBook[name] = address;
+  }
+ 
+  let arr = Object.entries(addressBook);
+  arr.sort((a, b) => a[0].localeCompare(b[0]));
+
+  let book = {};
+
+  for(let [name, address] of arr){
+    book[name] = address;
+  }
+  for(let key in book){
+    console.log(`${key} -> ${book[key]} `);
+  }
+  
+
 }
+solve([
+  "Tim:Doe Crossing",
+
+  "Bill:Nelson Place",
+
+  "Peter:Carlyle Ave",
+
+  "Bill:Ornery Rd",
+]);

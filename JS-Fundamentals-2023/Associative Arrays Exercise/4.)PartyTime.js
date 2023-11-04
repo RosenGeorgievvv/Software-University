@@ -13,50 +13,29 @@
 //Solution:
 
 function partyGuests(input) {
-    
-  function isVIP(name) {
-    return !isNaN(name[0]);
-  }
-
-  let guests = {
-    VIP: new Set(),
-    regular: new Set(),
-  };
-
-  let isPartyStarted = false;
-
-  for (let name of input) {
-    if (name === "PARTY") {
-      isPartyStarted = true;
-      continue;
-    }
-
-    if (!isPartyStarted) {
-      if (isVIP(name)) {
-        guests.VIP.add(name);
-      } else {
-        guests.regular.add(name);
-      }
+  let invitedList = input.splice(0, input.indexOf("PARTY"));
+  input.splice(0, 1);
+  let VIP = [];
+  let regular = [];
+  for (let guest of invitedList) {
+    if (guest[0] >= "0" && guest[0] <= "9") {
+      VIP.push(guest);
     } else {
-      if (isVIP(name)) {
-        guests.VIP.delete(name);
-      } else {
-        guests.regular.delete(name);
-      }
+      regular.push(guest);
     }
   }
-
-  let allGuests = new Set([...guests.VIP, ...guests.regular]);
-
-  console.log(allGuests.size);
-  for (let guest of guests.VIP) {
-    console.log(guest);
+  for (let guest of input) {
+    if (VIP.includes(guest)) {
+      VIP.splice(VIP.indexOf(guest), 1);
+    }
+    if (regular.includes(guest)) {
+      regular.splice(regular.indexOf(guest), 1);
+    }
   }
-  for (let guest of guests.regular) {
-    console.log(guest);
-  }
+  console.log(VIP.length + regular.length);
+  VIP.forEach((x) => console.log(x));
+  regular.forEach((x) => console.log(x));
 }
-
 partyGuests([
   "7IK9Yo0h",
   "9NoBUajQ",
