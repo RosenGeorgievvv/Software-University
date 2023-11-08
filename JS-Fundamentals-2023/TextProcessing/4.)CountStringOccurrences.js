@@ -21,15 +21,18 @@
  
 //second way:
 
-function countString(str, search){
+// function countString(str, search){
 
-    let words = str.split(' ');
+//     let words = str.split(' ');
 
-    let match = words.filter(word => word === search);
-    console.log(match.length);
-}
-countString(
-    "This is a word and it also is a sentence",
+//     let match = words.filter(word => word === search);
+//     console.log(match.length);
+// }
+// countString(
+//     "This is a word and it also is a sentence",
   
-    "is"
-  );
+//     "is"
+//   );
+
+  //third way (shortest):
+
