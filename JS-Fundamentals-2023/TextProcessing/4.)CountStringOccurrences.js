@@ -18,7 +18,7 @@
 
 //   "is"
 // );
- 
+
 //second way:
 
 // function countString(str, search){
@@ -30,9 +30,18 @@
 // }
 // countString(
 //     "This is a word and it also is a sentence",
-  
+
 //     "is"
 //   );
 
-  //third way (shortest):
+//third way (shortest):
 
+function countString(str, search) {
+  let words = str.split(" ").filter((word) => word === search);
+  console.log(words.length);
+}
+countString(
+  "This is a word and it also is a sentence",
+
+  "is"
+);
