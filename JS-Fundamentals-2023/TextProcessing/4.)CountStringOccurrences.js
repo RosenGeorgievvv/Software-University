@@ -2,3 +2,19 @@
 
 //Solution:
 
+function countStrOccurrences(str, search) {
+  let words = str.split(" ");
+  let counter = 0;
+
+  for (let special of words) {
+    if (special == search) {
+      counter++;
+    }
+  }
+  console.log(counter);
+}
+countStrOccurrences(
+  "This is a word and it also is a sentence",
+
+  "is"
+);
