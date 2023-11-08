@@ -2,3 +2,9 @@
 
 //Solution:
 
+function printChar(str){
+
+    
+
+}
+printChar('AWord');
