@@ -2,19 +2,34 @@
 
 //Solution:
 
-function countStrOccurrences(str, search) {
-  let words = str.split(" ");
-  let counter = 0;
+// function countStrOccurrences(str, search) {
+//   let words = str.split(" ");
+//   let counter = 0;
 
-  for (let special of words) {
-    if (special == search) {
-      counter++;
-    }
-  }
-  console.log(counter);
+//   for (let special of words) {
+//     if (special == search) {
+//       counter++;
+//     }
+//   }
+//   console.log(counter);
+// }
+// countStrOccurrences(
+//   "This is a word and it also is a sentence",
+
+//   "is"
+// );
+ 
+//second way:
+
+function countString(str, search){
+
+    let words = str.split(' ');
+
+    let match = words.filter(word => word === search);
+    console.log(match.length);
 }
-countStrOccurrences(
-  "This is a word and it also is a sentence",
-
-  "is"
-);
+countString(
+    "This is a word and it also is a sentence",
+  
+    "is"
+  );
