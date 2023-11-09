@@ -6,3 +6,9 @@
 
 
 //Solution:
+
+function strSubstring(word, text){
+
+
+}
+strSubstring('javascript', 'JavaScript is the best programming language')
