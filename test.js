@@ -1,5 +1,9 @@
-let text = 'str';
+function modernTimes(str) {
+  let splittedString = str.split(" ");
 
-text = text.padStart(6, '-');
-text = text.padEnd(7, '-');
-console.log(text);
+  let result = splittedString.filter((word) => word.includes("#") && word.length > 1);
+ 
+console.log(result);
+ 
+}
+modernTimes("Nowadays everyone uses # to tag a #special word in #socialMedia");
