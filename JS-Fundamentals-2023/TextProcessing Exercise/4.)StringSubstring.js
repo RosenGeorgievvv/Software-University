@@ -4,21 +4,18 @@
 
 // If you don't find the word print: "{word} not found!"
 
-
 //Solution:
 
-function strSubstring(word, text){
+function strSubstring(word, text) {
+  let convertWord = word.toLowerCase();
+  let convertText = text.toLowerCase();
 
-    let convertWord = word.toLowerCase();
-    let convertText = text.toLowerCase();
+  let splitted = convertText.split(" ");
 
-    let splitted = convertText.split(' ');
-
-    if(splitted.includes(convertWord)){
-        console.log(convertWord);
-    }else{
-        console.log(`${convertWord} not found!`);
-    }
-
+  if (splitted.includes(convertWord)) {
+    console.log(convertWord);
+  } else {
+    console.log(`${convertWord} not found!`);
+  }
 }
-strSubstring('javascript', 'JavaScript is the best programming language')
+strSubstring("javascript", "JavaScript is the best programming language");
