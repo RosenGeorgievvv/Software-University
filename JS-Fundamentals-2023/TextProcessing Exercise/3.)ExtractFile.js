@@ -4,3 +4,16 @@
 
 
 //Solution:
+
+function extractFile(str){
+
+let index = str.lastIndexOf('\\');
+
+let nameOfTheFile = str.substring(index + 1).split('.');
+let template = nameOfTheFile.shift();
+let ext = nameOfTheFile.pop();
+
+console.log(`File name: ${template}`);
+console.log(`File extension: ${ext}`);
+}
+extractFile('C:\\Internal\\training-internal\\Template.pptx')
