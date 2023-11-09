@@ -9,6 +9,16 @@
 
 function strSubstring(word, text){
 
+    let convertWord = word.toLowerCase();
+    let convertText = text.toLowerCase();
+
+    let splitted = convertText.split(' ');
+
+    if(splitted.includes(convertWord)){
+        console.log(convertWord);
+    }else{
+        console.log(`${convertWord} not found!`);
+    }
 
 }
 strSubstring('javascript', 'JavaScript is the best programming language')
