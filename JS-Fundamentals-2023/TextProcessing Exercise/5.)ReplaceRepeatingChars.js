@@ -2,8 +2,13 @@
 
 //Solution:
 
-function replacement(str){
+function replacement(str) {
+ 
+    let output = '';
 
-
+  for(let char of str){
+    char !== output[output.length - 1] ? output += char : '';
+  }
+  console.log(output);
 }
-replacement('aaaaabbbbbcdddeeeedssaa');
+replacement("aaaaabbbbbcdddeeeedssaa");
