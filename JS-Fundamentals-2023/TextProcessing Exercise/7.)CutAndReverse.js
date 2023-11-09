@@ -5,3 +5,9 @@
 // Print each half on a separate line.
 
 //Solution:
+
+function boringTask(str){
+
+
+}
+boringTask('tluciffiDsIsihTgnizamAoSsIsihT')
