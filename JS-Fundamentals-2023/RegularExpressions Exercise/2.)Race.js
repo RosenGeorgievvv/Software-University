@@ -14,6 +14,28 @@ let regexpForName = /[A-Za-z]/g;
 let regexpForDistance = /[\d]/g;
 
 let nameOfRacer = input.shift().split(', ');
+let racers = {};
+
+for(let name of nameOfRacer){
+    racers[name] = 0;
+}
+
+while(input[0] !== 'end of race'){
+    let currentLine = input.shift();
+    let char = currentLine.match(regexpForName);
+    let num = currentLine.match(regexpForDistance);
+
+    let name = char.join('');
+    let paths = num.map(Number);
+
+    let wholeDistance = 0;
+
+    for(let path of paths){
+        wholeDistance += path;
+    }
+    racers[name] !== undefined ? racers[name] += wholeDistance;
+}
+
 
 }
 race([
