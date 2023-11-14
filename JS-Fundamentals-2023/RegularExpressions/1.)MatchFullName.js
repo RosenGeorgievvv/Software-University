@@ -3,8 +3,13 @@
 //Solution:
 
 function matchFullName(input) {
+  let regexp = /\b[A-Z][a-z]+[ ][A-Z][a-z]+\b/g;
+  let validNames = [];
+  let validName = null;
 
-
-    
+  while ((validName = regexp.exec(input)) !== null) {
+    validNames.push(validName[0]);
+  }
+  console.log(validNames.join(" "));
 }
 matchFullName("Ivan Ivanov");
