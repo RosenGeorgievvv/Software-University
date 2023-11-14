@@ -20,6 +20,12 @@
 
 // Total money spend: {spend money}
 
-
-
 //Solution:
+
+function furniture(input) {
+
+
+
+    
+}
+furniture([">>Sofa<<312.23!3", ">>TV<<300!5", ">Invalid<<!5", "Purchase"]);
