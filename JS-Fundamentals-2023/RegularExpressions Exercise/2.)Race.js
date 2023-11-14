@@ -9,34 +9,46 @@
 //Solution:
 
 function race(input) {
+  let regexpForName = /[A-Za-z]/g;
+  let regexpForDistance = /[\d]/g;
 
-let regexpForName = /[A-Za-z]/g;
-let regexpForDistance = /[\d]/g;
+  let nameOfRacer = input.shift().split(", ");
+  let racers = {};
 
-let nameOfRacer = input.shift().split(', ');
-let racers = {};
-
-for(let name of nameOfRacer){
+  for (let name of nameOfRacer) {
     racers[name] = 0;
-}
+  }
 
-while(input[0] !== 'end of race'){
+  while (input[0] !== "end of race") {
     let currentLine = input.shift();
     let char = currentLine.match(regexpForName);
     let num = currentLine.match(regexpForDistance);
 
-    let name = char.join('');
+    let name = char.join("");
     let paths = num.map(Number);
 
     let wholeDistance = 0;
 
-    for(let path of paths){
-        wholeDistance += path;
+    for (let path of paths) {
+      wholeDistance += path;
     }
-    racers[name] !== undefined ? racers[name] += wholeDistance;
-}
+    if (racers[name] !== undefined) {
+      racers[name] += wholeDistance;
+    }
+  }
+  let sorting = Object.entries(racers).sort((a, b) => b[1] - a[1]);
 
+  if (sorting[0]) {
+    console.log(`1st place: ${sorting[0][0]}`);
+  }
 
+  if (sorting[1]) {
+    console.log(`2nd place: ${sorting[1][0]}`);
+  }
+
+  if (sorting[2]) {
+    console.log(`3rd place: ${sorting[2][0]}`);
+  }
 }
 race([
   "George, Peter, Bill, Tom",
