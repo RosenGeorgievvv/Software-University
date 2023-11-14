@@ -10,8 +10,11 @@
 
 function race(input) {
 
+let regexpForName = /[A-Za-z]/g;
+let regexpForDistance = /[\d]/g;
 
-    
+let nameOfRacer = input.shift().split(', ');
+
 }
 race([
   "George, Peter, Bill, Tom",
