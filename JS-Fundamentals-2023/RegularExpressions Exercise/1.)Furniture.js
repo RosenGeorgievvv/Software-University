@@ -23,9 +23,26 @@
 //Solution:
 
 function furniture(input) {
+  let regexp = />>(?<name>[A-Za-z]+)<<(?<price>\d+(?:\.\d+)?)!(?<quantity>\d+)/;
+  let furnitures = [];
+  let totalCount = 0;
 
+  while (input[0] !== "Purchase") {
+    let currentRow = input.shift();
+    let match = regexp.exec(currentRow);
 
+    if(match !== null){
+        let {name, price, quantity} = match.groups;
 
-    
+        price = Number(price);
+        quantity = Number(quantity);
+        totalCount += price * quantity;
+        furnitures.push(name);
+    }
+  }
+  console.log('Bought furniture:');
+
+  furnitures.forEach((item) => console.log(item));
+  console.log(`Total money spend: ${totalCount.toFixed(2)}`);
 }
 furniture([">>Sofa<<312.23!3", ">>TV<<300!5", ">Invalid<<!5", "Purchase"]);
