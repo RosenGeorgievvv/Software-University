@@ -28,6 +28,7 @@ function furniture(input) {
   let totalCount = 0;
 
   while (input[0] !== "Purchase") {
+    
     let currentRow = input.shift();
     let match = regexp.exec(currentRow);
 
