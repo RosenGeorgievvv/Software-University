@@ -22,8 +22,25 @@
 
 function softUniBarIncome(input) {
 
+    let regexp = /%([A-Z][a-z]*)%.*?<(\w+)>.*?\|(\d+)\|.*?(-?\d+(?:\.\d+)?)\$/;
+    let sum = 0;
 
-    
+    while(input[0] !== 'end of shift'){
+        let currentLine = input.shift();
+        let match = regexp.exec(currentLine);
+
+        if(match !== null){
+            let [, name, product, quantity, price] = match;
+
+            quantity = Number(quantity);
+            price = Number(price);
+            let finalSum = price * quantity;
+            sum += finalSum;
+            console.log(`${name}: ${product} - ${finalSum.toFixed(2)}`);
+        }
+    }
+console.log(`Total income: ${sum.toFixed(2)}`);
+
 }
 softUniBarIncome([
   "%George%<Croissant>|2|10.3$",
