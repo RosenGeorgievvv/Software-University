@@ -2,3 +2,9 @@
 
 //Solution:
 
+function matchFullName(input) {
+
+
+    
+}
+matchFullName("Ivan Ivanov");
