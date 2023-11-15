@@ -61,3 +61,7 @@
 // · The initial population and gold of the settlements will be valid 32-bit integers, never negative, or exceed the respective limits.
 
 // · The town names in the events will always be valid towns that should be on your list.
+
+
+
+//Solution:
