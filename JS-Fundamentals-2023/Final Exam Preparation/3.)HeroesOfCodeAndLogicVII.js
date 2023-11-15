@@ -73,3 +73,6 @@
 // · The HP/MP amounts in the commands will never be negative.
 
 // · The hero names in the commands will always be valid members of your party. No need to check that explicitly.
+
+
+//Solution:
