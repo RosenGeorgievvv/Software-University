@@ -21,3 +21,11 @@ function unclePascal(str) {
     console.log(wordsCounter.join(', '));
 }
 unclePascal("SplitMeIfYouCanHaHaYouCantOrYouCan");
+
+
+//secondway:
+
+function pascalCaseSplitter(str) {
+    let splitString = str.split(/(?=[A-Z])/);
+    console.log(splitString.join(', '));
+  }
