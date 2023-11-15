@@ -25,3 +25,6 @@
 // "You have food to last you for: {days} days!"
 
 // · The output for each food item should look like this: "Item: {item name}, Best before: {expiration date}, Nutrition: {calories}"
+
+
+//Solution:
