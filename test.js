@@ -1,21 +1,16 @@
-// function solve(text) {
-//   let regEx = /\b[A-Z][a-z]+[ ][A-Z][a-z]+\b/g;
-//   let matches = text.match(regEx);
+function solve(input){
 
-//   if (matches) {
-//     console.log(matches.join(" "));
-//   }
+    let pattern = /(?<day>\d{2})([\.\-\/])(?<month>[A-Z][a-z]{2})\2(?<year>\d{4})\b/g;
 
-//   console.log(matches);
-// }
-// solve("Ivan Ivanov");
+    let match = pattern.exec(input);
 
-function matchFullName(text) {
-  let regEx = /\b[A-Z][a-z]+[ ][A-Z][a-z]+\b/g;
-  let matches = text.match(regEx);
+    while(match !== null){
+        let day = match.groups.day;
+        let month = match.groups.month;
+        let year = match.groups.year;
 
-  if (matches) {
-    console.log(matches.join(" "));
-  }
+        console.log(`Day: ${day}, Month: ${month}, Year: ${year}`);
+        match = pattern.exec(input);
+    }
 }
-matchFullName("Ivan Ivanov");
+solve("13/Jul/1928", "10-Nov-1934", "25.Dec.1937")
