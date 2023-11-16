@@ -57,6 +57,15 @@ function secretChat(arr) {
             message = firstSubstring + secondSubstring + reversed;
             console.log(message);
         }
+    } else if(currentRow[0] === 'InsertSpace'){
+        let index = +currentRow[1];
+        let adjust = message.substr(0, index);
+        let finalAdjust = message.substr(index);
+        message = adjust + " " + finalAdjust;
+        console.log(message);
+    }else if(currentRow[0] === 'Reveal'){
+        console.log(`You have a new text message: ${message}`);
+        break;
     }
   }
 }
