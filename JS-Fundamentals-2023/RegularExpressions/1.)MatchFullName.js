@@ -14,14 +14,13 @@ function matchFullName(input) {
 }
 matchFullName("Ivan Ivanov");
 
-
 //secondway:
 
 // function matchFullName(text) {
-//     let regEx = /\b[A-Z][a-z]+ [A-Z][a-z]+\b/g;
-//     let matches = text.match(regEx);
+//   let regEx = /\b[A-Z][a-z]+[ ][A-Z][a-z]+\b/g;
+//   let matches = text.match(regEx);
 
-//     for (let name of matches) {
-//         console.log(name);
-//     }
+//   if (matches) {
+//     console.log(matches.join(" "));
+//   }
 // }
