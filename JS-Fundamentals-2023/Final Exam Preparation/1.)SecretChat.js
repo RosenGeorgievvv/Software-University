@@ -28,6 +28,22 @@
 
 // · After the "Reveal" command is received, print this message: "You have a new text message: {message}"
 
-
-
 //Solution:
+
+function secretChat(arr) {
+
+
+
+    
+}
+secretChat([
+  "heVVodar!gniV",
+
+  "ChangeAll:|:V:|:l",
+
+  "Reverse:|:!gnil",
+
+  "InsertSpace:|:5",
+
+  "Reveal",
+]);
