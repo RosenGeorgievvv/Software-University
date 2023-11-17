@@ -41,7 +41,4 @@ function countString(str, search) {
   console.log(words.length);
 }
 countString(
-  "This is a word and it also is a sentence",
-
-  "is"
-);
+  "This is a word and it also is a sentence", "is");
