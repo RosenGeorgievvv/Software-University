@@ -7,4 +7,5 @@ function printChar(str) {
     console.log(char);
   }
 }
+
 printChar("AWord");
