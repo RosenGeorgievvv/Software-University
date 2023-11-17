@@ -27,7 +27,6 @@ function race(input) {
     let name = char.join("");
     let paths = num.map(Number);
 
-    
     let wholeDistance = 0;
 
     for (let path of paths) {
