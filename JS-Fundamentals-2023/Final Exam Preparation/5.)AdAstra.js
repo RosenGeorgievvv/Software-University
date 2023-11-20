@@ -29,36 +29,39 @@
 //Solution:
 
 function adAstra(input) {
+    
+  let text = input[0];
+  let caloriesPerDay = 2000;
 
-let text = input[0];
-let caloriesPerDay = 2000;
+  let pattern = /(\||#)([A-Za-z ]+)\1(\d{2}\/\d{2}\/\d{2})\1(\d+)\1/g;
 
-let pattern = /(\||#)([A-Za-z ]+)\1(\d{2}\/\d{2}\/\d{2})\1(\d+)\1/g;
+  let possibleMatch;
+  let wholeFood = [];
 
-let possibleMatch;
-let wholeFood = [];
-
-while(possibleMatch = pattern.exec(text)){
+  while ((possibleMatch = pattern.exec(text))) {
     wholeFood.push(possibleMatch);
-}
+  }
 
-let totalCal = 0;
+  let totalCal = 0;
 
-for(let food of wholeFood){
+  for (let food of wholeFood) {
     let currCal = Number(food[4]);
     totalCal += currCal;
-}
-let allDaysFood = totalCal / caloriesPerDay;
-console.log(`You have food to last you for: ${Math.floor(allDaysFood)} days!`);
+  }
+  let allDaysFood = totalCal / caloriesPerDay;
+  console.log(
+    `You have food to last you for: ${Math.floor(allDaysFood)} days!`
+  );
 
-for(let items of wholeFood){
+  for (let items of wholeFood) {
     let product = items[2];
     let date = items[3];
     let productCalories = items[4];
-    
-    console.log(`Item: ${product}, Best before: ${date}, Nutrition: ${productCalories}`);
-}
 
+    console.log(
+      `Item: ${product}, Best before: ${date}, Nutrition: ${productCalories}`
+    );
+  }
 }
 adAstra([
   "#Bread#19/03/21#4000#|Invalid|03/03.20||Apples|08/10/20|200||Carrots|06/08/20|500||Not right|6.8.20|5|",
