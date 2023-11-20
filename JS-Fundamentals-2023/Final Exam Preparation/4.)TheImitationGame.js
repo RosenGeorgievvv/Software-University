@@ -27,8 +27,32 @@
 //Solution:
 
 function theImitationGame(arr) {
+  let encryptMessage = arr.shift();
 
+  for (let line of arr) {
+    let [command, firstElement, secondElement] = line.split("|");
 
-    
+    if (command === "ChangeAll") {
+      if (encryptMessage.includes(firstElement)) {
+        let subStr = firstElement;
+        let replaceEl = secondElement;
+        encryptMessage = encryptMessage.split(subStr).join(replaceEl);
+      }
+    } else if (command === "Insert") {
+      let index = Number(firstElement);
+      let value = secondElement;
+
+      let firstSubstring = encryptMessage.substring(0, index);
+      let secondSubstring = encryptMessage.substring(index);
+      encryptMessage = firstSubstring.concat(value, secondSubstring);
+    } else if (command === "Move") {
+      let lettersCount = Number(firstElement);
+
+      let firstSubstring = encryptMessage.substring(0, lettersCount);
+      let secondSubstring = encryptMessage.substring(lettersCount);
+      encryptMessage = secondSubstring.concat(firstSubstring);
+    }
+  }
+  console.log(`The decrypted message is: ${encryptMessage}`);
 }
 theImitationGame(["zzHe", "ChangeAll|z|l", "Insert|2|o", "Move|3", "Decode"]);
