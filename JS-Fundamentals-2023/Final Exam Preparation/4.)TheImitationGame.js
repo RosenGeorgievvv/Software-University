@@ -24,5 +24,11 @@
 
 // · After the "Decode" command is received, print this message: "The decrypted message is: {message}"
 
-
 //Solution:
+
+function theImitationGame(arr) {
+
+
+    
+}
+theImitationGame(["zzHe", "ChangeAll|z|l", "Insert|2|o", "Move|3", "Decode"]);
