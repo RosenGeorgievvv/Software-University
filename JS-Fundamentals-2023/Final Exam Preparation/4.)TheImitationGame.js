@@ -53,6 +53,7 @@ function theImitationGame(arr) {
       encryptMessage = secondSubstring.concat(firstSubstring);
     }
   }
+  
   console.log(`The decrypted message is: ${encryptMessage}`);
 }
 theImitationGame(["zzHe", "ChangeAll|z|l", "Insert|2|o", "Move|3", "Decode"]);
