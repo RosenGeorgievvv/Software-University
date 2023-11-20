@@ -38,6 +38,12 @@
 
 // · Each pair of mirror word must be printed with " <=> " between the words.
 
-
-
 //Solution:
+
+function mirrorWords(str) {
+
+    
+}
+mirrorWords([
+  "@mix#tix3dj#poOl##loOp#wl@@bong&song%4very$long@thong#Part##traP##@@leveL@@Level@##car#rac##tu@pack@@ckap@#rr#sAw##wAs#r#@w1r",
+]);
