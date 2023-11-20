@@ -47,47 +47,47 @@ function mirrorWords(input) {
   let validMatch;
   let validWords = [];
 
-  while(validMatch = pattern.exec(text)){
+  while ((validMatch = pattern.exec(text))) {
     validWords.push(validMatch);
   }
 
-  if(validWords.length === 0){
+  if (validWords.length === 0) {
     console.log("No word pairs found!");
-  }else{
+  } else {
     console.log(`${validWords.length} word pairs found!`);
   }
 
   let wordPairs = [];
 
-  for(let pair of validWords){
+  for (let pair of validWords) {
     let firstWord = pair[2];
     let secondWord = pair[3];
-    let wordToBeReversed = pair[3].split('').reverse().join('');
+    let wordToBeReversed = pair[3].split("").reverse().join("");
     let newArr = [];
 
-    if(firstWord === wordToBeReversed){
-        newArr.push(firstWord, secondWord);
-        wordPairs.push(newArr);
+    if (firstWord === wordToBeReversed) {
+      newArr.push(firstWord, secondWord);
+      wordPairs.push(newArr);
     }
     newArr = [];
   }
-  if(wordPairs.length === 0){
+  if (wordPairs.length === 0) {
     console.log("No mirror words!");
-  }else{
+  } else {
     let arrOfWords = [];
 
-    for(let pair of wordPairs){
-        let firstWord = pair[0];
-        let secondWord = pair[1];
-        let newArr = [];
+    for (let pair of wordPairs) {
+      let firstWord = pair[0];
+      let secondWord = pair[1];
+      let newArr = [];
 
-        newArr.push(firstWord, secondWord);
-        let finalArr = newArr.join(' <=> ');
-        arrOfWords.push(finalArr);
+      newArr.push(firstWord, secondWord);
+      let finalArr = newArr.join(" <=> ");
+      arrOfWords.push(finalArr);
     }
     console.log("The mirror words are:");
 
-    console.log(arrOfWords.join(', '));
+    console.log(arrOfWords.join(", "));
   }
 }
 mirrorWords([
