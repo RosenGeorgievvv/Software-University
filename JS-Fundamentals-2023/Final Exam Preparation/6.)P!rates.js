@@ -62,6 +62,4 @@
 
 // · The town names in the events will always be valid towns that should be on your list.
 
-
-
 //Solution:

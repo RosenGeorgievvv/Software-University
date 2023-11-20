@@ -40,9 +40,55 @@
 
 //Solution:
 
-function mirrorWords(str) {
+function mirrorWords(input) {
+  let text = input[0];
+  let pattern = /(@|#)([A-Za-z]{3,})\1\1([A-Za-z]{3,})\1/g;
 
-    
+  let validMatch;
+  let validWords = [];
+
+  while(validMatch = pattern.exec(text)){
+    validWords.push(validMatch);
+  }
+
+  if(validWords.length === 0){
+    console.log("No word pairs found!");
+  }else{
+    console.log(`${validWords.length} word pairs found!`);
+  }
+
+  let wordPairs = [];
+
+  for(let pair of validWords){
+    let firstWord = pair[2];
+    let secondWord = pair[3];
+    let wordToBeReversed = pair[3].split('').reverse().join('');
+    let newArr = [];
+
+    if(firstWord === wordToBeReversed){
+        newArr.push(firstWord, secondWord);
+        wordPairs.push(newArr);
+    }
+    newArr = [];
+  }
+  if(wordPairs.length === 0){
+    console.log("No mirror words!");
+  }else{
+    let arrOfWords = [];
+
+    for(let pair of wordPairs){
+        let firstWord = pair[0];
+        let secondWord = pair[1];
+        let newArr = [];
+
+        newArr.push(firstWord, secondWord);
+        let finalArr = newArr.join(' <=> ');
+        arrOfWords.push(finalArr);
+    }
+    console.log("The mirror words are:");
+
+    console.log(arrOfWords.join(', '));
+  }
 }
 mirrorWords([
   "@mix#tix3dj#poOl##loOp#wl@@bong&song%4very$long@thong#Part##traP##@@leveL@@Level@##car#rac##tu@pack@@ckap@#rr#sAw##wAs#r#@w1r",
