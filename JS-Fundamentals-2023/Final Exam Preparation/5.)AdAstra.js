@@ -29,7 +29,6 @@
 //Solution:
 
 function adAstra(input) {
-    
   let text = input[0];
   let caloriesPerDay = 2000;
 
