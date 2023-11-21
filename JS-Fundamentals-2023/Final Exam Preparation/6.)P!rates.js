@@ -65,9 +65,93 @@
 //Solution:
 
 function pirates(input) {
+  let finalCommand = input.pop();
+  let sailIndex = input.indexOf("Sail");
 
+  let townsInput = input.slice(0, sailIndex);
+  let actionInput = input.slice(sailIndex + 1);
 
-    
+  let myObj = {};
+
+  for (let town of townsInput) {
+    let [name, population, gold] = town.split("||");
+    population = Number(population);
+    gold = Number(gold);
+
+    if (!myObj[name]) {
+      myObj[name] = {
+        population: 0,
+        gold: 0,
+      };
+    }
+    myObj[name].population += population;
+    myObj[name].gold += gold;
+  }
+  for (let action of actionInput) {
+    let [currAction, town, firstElement, secondElement] = action.split("=>");
+
+    if (currAction === "Plunder") {
+      let peopleCount = Number(firstElement);
+      let gold = Number(secondElement);
+
+      myObj[town].population -= peopleCount;
+      myObj[town].gold -= gold;
+      console.log(
+        `${town} plundered! ${gold} gold stolen, ${peopleCount} citizens killed.`
+      );
+
+      if (myObj[town].population <= 0 || myObj[town].gold <= 0) {
+        delete myObj[town];
+        console.log(`${town} has been wiped off the map!`);
+      }
+    } else if (currAction === "Prosper") {
+      let gold = Number(firstElement);
+
+      if (gold < 0) {
+        console.log("Gold added cannot be a negative number!");
+      } else {
+        myObj[town].gold += gold;
+        console.log(
+          `${gold} gold added to the city treasury. ${town} now has ${myObj[town].gold} gold.`
+        );
+      }
+    }
+  }
+  let nameOfTowns = Object.keys(myObj);
+
+  if (nameOfTowns.length === 0) {
+    console.log(
+      "Ahoy, Captain! All targets have been plundered and destroyed!"
+    );
+  } else {
+    let entries = Object.entries(myObj);
+
+    entries.sort((a, b) => {
+      let townA = a[0];
+      let townB = b[0];
+
+      let townAProp = a[1];
+      let townBProp = b[1];
+
+      if (townAProp.gold !== townBProp.gold) {
+        return townBProp.gold - townAProp.gold;
+      } else {
+        return townA.localeCompare(townB);
+      }
+    });
+    console.log(
+      `Ahoy, Captain! There are ${nameOfTowns.length} wealthy settlements to go to:`
+    );
+
+    for (let currTown of entries) {
+      let currTownName = currTown[0];
+      let currTownProp = currTown[1];
+
+      console.log(
+        `${currTownName} -> Population: ${currTownProp.population} citizens, Gold: ${currTownProp.gold} kg`
+      );
+    }
+  }
 }
 pirates([
   "Tortuga||345000||1250",
