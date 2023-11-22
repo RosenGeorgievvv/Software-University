@@ -14,22 +14,6 @@ function secretChat(arr) {
           message = message.replace(cut, str);
         }
         console.log(message);
-      } else if (currentRow[0] === "Reverse") {
-        let substr = currentRow[1];
-        if (message.includes(substr)) {
-          let index = message.indexOf(substr);
-          let reversed = message
-            .substring(index, index + substr.length)
-            .split("")
-            .reverse()
-            .join("");
-          let firstSubstring = message.substring(0, index);
-          let secondSubstring = message.substring(index + substr.length);
-          message = firstSubstring + secondSubstring + reversed;
-          console.log(message);
-        } else{
-          console.log("error");
-        }
       } 
   }
 solve([
