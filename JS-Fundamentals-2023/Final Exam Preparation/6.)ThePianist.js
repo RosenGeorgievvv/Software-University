@@ -49,6 +49,7 @@ function thePianist(arr) {
         organizer[name] = {
           composer: tokens[2],
           key: tokens[3],
+          
         };
         console.log(
           `${name} by ${tokens[2]} in ${tokens[3]} added to the collection!`
