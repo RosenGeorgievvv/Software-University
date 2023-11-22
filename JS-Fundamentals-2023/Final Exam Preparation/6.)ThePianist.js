@@ -38,6 +38,7 @@ function thePianist(arr) {
     };
   }
 
+  
   while (arr[0] !== "Stop") {
     let tokens = arr.shift().split("|");
     let command = tokens[0];
@@ -74,7 +75,7 @@ function thePianist(arr) {
       }
     }
   }
-  for(let [name, piece] of Object.entries(organizer)){
+  for (let [name, piece] of Object.entries(organizer)) {
     console.log(`${name} -> Composer: ${piece.composer}, Key: ${piece.key}`);
   }
 }
