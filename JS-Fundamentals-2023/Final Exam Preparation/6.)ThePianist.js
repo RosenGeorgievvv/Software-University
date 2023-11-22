@@ -38,7 +38,6 @@ function thePianist(arr) {
     };
   }
 
-  
   while (arr[0] !== "Stop") {
     let tokens = arr.shift().split("|");
     let command = tokens[0];
