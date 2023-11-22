@@ -95,6 +95,7 @@ function heroesOfCodeLogic(input) {
     heroes[heroName] = {
       hitPoints,
       manaPoints,
+      
     };
   }
 
