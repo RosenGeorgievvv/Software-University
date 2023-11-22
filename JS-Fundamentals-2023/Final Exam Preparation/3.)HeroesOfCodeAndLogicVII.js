@@ -74,5 +74,112 @@
 
 // · The hero names in the commands will always be valid members of your party. No need to check that explicitly.
 
-
 //Solution:
+
+function heroesOfCodeLogic(input) {
+  let actions = {
+    CastSpell: castSpell,
+    TakeDamage: takeDamage,
+    Recharge: recharge,
+    Heal: heal,
+  };
+
+  let numberOfHeroes = Number(input.shift());
+  let heroes = {};
+
+  for (let i = 0; i < numberOfHeroes; i++) {
+    let [heroName, hitPoints, manaPoints] = input.shift().split(" ");
+    hitPoints = Number(hitPoints);
+    manaPoints = Number(manaPoints);
+
+    heroes[heroName] = {
+      hitPoints,
+      manaPoints,
+    };
+  }
+
+  while (input[0] !== "End") {
+    let tokens = input.shift().split(" - ");
+    let command = tokens[0];
+    let action = actions[command];
+    action(tokens[1], tokens[2], tokens[3]);
+  }
+
+  function heal(heroName, amount) {
+    amount = Number(amount);
+    let hero = heroes[heroName];
+    let oldValue = hero.hitPoints;
+    hero.hitPoints = Math.min(100, hero.hitPoints + amount);
+    console.log(`${heroName} healed for ${hero.hitPoints - oldValue} HP!`);
+  }
+
+  function castSpell(heroName, mpNeeded, spellName) {
+    mpNeeded = Number(mpNeeded);
+    let hero = heroes[heroName];
+
+    if (hero.manaPoints >= mpNeeded) {
+      hero.manaPoints -= mpNeeded;
+
+      console.log(
+        `${heroName} has successfully cast ${spellName} and now has ${hero.manaPoints} MP!`
+      );
+    } else {
+      console.log(`${heroName} does not have enough MP to cast ${spellName}!`);
+    }
+  }
+
+  function takeDamage(heroName, damage, attacker) {
+    damage = Number(damage);
+    let hero = heroes[heroName];
+
+    hero.hitPoints -= damage;
+
+    if (hero.hitPoints > 0) {
+      console.log(
+        `${heroName} was hit for ${damage} HP by ${attacker} and now has ${hero.hitPoints} HP left!`
+      );
+    } else {
+      delete heroes[heroName];
+      console.log(`${heroName} has been killed by ${attacker}!`);
+    }
+  }
+
+  function recharge(heroName, amount) {
+    amount = Number(amount);
+    let hero = heroes[heroName];
+
+    let oldValue = hero.manaPoints;
+    hero.manaPoints = Math.min(200, hero.manaPoints + amount);
+
+    console.log(`${heroName} recharged for ${hero.manaPoints - oldValue} MP!`);
+  }
+
+  let sortedHeroes = Object.entries(heroes).sort(sortingHeroes);
+
+  function sortingHeroes(a, b) {
+    let [aName, aInfo] = a;
+    let [bName, bInfo] = b;
+    let byHealthDescending = bInfo.hitPoints - aInfo.hitPoints;
+
+    if (byHealthDescending === 0) {
+      return aName.localeCompare(bName);
+    }
+
+    return byHealthDescending;
+  }
+  for (let [heroName, hero] of Object.entries(heroes)) {
+    console.log(`${heroName}`);
+    console.log(`  HP: ${hero.hitPoints}`);
+    console.log(`  MP: ${hero.manaPoints}`);
+  }
+}
+heroesOfCodeLogic([
+  "2",
+  "Solmyr 85 120",
+  "Kyrre 99 50",
+  "Heal - Solmyr - 10",
+  "Recharge - Solmyr - 50",
+  "TakeDamage - Kyrre - 66 - Orc",
+  "CastSpell - Kyrre - 15 - ViewEarth",
+  "End",
+]);
