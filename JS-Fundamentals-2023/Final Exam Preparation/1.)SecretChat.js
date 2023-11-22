@@ -59,6 +59,8 @@ function secretChat(arr) {
         let secondSubstring = message.substring(index + substr.length);
         message = firstSubstring + secondSubstring + reversed;
         console.log(message);
+      } else{
+        console.log("error");
       }
     } else if (currentRow[0] === "InsertSpace") {
       let index = +currentRow[1];
