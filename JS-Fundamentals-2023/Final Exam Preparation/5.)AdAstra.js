@@ -39,6 +39,7 @@ function adAstra(input) {
 
   while ((possibleMatch = pattern.exec(text))) {
     wholeFood.push(possibleMatch);
+    
   }
 
   let totalCal = 0;
