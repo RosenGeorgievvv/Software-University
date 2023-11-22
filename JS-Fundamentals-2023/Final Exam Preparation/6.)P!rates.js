@@ -147,9 +147,7 @@ function pirates(input) {
       let currTownName = currTown[0];
       let currTownProp = currTown[1];
 
-      console.log(
-        `${currTownName} -> Population: ${currTownProp.population} citizens, Gold: ${currTownProp.gold} kg`
-      );
+      console.log(`${currTownName} -> Population: ${currTownProp.population} citizens, Gold: ${currTownProp.gold} kg`);
     }
   }
 }
