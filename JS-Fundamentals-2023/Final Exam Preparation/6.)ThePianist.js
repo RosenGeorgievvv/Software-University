@@ -23,12 +23,60 @@
 // •	For each piece, you will receive a single line of text with information about it.
 // •	Then you will receive multiple commands in the way described above until the command "Stop".
 
-
 //Solution:
 
 function thePianist(arr) {
+  let piecesCount = Number(arr.shift());
+  let organizer = {};
 
+  for (let i = 0; i < piecesCount; i++) {
+    let [name, composer, key] = arr.shift().split("|");
 
+    organizer[name] = {
+      composer,
+      key,
+    };
+  }
+
+  while (arr[0] !== "Stop") {
+    let tokens = arr.shift().split("|");
+    let command = tokens[0];
+    let name = tokens[1];
+    if (command === "Add") {
+      if (organizer[name] !== undefined) {
+        console.log(`${name} is already in the collection!`);
+      } else {
+        organizer[name] = {
+          composer: tokens[2],
+          key: tokens[3],
+        };
+        console.log(
+          `${name} by ${tokens[2]} in ${tokens[3]} added to the collection!`
+        );
+      }
+    } else if (command === "Remove") {
+      if (organizer[name] === undefined) {
+        console.log(
+          `Invalid operation! ${name} does not exist in the collection.`
+        );
+      } else {
+        delete organizer[name];
+        console.log(`Successfully removed ${name}!`);
+      }
+    } else if (command === "ChangeKey") {
+      if (organizer[name] === undefined) {
+        console.log(
+          `Invalid operation! ${name} does not exist in the collection.`
+        );
+      } else {
+        organizer[name].key = tokens[2];
+        console.log(`Changed the key of ${name} to ${tokens[2]}!`);
+      }
+    }
+  }
+  for(let [name, piece] of Object.entries(organizer)){
+    console.log(`${name} -> Composer: ${piece.composer}, Key: ${piece.key}`);
+  }
 }
 thePianist([
   "3",
