@@ -16,17 +16,6 @@ function imitationGame(arr) {
       let firstCut = message.substr(0, index);
       let secondCut = message.substr(index);
       message = firstCut.concat(value, secondCut);
-    } else if (command === "Move") {
-      let lettersCount = Number(firstEl);
-
-      let firstSubstr = message.substr(0, lettersCount);
-      let secondSubstr = message.substr(lettersCount);
-
-      message = secondSubstr + firstSubstr;
-    } else if (command === "Decode") {
-      return;
-    }
-  }
-  console.log(`The decrypted message is: ${message}`);
+    } 
 }
 imitationGame(["zzHe", "ChangeAll|z|l", "Insert|2|o", "Move|3", "Decode"]);
