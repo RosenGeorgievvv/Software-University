@@ -21,14 +21,6 @@ function adAstra(str) {
   console.log(
     `You have food to last you for: ${Math.floor(foodForAllDays)} days!`
   );
-
-  for (let items of allFood) {
-    let product = items[2];
-    let date = items[3];
-    let cals = items[4];
-
-    console.log(`Item: ${product}, Best before: ${date}, Nutrition: ${cals}`);
-  }
 }
 
 adAstra([
