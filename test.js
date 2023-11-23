@@ -1,5 +1,6 @@
 function adAstra(str) {
 
+
     
 }
 adAstra([
