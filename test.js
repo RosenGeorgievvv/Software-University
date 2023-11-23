@@ -12,11 +12,6 @@ function adAstra(str) {
   }
 
   let allCalories = 0;
-
-  for (let food of allFood) {
-    let currentCalories = Number(food[4]);
-    allCalories += currentCalories;
-  }
 }
 
 adAstra([
