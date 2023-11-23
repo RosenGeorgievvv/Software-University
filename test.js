@@ -3,15 +3,6 @@ function adAstra(str) {
   let calsPerDay = 2000;
 
   let pattern = /(\||#)([A-Za-z ]+)\1(\d{2}\/\d{2}\/\d{2})\1(\d+)\1/g;
-
-  let possibleMatch;
-  let allFood = [];
-
-  while ((possibleMatch = pattern.exec(textString))) {
-    allFood.push(possibleMatch);
-  }
-
-  let allCalories = 0;
 }
 
 adAstra([
