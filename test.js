@@ -17,10 +17,6 @@ function adAstra(str) {
     let currentCalories = Number(food[4]);
     allCalories += currentCalories;
   }
-  let foodForAllDays = allCalories / calsPerDay;
-  console.log(
-    `You have food to last you for: ${Math.floor(foodForAllDays)} days!`
-  );
 }
 
 adAstra([
