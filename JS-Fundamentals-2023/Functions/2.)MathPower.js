@@ -5,7 +5,6 @@
 function mathPower(number, power) {
   let start = 1;
 
-  
   for (let i = 0; i < power; i++) {
     start *= number;
   }
