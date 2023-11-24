@@ -14,6 +14,7 @@
 
 function formatGrade(grade) {
   if (grade >= 5.5) {
+    
     console.log(`Excellent (${grade.toFixed(2)})`);
   } else if (grade >= 4.5 && grade < 5.5) {
     console.log(`Very good (${grade.toFixed(2)})`);
