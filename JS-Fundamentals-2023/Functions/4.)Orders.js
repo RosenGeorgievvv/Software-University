@@ -15,7 +15,6 @@
 function orders(product, quantity) {
   let price = 0;
 
-  
   switch (product) {
     case "coffee":
       price = 1.5;
