@@ -56,6 +56,7 @@ function adAstra(input) {
     let product = items[2];
     let date = items[3];
     let productCalories = items[4];
+    
 
     console.log(
       `Item: ${product}, Best before: ${date}, Nutrition: ${productCalories}`
