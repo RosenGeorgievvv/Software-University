@@ -9,5 +9,6 @@ function mathPower(number, power) {
     start *= number;
   }
   console.log(start);
+  
 }
 mathPower(2, 8);
