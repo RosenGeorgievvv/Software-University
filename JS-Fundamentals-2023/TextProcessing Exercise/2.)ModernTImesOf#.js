@@ -33,6 +33,6 @@ function modernTimes(str) {
       result.push(el);
     }
   }
-  result.forEach(element => console.log(element));
+  result.forEach((element) => console.log(element));
 }
 modernTimes("Nowadays everyone uses # to tag a #special word in #socialMedia");
