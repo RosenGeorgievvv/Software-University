@@ -36,6 +36,7 @@ function solve(arr) {
     } else if (command === "Reveal") {
       console.log(`You have a new text message: ${message}`);
       break;
+      
     }
   }
 }
