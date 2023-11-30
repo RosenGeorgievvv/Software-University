@@ -25,7 +25,6 @@ revealWords(
   "softuni is ***** place for learning new programming languages"
 );
 
-
 //second way:
 
 function revealWords(wordsStr, text) {
