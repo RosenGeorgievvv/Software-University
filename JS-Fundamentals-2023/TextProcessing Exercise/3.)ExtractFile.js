@@ -10,10 +10,10 @@ function extractFile(str) {
   let nameOfTheFile = str.substring(index + 1).split(".");
 
   let ext = nameOfTheFile.pop();
-  let template = nameOfTheFile.join('.');
+  let template = nameOfTheFile.join(".");
 
   console.log(`File name: ${template}`);
   console.log(`File extension: ${ext}`);
 }
 extractFile("C:\\Internal\\training-internal\\Template.pptx");
-extractFile('C:\\Projects\\Data-Structures\\LinkedList.cs')
+extractFile("C:\\Projects\\Data-Structures\\LinkedList.cs");
