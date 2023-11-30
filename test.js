@@ -39,6 +39,7 @@ function solve(arr) {
     }
   }
 }
+
 solve([
   "heVVodar!gniV",
 
