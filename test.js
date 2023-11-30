@@ -9,10 +9,33 @@ function solve(arr) {
       let addIndex = secondPart;
 
       while (message.includes(removeIndex)) {
-        let index = message.indexOf(removeIndex);
-        let cut = message.substr(index, index + removeIndex.length);
-        message = message.replace(cut, addIndex);
+        message = message.replace(removeIndex, addIndex);
       }
+      console.log(message);
+    } else if (command === "Reverse") {
+      if (message.includes(firstPart)) {
+        let index = message.indexOf(firstPart);
+        let reversed = message
+          .substr(index, firstPart.length)
+          .split("")
+          .reverse()
+          .join("");
+        let firstCut = message.substr(0, index);
+        let secondCut = message.substr(index + firstPart.length);
+        message = firstCut + secondCut + reversed;
+        console.log(message);
+      } else {
+        console.log("error");
+      }
+    } else if (command === "InsertSpace") {
+      let index = +firstPart;
+      let space = message.substr(0, index);
+      let result = message.substr(index);
+      message = space + " " + result;
+      console.log(message);
+    } else if (command === "Reveal") {
+      console.log(`You have a new text message: ${message}`);
+      break;
     }
   }
 }
