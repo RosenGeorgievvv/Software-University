@@ -7,25 +7,24 @@
 //Solution:
 
 function unclePascal(str) {
-    str = str.split('');
+  str = str.split("");
 
-    let wordsCounter = [];
+  let wordsCounter = [];
 
-    str.forEach(i => {
-        if (i.charCodeAt(0) >= 65 && i.charCodeAt(0) <= 90) {
-            wordsCounter.push(i);
-        } else if (i.charCodeAt(0) >= 97 && i.charCodeAt(0) <= 122) {
-            wordsCounter[wordsCounter.length - 1] += i;
-        }
-    });
-    console.log(wordsCounter.join(', '));
+  str.forEach((i) => {
+    if (i.charCodeAt(0) >= 65 && i.charCodeAt(0) <= 90) {
+      wordsCounter.push(i);
+    } else if (i.charCodeAt(0) >= 97 && i.charCodeAt(0) <= 122) {
+      wordsCounter[wordsCounter.length - 1] += i;
+    }
+  });
+  console.log(wordsCounter.join(", "));
 }
 unclePascal("SplitMeIfYouCanHaHaYouCantOrYouCan");
-
 
 //secondway:
 
 function pascalCaseSplitter(str) {
-    let splitString = str.split(/(?=[A-Z])/);
-    console.log(splitString.join(', '));
-  }
+  let splitString = str.split(/(?=[A-Z])/);
+  console.log(splitString.join(", "));
+}
