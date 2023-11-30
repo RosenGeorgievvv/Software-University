@@ -6,13 +6,19 @@
 
 //Solution:
 
-function boringTask(str){
+function boringTask(str) {
+  const firstLine = str
+    .substring(0, str.length / 2)
+    .split("")
+    .reverse()
+    .join("");
+  const secondLine = str
+    .substring(str.length / 2)
+    .split("")
+    .reverse()
+    .join("");
 
-    const firstLine = str.substring(0, str.length / 2).split('').reverse().join('');
-    const secondLine = str.substring(str.length / 2).split('').reverse().join('');
-
-    console.log(firstLine);
-    console.log(secondLine);
-
+  console.log(firstLine);
+  console.log(secondLine);
 }
-boringTask('tluciffiDsIsihTgnizamAoSsIsihT')
+boringTask("tluciffiDsIsihTgnizamAoSsIsihT");
