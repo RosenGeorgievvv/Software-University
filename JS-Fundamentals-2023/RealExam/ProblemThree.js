@@ -1,6 +1,13 @@
 function janeFollowers(arr) {
 
+    let command = arr.pop();
     let followers = {};
+
+    for()
+
+    
+
+
 }
 
 followers([
