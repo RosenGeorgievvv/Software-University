@@ -1,6 +1,6 @@
-function followers(arr) {
+function janeFollowers(arr) {
 
-    
+    let followers = {};
 }
 
 followers([
