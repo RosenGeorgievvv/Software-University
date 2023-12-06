@@ -15,7 +15,9 @@ function passwordValidator(arr) {
   function isPasswordValid() {
     if (incomePassword.length < 8) {
       console.log("Password must be at least 8 characters long!");
-    }
+      break;
+    } 
+    
 
     for (let i = 0; i < incomePassword.length; i++) {
       let symbol = incomePassword[i];
@@ -86,7 +88,7 @@ function passwordValidator(arr) {
         break;
     }
   }
-  arr.forEach(commandIteration);
+  arr.forEach(comm);
 }
 passwordValidator([
   "invalidpassword*",
