@@ -5,3 +5,6 @@
 // Print on the console the result of the mathematical operation between both numbers and the operator you receive as a string.
 // The input comes as two numbers and a string argument passed to your function.
 // The output should be printed on the console.
+
+
+//Solution:
