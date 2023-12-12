@@ -4,3 +4,6 @@
 // •	Concat(ai) - concatenates the string representations of all elements from the array
 // The input comes as an array of number elements.
 // The output should be printed on the console on a new line for each of the operations.
+
+
+//Solution:
