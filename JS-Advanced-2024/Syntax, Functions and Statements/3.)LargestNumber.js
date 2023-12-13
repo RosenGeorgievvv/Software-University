@@ -5,7 +5,5 @@
 function largestNum(firstNum, secondNum, thirdNum) {
 
 
-
-    
 }
 largestNum(5, -3, 16);
