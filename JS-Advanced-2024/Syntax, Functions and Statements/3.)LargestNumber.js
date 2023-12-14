@@ -10,6 +10,19 @@ function largestNum(firstNum, secondNum, thirdNum) {
 
   //second way:
   let result = Math.max(firstNum, secondNum, thirdNum);
-  console.log(`The largest number is${result}.`);
+  console.log(`The largest number is ${result}.`);
+
+  //third way:
+
+  let final ;
+
+  if(firstNum > secondNum && firstNum > thirdNum){
+    final = firstNum
+  }else if(secondNum > firstNum && secondNum > thirdNum){
+    final = secondNum;
+  }else if(thirdNum > firstNum && thirdNum > secondNum){
+    final = thirdNum;
+  }
+  console.log(`The largest number is ${final}.`);
 }
 largestNum(5, -3, 16);
