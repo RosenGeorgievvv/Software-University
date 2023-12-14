@@ -6,6 +6,7 @@
 
 function circleArea(input) {
   let inputType = typeof input;
+  
   let result;
 
   if (inputType === "number") {
