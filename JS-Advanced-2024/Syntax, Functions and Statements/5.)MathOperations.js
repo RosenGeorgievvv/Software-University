@@ -12,6 +12,7 @@
 function mathOperations(numOne, numTwo, str) {
 
     let sum;
+    
     switch (str) {
         case "+": sum = numOne + numTwo; break;
         case "-": sum = numOne - numTwo; break;
