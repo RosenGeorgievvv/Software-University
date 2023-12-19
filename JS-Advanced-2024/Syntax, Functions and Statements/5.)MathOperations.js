@@ -8,3 +8,10 @@
 
 
 //Solution:
+
+function mathOperations(numOne, numTwo, str) {
+
+    
+
+}
+mathOperations(5, 6, '+')
