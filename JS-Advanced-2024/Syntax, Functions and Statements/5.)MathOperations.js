@@ -21,7 +21,6 @@ function mathOperations(numOne, numTwo, str) {
         case "%": sum = numOne % numTwo; break;
         case "**": sum = numOne ** numTwo; break;
     }
-
     console.log(sum);
 }
 mathOperations(5, 6, '+')
