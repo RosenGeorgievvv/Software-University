@@ -23,4 +23,5 @@ function mathOperations(numOne, numTwo, str) {
     }
     console.log(sum);
 }
+
 mathOperations(5, 6, '+')
