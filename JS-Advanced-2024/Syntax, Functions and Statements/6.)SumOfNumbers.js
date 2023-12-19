@@ -4,3 +4,10 @@
 
 
 //Solution:
+
+function sumOfNumbers(n,m){
+
+    
+
+}
+sumOfNumbers('1', '5')
