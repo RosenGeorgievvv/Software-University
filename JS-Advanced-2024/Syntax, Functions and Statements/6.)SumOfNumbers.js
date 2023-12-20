@@ -5,9 +5,16 @@
 
 //Solution:
 
-function sumOfNumbers(n,m){
+function sumOfNumbers(n, m){
 
-    
+    let numberOne = Number(n);
+    let numberTwo = Number(m);
 
+    let sum;
+
+    for(let i = numberOne; i <= numberTwo; i++){
+        sum += i;
+    }
+return sum;
 }
 sumOfNumbers('1', '5')
