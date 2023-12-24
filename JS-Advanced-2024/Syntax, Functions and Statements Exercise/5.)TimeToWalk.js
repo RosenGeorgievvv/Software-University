@@ -3,3 +3,6 @@
 // Тhe second number is the length of the student's footprint in meters
 // Тhe third number is the student speed in km/h
 // Every 500 meters the student rests and takes a 1-minute break.
+
+
+//Solution:
