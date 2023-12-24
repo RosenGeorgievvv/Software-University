@@ -10,11 +10,11 @@ function sumOfNumbers(n, m){
     let numberOne = Number(n);
     let numberTwo = Number(m);
 
-    let sum;
+    let sum = 0;
 
     for(let i = numberOne; i <= numberTwo; i++){
         sum += i;
     }
 return sum;
 }
-sumOfNumbers('1', '5')
+console.log(sumOfNumbers('1', '5'))
