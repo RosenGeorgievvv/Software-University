@@ -7,3 +7,13 @@
 
 
 //Solution:
+
+function aggElements(arr){
+
+    let mappedArr = arr.map(Number);
+
+    
+
+
+}
+aggElements([1, 2, 3])
