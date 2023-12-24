@@ -5,11 +5,7 @@
 
 //Solution:
 
-function dayOfWeek(month, year){
+function dayOfWeek(str){
 
-    let m = Number(month);
-    let y = Number(year)
-    let date = new Date(y, m, 0).getDate();
-    console.log(date);
 }
-dayOfWeek("1", "2012")
+dayOfWeek('Monday')
