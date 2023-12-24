@@ -7,9 +7,6 @@
 
 function daysInMonth(month, year){
 
-    let m = Number(month);
-    let y = Number(year)
-    let date = new Date(y, m, 0).getDate();
-    console.log(date);
+    console.log(new Date(year, month, 0).getDate());
 }
 daysInMonth("1", "2012")
