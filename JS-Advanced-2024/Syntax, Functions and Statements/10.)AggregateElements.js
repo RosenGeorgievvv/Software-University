@@ -12,8 +12,17 @@ function aggElements(arr){
 
     let mappedArr = arr.map(Number);
 
-    
+    let sumOperation = mappedArr.reduce((a,b) => a + b);
+    console.log(sumOperation);
+    let inverseSum = 0;
 
+    for(let i = 0; i < mappedArr.length; i++){
+        inverseSum += 1 / mappedArr[i];
+    }
+    console.log(inverseSum);
 
+    let concatStr = mappedArr.join('');
+
+    console.log(concatStr);
 }
 aggElements([1, 2, 3])
