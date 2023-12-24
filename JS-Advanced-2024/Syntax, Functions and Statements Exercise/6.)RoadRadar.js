@@ -11,3 +11,5 @@
 // For speeding up to 40 km/h over the limit, the status should be excessive speeding.
 // For anything else, status should be reckless driving.
 // The input comes as 2 string parameters. The first element is the current speed (number), the second element is the area.
+
+//Solution:
