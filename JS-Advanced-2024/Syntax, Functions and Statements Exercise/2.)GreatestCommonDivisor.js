@@ -2,3 +2,9 @@
 // The input comes as two positive integer numbers.
 
 //Solution:
+
+function commonDivisor(firstNum, secondNum){
+
+
+}
+commonDivisor(15, 5);
