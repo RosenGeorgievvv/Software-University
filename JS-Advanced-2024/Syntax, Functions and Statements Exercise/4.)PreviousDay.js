@@ -3,3 +3,9 @@
 // The output must be the return date of the previous day in the format: `{year}-{month}-{day}`
 
 //Solution:
+
+function calculateTheDate(y, m, d){
+
+
+}
+calculateTheDate(2016, 9, 30)
