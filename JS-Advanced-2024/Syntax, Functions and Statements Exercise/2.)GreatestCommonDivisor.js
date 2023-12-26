@@ -3,8 +3,14 @@
 
 //Solution:
 
-function commonDivisor(firstNum, secondNum){
+function commonDivisor(firstNum, secondNum) {
 
-
+    let divisor;
+    while (secondNum !== 0) {
+        divisor = secondNum;
+        secondNum = firstNum % secondNum;
+        firstNum = divisor;
+    }
+    console.log(divisor);
 }
 commonDivisor(15, 5);
