@@ -5,8 +5,20 @@
 //Solution:
 
 function duplicateNums(num){
-
-
+  
+    let sum = 0;
+    let isTrue = true;
+    let digit = num % 10;
     
+    while(num !== 0){
+        let current = num % 10;
+        sum += current;
+        if(current !== digit){
+            isTrue = false;
+        }
+        num = Math.floor(num / 10);
+    }
+    console.log(isTrue);
+    console.log(sum);
 }
 duplicateNums(2222222)
