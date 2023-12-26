@@ -4,3 +4,9 @@
 // Print the weight and the money rounded to two decimal places.
 
 //Solution:
+
+function fruitTask(typeFruit, weightInGrams, pricePerKilo){
+
+
+}
+fruitTask('orange', 2500, 1.80)
