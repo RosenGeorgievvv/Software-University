@@ -10,6 +10,7 @@ function duplicateNums(num){
     let isTrue = true;
     let digit = num % 10;
     
+    
     while(num !== 0){
         let current = num % 10;
         sum += current;
