@@ -6,5 +6,7 @@
 
 function duplicateNums(num){
 
+
+    
 }
 duplicateNums(2222222)
