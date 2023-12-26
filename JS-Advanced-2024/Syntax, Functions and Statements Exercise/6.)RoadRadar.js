@@ -13,3 +13,9 @@
 // The input comes as 2 string parameters. The first element is the current speed (number), the second element is the area.
 
 //Solution:
+
+function speedCalculation(speed, area){
+
+
+}
+speedCalculation(40, 'city')
