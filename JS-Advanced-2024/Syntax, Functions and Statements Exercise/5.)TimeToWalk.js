@@ -7,8 +7,22 @@
 
 //Solution:
 
-function walkingTime(steps, footprintLength, speed){
+function walkingTime(steps, footprintLength, speed) {
 
+    let stepsCount = Number(steps);
+    let footprintNum = Number(footprintLength);
+    let speedCount = Number(speed);
+
+    let convertDistance = stepsCount * footprintNum;
+    let speedInSeconds = speedCount / 3.6;
+    let time = convertDistance / speedInSeconds;
+    let restPeriod = Math.floor(convertDistance / 500);
+
+    let timeInMinutes = Math.floor(time / 60);
+    let timeInSeconds = Math.round(time - (timeInMinutes * 60));
+    let timeInHours = Math.floor(time / 3600);
+
+    console.log((timeInHours < 10 ? "0" : "") + timeInHours + ":" + (timeInMinutes + restPeriod < 10 ? "0" : "") + (timeInMinutes + restPeriod) + ":" + (timeInSeconds < 10 ? "0" : "") + timeInSeconds);
 
 }
 walkingTime(4000, 0.60, 5)
