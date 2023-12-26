@@ -6,6 +6,10 @@
 
 function calculateTheDate(y, m, d){
 
-
+  let previous = new Date(y, m - 1, d - 1);
+  let year = previous.getFullYear();
+  let month = previous.getMonth() + 1;
+  let newDate = previous.getDate();
+  console.log(`${year}-${month}-${newDate}`)
 }
 calculateTheDate(2016, 9, 30)
