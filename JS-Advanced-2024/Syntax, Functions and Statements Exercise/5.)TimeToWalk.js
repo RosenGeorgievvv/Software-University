@@ -6,3 +6,9 @@
 
 
 //Solution:
+
+function walkingTime(steps, footprintLength, speed){
+
+
+}
+walkingTime(4000, 0.60, 5)
