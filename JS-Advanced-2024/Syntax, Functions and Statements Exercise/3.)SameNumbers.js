@@ -3,3 +3,8 @@
 // The input comes as an integer number.
 
 //Solution:
+
+function duplicateNums(num){
+
+}
+duplicateNums(2222222)
