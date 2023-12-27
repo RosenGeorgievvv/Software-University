@@ -7,11 +7,12 @@ function compareAndPrint(x1, y1, x2, y2) {
     const distance2 = calculateDistance(x2, y2, 0, 0);
     const distance3 = calculateDistance(x1, y1, x2, y2);
 
+    
     function calculateDistance(x1, y1, x2, y2) {
         return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
     }
 
-    
+
     function isDistanceValid(x1, y1, x2, y2) {
         const distance = calculateDistance(x1, y1, x2, y2);
         return Number.isInteger(distance);
