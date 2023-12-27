@@ -8,33 +8,9 @@
 
 //Solution:
 
-function cookingTask(str) {
+function cookingTask(input) {
 
-    let num = Number(str[0]);
-
-    for (let i = 1; i < str.length; i++) {
-
-        if (str[i] === 'chop') {
-            num /= 2;
-            console.log(num);
-        }
-        else if (str[i] === 'dice') {
-            num = Math.sqrt(num);
-            console.log(num);
-        }
-        else if (str[i] === 'spice') {
-            num += 1;
-            console.log(num);
-        }
-        else if (str[i] === 'bake') {
-            num *= 3;
-            console.log(num);
-        }
-        else if(str[i] === 'fillet'){
-            num = num - 0.20 * num;
-            console.log(num);
-        }
-    }
+    
 }
-cookingTask(['32', 'chop', 'chop', 'chop', 'chop', 'chop']);
-cookingTask([9, 'dice', 'spice', 'chop', 'bake', 'fillet'])
+cookingTask('32', 'chop', 'chop', 'chop', 'chop', 'chop');
+cookingTask('9', 'dice', 'spice', 'chop', 'bake', 'fillet')
