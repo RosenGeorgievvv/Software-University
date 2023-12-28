@@ -11,6 +11,7 @@ function commonDivisor(firstNum, secondNum) {
         secondNum = firstNum % secondNum;
         firstNum = divisor;
     }
+    
     console.log(divisor);
 }
 commonDivisor(15, 5);
