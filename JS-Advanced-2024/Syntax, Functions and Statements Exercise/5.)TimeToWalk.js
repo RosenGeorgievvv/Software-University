@@ -13,7 +13,6 @@ function walkingTime(steps, footprintLength, speed) {
     let footprintNum = Number(footprintLength);
     let speedCount = Number(speed);
 
-    
     let convertDistance = stepsCount * footprintNum;
     let speedInSeconds = speedCount / 3.6;
     let time = convertDistance / speedInSeconds;
