@@ -34,5 +34,4 @@ function compareAndPrint(x1, y1, x2, y2) {
         console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is invalid`);
     }
 }
-
 compareAndPrint(3, 0, 0, 4)
