@@ -5,7 +5,7 @@
 
 //Solution:
 
-function fruitTask(typeFruit, weightInGrams, pricePerKilo){
+function fruitTask(typeFruit, weightInGrams, pricePerKilo) {
 
     let weight = Number(weightInGrams);
     let price = Number(pricePerKilo);
