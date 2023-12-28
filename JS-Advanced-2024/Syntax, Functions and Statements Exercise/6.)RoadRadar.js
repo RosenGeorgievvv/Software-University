@@ -14,33 +14,33 @@
 
 //Solution:
 
-function speedCalculation(speed, area){
+function speedCalculation(speed, area) {
 
-let message = '';
-let limit = 0;
-let aboveAllowedSpeed = 0;
-let status = '';
+    let message = '';
+    let limit = 0;
+    let aboveAllowedSpeed = 0;
+    let status = '';
 
-switch(area){
-    case "city": limit = 50; break;
-    case "residential": limit = 20; break;
-    case "interstate": limit = 90; break;
-    case "motorway": limit = 130; break;
-    default: break;
-}
-if(speed <= limit && speed > 0){
-    message = `Driving ${speed} km/h in a ${limit} zone`
-}else{
-    aboveAllowedSpeed = speed - limit;
-    if(aboveAllowedSpeed <= 20){
-        status = "speeding";
-    }else if(aboveAllowedSpeed > 20 && aboveAllowedSpeed <= 40){
-        status = 'excessive speeding'
-    }else{
-        status = 'reckless driving'
+    switch (area) {
+        case "city": limit = 50; break;
+        case "residential": limit = 20; break;
+        case "interstate": limit = 90; break;
+        case "motorway": limit = 130; break;
+        default: break;
     }
-    message = `The speed is ${aboveAllowedSpeed} km/h faster than the allowed speed of ${limit} - ${status}`
-}
-console.log(message);
+    if (speed <= limit && speed > 0) {
+        message = `Driving ${speed} km/h in a ${limit} zone`
+    } else {
+        aboveAllowedSpeed = speed - limit;
+        if (aboveAllowedSpeed <= 20) {
+            status = "speeding";
+        } else if (aboveAllowedSpeed > 20 && aboveAllowedSpeed <= 40) {
+            status = 'excessive speeding'
+        } else {
+            status = 'reckless driving'
+        }
+        message = `The speed is ${aboveAllowedSpeed} km/h faster than the allowed speed of ${limit} - ${status}`
+    }
+    console.log(message);
 }
 speedCalculation(40, 'city')
