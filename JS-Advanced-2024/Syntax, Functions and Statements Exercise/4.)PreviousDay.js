@@ -4,7 +4,7 @@
 
 //Solution:
 
-function calculateTheDate(y, m, d){
+function calculateTheDate(y, m, d) {
 
   let previous = new Date(y, m - 1, d - 1);
   let year = previous.getFullYear();
