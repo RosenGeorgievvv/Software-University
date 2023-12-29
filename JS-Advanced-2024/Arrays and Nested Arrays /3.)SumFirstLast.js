@@ -3,3 +3,9 @@
 // The output is the return value of your function and should be a number.
 
 //Solution:
+
+function sumFirstLastNumbers(arr){
+
+
+}
+sumFirstLastNumbers(['20', '30', '40'])
