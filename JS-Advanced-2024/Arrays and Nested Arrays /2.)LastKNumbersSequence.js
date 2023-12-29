@@ -7,7 +7,7 @@
 
 //Solution:
 
-function lastKNumbers(arr){
+function lastKNumbers(n, k){
 
 
 }
