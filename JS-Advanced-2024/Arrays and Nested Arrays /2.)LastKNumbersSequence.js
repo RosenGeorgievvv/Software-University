@@ -6,3 +6,9 @@
 // The output is the return value of your function and should be an array of numbers.
 
 //Solution:
+
+function lastKNumbers(arr){
+
+
+}
+lastKNumbers(6, 3);
