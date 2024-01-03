@@ -3,3 +3,9 @@
 // The output is printed on the console, on a single line separated by space. First print the sum at the main diagonal, then the sum at the secondary diagonal.
 
 //Solution:
+
+function diagonal(arr){
+
+
+}
+diagonal()
