@@ -8,4 +8,5 @@ function biggestEl(arr){
 
 
 }
-biggestEl()
+biggestEl([[20, 50, 10],
+    [8, 33, 145]])
