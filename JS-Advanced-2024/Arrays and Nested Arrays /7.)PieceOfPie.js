@@ -6,3 +6,9 @@
 
 
 //Solution:
+
+function pieceOfPie(arr){
+
+
+}
+pieceOfPie()
