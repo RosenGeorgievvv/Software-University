@@ -6,5 +6,6 @@
 
 function oddPosition(arr){
 
+    
 }
 oddPosition([10, 15, 20, 25])
