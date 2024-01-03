@@ -8,4 +8,5 @@ function diagonal(arr){
 
 
 }
-diagonal()
+diagonal([[20, 40],
+    [10, 60]])
