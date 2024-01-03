@@ -3,3 +3,9 @@
 // The output is the return value of your function. Find the biggest element and return it.
 
 //Solution:
+
+function biggestEl(arr){
+
+
+}
+biggestEl()
