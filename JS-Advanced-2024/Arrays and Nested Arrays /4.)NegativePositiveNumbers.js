@@ -3,3 +3,9 @@
 // The output is printed on the console, each element on a new line.
 
 //Solution:
+
+function negativePositiveNum(arr){
+
+    
+}
+negativePositiveNum([7, -2, 8, 9])
