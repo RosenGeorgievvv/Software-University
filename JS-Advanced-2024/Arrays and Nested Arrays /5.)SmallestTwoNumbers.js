@@ -3,3 +3,9 @@
 // The output is printed on the console on a single line, separated by space.
 
 //Solution:
+
+function smallestTwoNums(arr){
+
+
+}
+smallestTwoNums([30, 15, 50, 5])
