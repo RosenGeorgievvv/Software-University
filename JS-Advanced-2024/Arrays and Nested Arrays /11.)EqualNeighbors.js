@@ -3,3 +3,9 @@
 // The output is the return value of your function. Save the number of equal pairs you find and return it.
 
 //Solution:
+
+function equals(arr){
+
+
+}
+equals()
