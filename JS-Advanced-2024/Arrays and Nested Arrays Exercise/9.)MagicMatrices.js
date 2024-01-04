@@ -3,3 +3,5 @@
 // The input comes as an array of arrays, containing numbers (number 2D matrix). The input numbers will always be positive.
 
 // The output is a Boolean result indicating whether the matrix is magical or not.
+
+//Solution:
