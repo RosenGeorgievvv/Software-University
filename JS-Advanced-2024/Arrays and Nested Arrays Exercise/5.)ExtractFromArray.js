@@ -3,3 +3,6 @@
 // The input comes as an array of numbers.
 
 // The output is the processed array after the filtration, which should be a non-decreasing subset. Return the array of numbers.
+
+
+//Solution:
