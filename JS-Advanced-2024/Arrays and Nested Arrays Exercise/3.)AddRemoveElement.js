@@ -5,3 +5,5 @@
 // The input comes as an array of strings. Each element holds a command.
 
 // The output is the element of the array, each printed on a new line. In case of an empty array, just print "Empty".
+
+//Solution:
