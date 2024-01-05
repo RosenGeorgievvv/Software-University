@@ -9,8 +9,10 @@
 
 function pieceOfPie(pies, start, end){
 
-    
-
+    let firstPart = pies.indexOf(start);
+    let secondPart = pies.indexOf(end) + 1;
+    let result = pies.slice(firstPart, secondPart);
+    return result;
 }
 pieceOfPie(['Pumpkin Pie',
 'Key Lime Pie',
