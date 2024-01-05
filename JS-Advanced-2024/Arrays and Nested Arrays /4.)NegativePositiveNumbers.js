@@ -4,17 +4,18 @@
 
 //Solution:
 
-function negativePositiveNum(arr){
+function negativePositiveNum(arr) {
 
-let result = [];
+    
+    let result = [];
 
-for(let i = 0; i < arr.length; i++){
-    if(arr[i] < 0){
-        result.unshift(arr[i])
-    }else{
-        result.push(arr[i])
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            result.unshift(arr[i])
+        } else {
+            result.push(arr[i])
+        }
     }
-}
-console.log(result.join('\n'))
+    console.log(result.join('\n'))
 }
 negativePositiveNum([7, -2, 8, 9])
