@@ -12,6 +12,5 @@ function biggerHalf(arr){
     let result = arr.slice(mid);
 
     return result
-    
 }
 biggerHalf([4, 7, 2, 5])
