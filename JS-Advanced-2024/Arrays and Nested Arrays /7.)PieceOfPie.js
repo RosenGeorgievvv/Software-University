@@ -7,8 +7,9 @@
 
 //Solution:
 
-function pieceOfPie(arr){
+function pieceOfPie(pies, start, end){
 
+    
 
 }
 pieceOfPie(['Pumpkin Pie',
