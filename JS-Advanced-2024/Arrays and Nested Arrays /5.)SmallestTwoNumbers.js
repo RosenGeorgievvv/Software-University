@@ -9,6 +9,5 @@ function smallestTwoNums(arr){
     let sorted = arr.sort((a, b) => a - b);
     let myArr = sorted.splice(0, 2);
     console.log(myArr.join(' '));
-
 }
 smallestTwoNums([30, 15, 50, 5])
