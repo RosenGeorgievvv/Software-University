@@ -5,3 +5,18 @@
 // The output is the return value of your function and must be an array.
 
 //Solution:
+
+function printNth(arr, num){
+
+}
+printNth(['5',
+
+'20',
+
+'31',
+
+'4',
+
+'20'],
+
+2)
