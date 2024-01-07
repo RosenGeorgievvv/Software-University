@@ -4,23 +4,24 @@
 
 //Solution:
 
-function equals(arr){
-    
+function equals(arr) {
+
     let counter = 0;
+    
     for (let i = 0; i < arr.length; i++) {
-        let row = arr[i];
-        for (let j = 0; j < row.length; j++) {
-            let col = row[j];
- 
+        let line = arr[i];
+        for (let j = 0; j < line.length; j++) {
+            let col = line[j];
+
             if (i !== arr.length - 1) {
-                if (col === row[j + 1]) {
+                if (col === line[j + 1]) {
                     counter++;
                 }
                 if (col === arr[i + 1][j]) {
                     counter++;
                 }
             }
-            else if (col === row[j + 1] || col === arr[i][j + 1]) {
+            else if (col === line[j + 1] || col === arr[i][j + 1]) {
                 counter++;
             }
         }
