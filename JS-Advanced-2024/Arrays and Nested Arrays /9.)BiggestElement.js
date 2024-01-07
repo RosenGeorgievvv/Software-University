@@ -5,7 +5,6 @@
 //Solution:
 
 function biggestEl(arr) {
-
     let result = Number.NEGATIVE_INFINITY;
 
     for (let i = 0; i < arr.length; i++) {
