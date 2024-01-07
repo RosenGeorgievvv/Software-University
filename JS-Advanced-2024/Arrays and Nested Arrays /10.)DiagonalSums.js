@@ -4,9 +4,10 @@
 
 //Solution:
 
-function diagonal(arr){
+function diagonal(arr) {
+
 
 
 }
 diagonal([[20, 40],
-    [10, 60]])
+[10, 60]])
