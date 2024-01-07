@@ -13,9 +13,6 @@ function addRemove(arr){
 
 }
 addRemove(['add',
-
 'add',
-
 'add',
-
 'add'])
