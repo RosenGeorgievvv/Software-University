@@ -4,12 +4,12 @@
 //Solution:
 
 function printDelimiter(arr, str) {
-    
+
     console.log(arr.join(str));
-  }
+}
 printDelimiter(['One',
-'Two',
-'Three',
-'Four',
-'Five'],
-'-')
+    'Two',
+    'Three',
+    'Four',
+    'Five'],
+    '-')
