@@ -6,7 +6,16 @@
 
 function diagonal(arr) {
 
+let diagonalOne = 0;
+let diagonalTwo = 0;
+let indexOne = 0;
+let indexTwo = arr[0].length - 1;
 
+arr.forEach(array => {
+    diagonalOne += array[indexOne++];
+    diagonalTwo += array[indexTwo--];
+})
+console.log(diagonalOne + ' ' + diagonalTwo);
 
 }
 diagonal([[20, 40],
