@@ -10,13 +10,8 @@ function printNth(arr, num){
 
 }
 printNth(['5',
-
 '20',
-
 '31',
-
 '4',
-
 '20'],
-
 2)
