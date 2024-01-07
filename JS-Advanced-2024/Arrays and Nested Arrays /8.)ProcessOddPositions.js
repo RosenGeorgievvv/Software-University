@@ -5,7 +5,6 @@
 //Solution:
 
 function oddPosition(arr){
-
     return arr.filter((a, b) => b % 2 !== 0).map(x => x * 2).reverse().join(' ');
 }
 oddPosition([10, 15, 20, 25])
