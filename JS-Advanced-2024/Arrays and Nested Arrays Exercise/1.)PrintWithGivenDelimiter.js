@@ -2,3 +2,19 @@
 // The output is the elements of the array, printed on the console, each element separated from the others by the given delimiter.
 
 //Solution:
+
+function printDelimiter(arr, str){
+
+
+}
+printDelimiter(['One',
+
+'Two',
+
+'Three',
+
+'Four',
+
+'Five'],
+
+'-')
