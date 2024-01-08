@@ -8,7 +8,7 @@
 
 //Solution:
 
-function addRemove(arr){
+function addRemove(arr) {
     let result = [];
     let currentNum = 1;
 
@@ -30,6 +30,6 @@ function addRemove(arr){
     }
 }
 addRemove(['add',
-'add',
-'add',
-'add'])
+    'add',
+    'add',
+    'add'])
