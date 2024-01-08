@@ -7,8 +7,14 @@
 
 //Solution:
 
-function rotation(arr){
+function rotation(arr, count){
 
+count = count % arr.length;
 
-    
+for(let i = 0; i < count; i++){
+    let lastElement = arr.pop();
+    arr.unshift(lastElement);
+}
+console.log(arr.join(' '));
+
 }
