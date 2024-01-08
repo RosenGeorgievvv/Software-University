@@ -9,9 +9,25 @@
 //Solution:
 
 function addRemove(arr){
+    let result = [];
+    let currentNum = 1;
 
-    
-    
+    for (let command of arr) {
+        if (command === "add") {
+            result.push(currentNum);
+        } else if (command === "remove") {
+            if (result.length > 0) {
+                result.pop();
+            }
+        }
+        currentNum++;
+    }
+
+    if (result.length === 0) {
+        console.log("Empty");
+    } else {
+        console.log(result.join('\n'));
+    }
 }
 addRemove(['add',
 'add',
