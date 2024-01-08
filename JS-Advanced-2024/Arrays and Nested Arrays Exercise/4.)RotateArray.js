@@ -18,12 +18,4 @@ for(let i = 0; i < count; i++){
 console.log(arr.join(' '));
 
 }
-rotation(['1',
-
-'2',
-
-'3',
-
-'4'],
-
-2)
+rotation(['1','2','3','4'], 2)
