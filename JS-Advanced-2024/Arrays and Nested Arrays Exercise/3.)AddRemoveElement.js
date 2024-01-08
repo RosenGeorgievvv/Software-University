@@ -12,6 +12,7 @@ function addRemove(arr){
     let result = [];
     let currentNum = 1;
 
+    
     for (let command of arr) {
         if (command === "add") {
             result.push(currentNum);
