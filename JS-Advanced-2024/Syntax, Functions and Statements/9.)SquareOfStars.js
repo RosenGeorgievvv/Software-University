@@ -10,6 +10,7 @@ function squareStars(num) {
     let star = "* ";
     for (let i = 0; i < num; i++) {
         console.log(`${(star.repeat(num).trim())}`);
+        
     }
 }
 squareStars(7)
