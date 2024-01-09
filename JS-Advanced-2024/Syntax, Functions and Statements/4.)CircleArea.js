@@ -14,6 +14,5 @@ function circleArea(input) {
   } else {
     console.log( `We can not calculate the circle area, because we receive a ${inputType}.`);
   }
-  
 }
 circleArea(5);
