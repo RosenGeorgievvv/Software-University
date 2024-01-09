@@ -5,7 +5,6 @@
 
 function printDelimiter(arr, str) {
     console.log(arr.join(str));
-    
 }
 printDelimiter(['One',
     'Two',
