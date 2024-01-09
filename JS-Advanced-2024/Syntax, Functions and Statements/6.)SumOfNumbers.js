@@ -14,7 +14,6 @@ function sumOfNumbers(n, m){
 
     for(let i = numberOne; i <= numberTwo; i++){
         sum += i;
-        
     }
 return sum;
 }
