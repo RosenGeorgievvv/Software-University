@@ -8,6 +8,7 @@ function largestNum(firstNum, secondNum, thirdNum) {
     `The largest number is ${Math.max(firstNum, secondNum, thirdNum)}.`
   );
 
+  
   //second way:
   let result = Math.max(firstNum, secondNum, thirdNum);
   console.log(`The largest number is ${result}.`);
