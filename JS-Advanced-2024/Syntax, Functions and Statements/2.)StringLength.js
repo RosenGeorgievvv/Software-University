@@ -6,6 +6,7 @@ function strLength(firstStr, secondStr, thirdStr) {
   let sum = firstStr.length + secondStr.length + thirdStr.length;
 
   console.log(sum);
+  
   let average = Math.floor(sum / 3);
   console.log(average);
 }
