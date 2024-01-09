@@ -21,7 +21,6 @@ function aggElements(arr){
     }
     console.log(inverseSum);
 
-    
     let concatStr = mappedArr.join('');
     
     console.log(concatStr);
