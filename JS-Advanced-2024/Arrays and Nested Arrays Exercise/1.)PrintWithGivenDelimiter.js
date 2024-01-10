@@ -11,7 +11,6 @@ function printDelimiter(arr, str) {
 
 
 
-
 }
 printDelimiter(['One',
     'Two',
