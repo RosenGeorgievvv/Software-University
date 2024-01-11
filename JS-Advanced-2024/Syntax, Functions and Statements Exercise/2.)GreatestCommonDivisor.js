@@ -9,7 +9,6 @@ function commonDivisor(firstNum, secondNum) {
 
 
 
-    
     while (secondNum !== 0) {
         divisor = secondNum;
         secondNum = firstNum % secondNum;
