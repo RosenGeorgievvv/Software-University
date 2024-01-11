@@ -12,7 +12,6 @@ function fruitTask(typeFruit, weightInGrams, pricePerKilo) {
 
 
 
-
     let weightInKilo = (weight / 1000);
     let sum = (weightInKilo * price);
     console.log(`I need $${sum.toFixed(2)} to buy ${weightInKilo.toFixed(2)} kilograms ${typeFruit}.`);
