@@ -6,7 +6,6 @@
 function commonDivisor(firstNum, secondNum) {
 
     let divisor;
-
     while (secondNum !== 0) {
         divisor = secondNum;
         secondNum = firstNum % secondNum;
