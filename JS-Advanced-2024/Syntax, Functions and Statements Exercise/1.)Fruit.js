@@ -11,6 +11,7 @@ function fruitTask(typeFruit, weightInGrams, pricePerKilo) {
     let price = Number(pricePerKilo);
 
 
+
     
     let weightInKilo = (weight / 1000);
     let sum = (weightInKilo * price);
