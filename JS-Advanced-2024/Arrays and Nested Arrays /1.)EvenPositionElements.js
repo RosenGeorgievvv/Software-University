@@ -13,7 +13,6 @@ function evenElements(arr){
 
 
 
-        
     }
 console.log(result);
 }
