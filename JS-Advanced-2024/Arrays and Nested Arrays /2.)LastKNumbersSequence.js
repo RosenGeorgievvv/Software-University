@@ -17,6 +17,7 @@ function lastKNumbers(n, k) {
     }
 
 
+
     
     console.log(`[${result.join(', ')}]`);
 }
