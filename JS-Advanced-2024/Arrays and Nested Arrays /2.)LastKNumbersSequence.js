@@ -15,6 +15,7 @@ function lastKNumbers(n, k) {
         let currentNumber = result.slice(startingNumber, startingNumber + k).reduce((acc, val) => acc + val, 0);
         result.push(currentNumber);
     }
+
     
     console.log(`[${result.join(', ')}]`);
 }
