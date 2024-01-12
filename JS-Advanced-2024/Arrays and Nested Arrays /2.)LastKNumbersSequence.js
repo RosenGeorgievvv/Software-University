@@ -16,6 +16,7 @@ function lastKNumbers(n, k) {
         result.push(currentNumber);
     }
 
+
     
     console.log(`[${result.join(', ')}]`);
 }
