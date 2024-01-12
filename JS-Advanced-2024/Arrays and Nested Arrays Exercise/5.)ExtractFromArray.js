@@ -6,3 +6,8 @@
 
 
 //Solution:
+
+function extractArray(arr){
+
+    
+}

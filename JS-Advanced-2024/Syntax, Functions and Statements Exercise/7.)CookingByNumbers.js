@@ -8,33 +8,34 @@
 
 //Solution:
 
-function cookingTask(str) {
+function cookingTask(arr) {
 
-    let num = Number(str[0]);
+    let myStr = arr.split(', ')
+    let num = Number(arr);
+    console.log(myStr.charAt(2));
 
-    for (let i = 1; i < str.length; i++) {
+    for (let i = 1; i < myStr.length; i++) {
 
-        if (str[i] == 'chop') {
+        if (myStr[i] == 'chop') {
             num /= 2;
             console.log(num);
         }
-        else if (str[i] == 'dice') {
+        else if (myStr[i] == 'dice') {
             num = Math.sqrt(num);
             console.log(num);
         }
-        else if (str[i] == 'spice') {
+        else if (myStr[i] == 'spice') {
             num += 1;
             console.log(num);
         }
-        else if (str[i] == 'bake') {
+        else if (myStr[i] == 'bake') {
             num *= 3;
             console.log(num);
         }
         else {
-            num -= 0.20;
+            num = num - 0.20 * num;
             console.log(num);
         }
     }
 }
-
 cookingTask('32', 'chop', 'chop', 'chop', 'chop', 'chop');
