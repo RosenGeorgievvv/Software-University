@@ -10,6 +10,7 @@ function evenElements(arr){
     for(let i = 0; i < arr.length; i+=2){
         result += arr[i] + " "
 
+
         
     }
 console.log(result);
