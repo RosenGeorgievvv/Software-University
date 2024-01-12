@@ -8,31 +8,23 @@
 
 //Solution:
 
-function cookingTask(arr) {
+function cookingTask(...args) {
+    let num = Number(args[0]);
 
-    let myStr = arr.split(', ')
-    let num = Number(arr);
-    console.log(myStr.charAt(2));
-
-    for (let i = 1; i < myStr.length; i++) {
-
-        if (myStr[i] == 'chop') {
+    for (let i = 1; i < args.length; i++) {
+        if (args[i] == 'chop') {
             num /= 2;
             console.log(num);
-        }
-        else if (myStr[i] == 'dice') {
+        } else if (args[i] == 'dice') {
             num = Math.sqrt(num);
             console.log(num);
-        }
-        else if (myStr[i] == 'spice') {
+        } else if (args[i] == 'spice') {
             num += 1;
             console.log(num);
-        }
-        else if (myStr[i] == 'bake') {
+        } else if (args[i] == 'bake') {
             num *= 3;
             console.log(num);
-        }
-        else {
+        } else {
             num = num - 0.20 * num;
             console.log(num);
         }
