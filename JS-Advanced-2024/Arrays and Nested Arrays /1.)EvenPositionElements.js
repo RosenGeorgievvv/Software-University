@@ -11,6 +11,7 @@ function evenElements(arr){
         result += arr[i] + " "
 
 
+
         
     }
 console.log(result);
