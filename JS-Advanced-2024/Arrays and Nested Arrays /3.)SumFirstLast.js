@@ -7,6 +7,7 @@
 function sumFirstLastNumbers(arr) {
     console.log(Number(arr.shift()) + Number(arr.pop()));
 
+
     
 }
 sumFirstLastNumbers(['20', '30', '40'])
