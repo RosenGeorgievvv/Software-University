@@ -15,6 +15,5 @@ sumFirstLastNumbers(['20', '30', '40'])
 
 function sumFirstLastNumbers(arr) {
     console.log(Number(arr[0]) + Number(arr[arr.length - 1]));
-
 }
 sumFirstLastNumbers(['20', '30', '40'])
