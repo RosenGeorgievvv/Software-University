@@ -18,5 +18,6 @@ function sumFirstLastNumbers(arr) {
 
   
     
+    
 }
 sumFirstLastNumbers(['20', '30', '40'])
