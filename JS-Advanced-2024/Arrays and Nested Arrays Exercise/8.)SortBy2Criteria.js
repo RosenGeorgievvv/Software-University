@@ -21,7 +21,6 @@ function sortByCrit(arr){
         return length;
     });
 sortedArray.forEach(e => console.log(e));
-
 }
 sortByCrit(['alpha',
 'beta',

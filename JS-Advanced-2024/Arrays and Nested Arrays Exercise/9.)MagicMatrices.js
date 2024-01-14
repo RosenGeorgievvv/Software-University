@@ -5,3 +5,30 @@
 // The output is a Boolean result indicating whether the matrix is magical or not.
 
 //Solution:
+
+function magic(arr){
+ 
+   let referenceSum = arr[0].reduce((acc, num) => acc + num, 0);
+
+   for (let i = 1; i < arr.length; i++) {
+       let rowSum = arr[i].reduce((acc, num) => acc + num, 0);
+       if (rowSum !== referenceSum) {
+           return false;
+       }
+   }
+
+   for (let j = 0; j < arr[0].length; j++) {
+       let colSum = 0;
+       for (let i = 0; i < arr.length; i++) {
+           colSum += arr[i][j];
+       }
+       if (colSum !== referenceSum) {
+           return false;
+       }
+   }
+
+   return true;
+}
+console.log(magic([[4, 5, 6],
+    [6, 5, 4],
+    [5, 5, 5]]));
