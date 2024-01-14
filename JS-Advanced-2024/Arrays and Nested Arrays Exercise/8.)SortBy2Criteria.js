@@ -6,3 +6,12 @@
 
 
 //Solution:
+
+function sortByCrit(arr){
+
+    
+
+}
+sortByCrit(['alpha',
+'beta',
+'gamma'])
