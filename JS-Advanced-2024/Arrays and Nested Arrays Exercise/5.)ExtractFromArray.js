@@ -16,6 +16,7 @@ function extractArray(arr){
         return [];
     }
 
+    
     for (let i = 1; i < arr.length; i++) {
         const num = arr[i];
         if (num >= maxNumber) {
