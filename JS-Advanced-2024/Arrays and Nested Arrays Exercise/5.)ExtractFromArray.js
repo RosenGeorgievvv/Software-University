@@ -9,7 +9,21 @@
 
 function extractArray(arr){
 
+    let result = [arr[0]];
+    let maxNumber = arr[0];
 
-    
+    if (!arr || arr.length === 0) {
+        return [];
+    }
+
+    for (let i = 1; i < arr.length; i++) {
+        const num = arr[i];
+        if (num >= maxNumber) {
+            maxNumber = num;
+            result.push(num);
+        }
+    }
+
+    return result;
 }
-extractArray([1, 3, 8, 4, 10, 12, 3, 2, 24])
+console.log(extractArray([1, 3, 8, 4, 10, 12, 3, 2, 24]))
