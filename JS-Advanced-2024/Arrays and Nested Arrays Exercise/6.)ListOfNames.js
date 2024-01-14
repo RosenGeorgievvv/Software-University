@@ -7,9 +7,6 @@ function namesList(arr){
 
 }
 namesList(["John",
-
 "Bob",
-
 "Christina",
-
 "Ema"])
