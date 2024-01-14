@@ -5,6 +5,7 @@
 //Solution:
 
 function sortNumbers(arr){
+    
     arr.sort((a, b) => a - b);
 
  let result = arr.reduce((acc, value, index, array) => {
