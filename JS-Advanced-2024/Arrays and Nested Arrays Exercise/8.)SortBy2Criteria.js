@@ -9,7 +9,18 @@
 
 function sortByCrit(arr){
 
-    
+    let sortedArray = arr.sort((a, b) => {
+
+        let length = a.length - b.length;
+
+        if(length === 0){
+            let lowA = a.toLowerCase();
+            let lowB = b.toLowerCase();
+            return lowA.localeCompare(b);
+        }
+        return length;
+    });
+sortedArray.forEach(e => console.log(e));
 
 }
 sortByCrit(['alpha',
