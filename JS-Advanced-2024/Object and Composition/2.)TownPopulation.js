@@ -13,29 +13,30 @@
 
 //Solution:
 
-function townDetails(arr){
+function townDetails(arr) {
 
     const towns = {};
 
-    for(let toStr of arr){
+    for (let toStr of arr) {
         let [name, population] = toStr.split(" <-> ");
         population = Number(population);
 
-        if(towns[name] != undefined){
+        if (towns[name] != undefined) {
             population += towns[name];
         }
         towns[name] = population;
     }
-    for(let town in towns){
-console.log(`${town} : ${towns[town]}`);
-}
+    
+    for (let town in towns) {
+        console.log(`${town} : ${towns[town]}`);
+    }
 }
 townDetails(['Sofia <-> 1200000',
 
-'Montana <-> 20000',
+    'Montana <-> 20000',
 
-'New York <-> 10000000',
+    'New York <-> 10000000',
 
-'Washington <-> 2345000',
+    'Washington <-> 2345000',
 
-'Las Vegas <-> 1000000'])
+    'Las Vegas <-> 1000000'])
