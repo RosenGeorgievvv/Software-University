@@ -34,4 +34,5 @@ function taxesRecords(name, population, treasury) {
             this.treasury -= Math.floor(this.treasury * percent / 100);
         },
     };
+    
 }
