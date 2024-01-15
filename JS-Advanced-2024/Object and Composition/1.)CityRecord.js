@@ -2,7 +2,7 @@
 
 //Solution:
 
-function records(name, population, treasury){
+function records(name, population, treasury) {
 
     let obj = {};
 
@@ -13,5 +13,5 @@ function records(name, population, treasury){
     return obj;
 }
 records('Tortuga',
-7000,
-15000)
+    7000,
+    15000)
