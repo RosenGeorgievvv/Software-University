@@ -2,9 +2,15 @@
 
 //Solution:
 
-function records(input){
+function records(name, population, treasury){
 
+    let obj = {};
 
+    obj.name = name;
+    obj.population = population;
+    obj.treasury = treasury;
+
+    return obj;
 }
 records('Tortuga',
 7000,
