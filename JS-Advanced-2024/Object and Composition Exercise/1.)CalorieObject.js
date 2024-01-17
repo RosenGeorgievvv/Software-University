@@ -11,6 +11,7 @@ function calObject(arr) {
 
     let myObj = {};
 
+    
     for (let i = 0; i < arr.length; i += 2) {
         let name = arr[i];
         let cals = Number(arr[i + 1]);
