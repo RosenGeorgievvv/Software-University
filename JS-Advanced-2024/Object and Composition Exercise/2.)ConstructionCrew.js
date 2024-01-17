@@ -25,3 +25,13 @@
 //     Return the same object that was passed in, modified as necessary
 
 //Solution:
+
+
+function workers(worker) {
+    if (worker.dizziness) {
+        const requiredWater = 0.1 * worker.weight * worker.experience;
+        worker.levelOfHydrated += requiredWater;
+        worker.dizziness = false;
+    }
+    return worker;
+}

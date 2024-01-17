@@ -7,9 +7,15 @@
 
 //Solution:
 
-function calObject(arr){
+function calObject(arr) {
 
+    let myObj = {};
 
-    
+    for (let i = 0; i < arr.length; i += 2) {
+        let name = arr[i];
+        let cals = Number(arr[i + 1]);
+        myObj[name] = cals;
+    }
+    console.log(myObj);
 }
 calObject(['Yoghurt', '48', 'Rise', '138', 'Apple', '52'])
