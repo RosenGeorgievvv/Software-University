@@ -10,3 +10,23 @@
 
 
 //Solution:
+
+function rectangle(width, height, color) {
+    return {
+        widthProp: width,
+        heightProp: height,
+        colorProp: String(color).charAt(0).toUpperCase() + String(color).slice(1),
+        calcArea: function () {
+            return this.widthProp * this.heightProp
+        },
+    }
+}
+let rect = rectangle(4, 5, 'red');
+
+console.log(rect.widthProp);
+
+console.log(rect.heightProp);
+
+console.log(rect.colorProp);
+
+console.log(rect.calcArea());
