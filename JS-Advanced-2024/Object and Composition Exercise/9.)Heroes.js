@@ -17,8 +17,8 @@ function heroes() {
             letter,
             health: 100,
             [stamina]: 100,
-            [attack]: function (msg = "") {
-                console.log(this.letter + msg)
+            [attack]: function (message = "") {
+                console.log(this.letter + message)
                 this[stamina] -= 1
             },
         }
