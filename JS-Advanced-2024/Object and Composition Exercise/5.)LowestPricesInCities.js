@@ -15,3 +15,31 @@
 // The order of output in - order of entrance. See the examples for more info
 
 //Solution:
+
+
+function lowestPrices(arr){
+    let obj = {};
+    for (let row of arr) {
+        let [town, product, price] = row.split(' | ');
+        price = Number(price);
+        obj[product] ? obj[product][town] = price : obj[product] = { [town]: price };
+    }
+
+    for (let key in obj) {
+        let sort = Object.entries(obj[key]).sort((a, b) => a[1] - b[1]);
+        console.log(`${key} -> ${sort[0][1]} (${sort[0][0]})`);
+    }
+}
+lowestPrices(['Sample Town | Sample Product | 1000',
+
+'Sample Town | Orange | 2',
+
+'Sample Town | Peach | 1',
+
+'Sofia | Orange | 3',
+
+'Sofia | Peach | 2',
+
+'New York | Sample Product | 1000.1',
+
+'New York | Burger | 10'])

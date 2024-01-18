@@ -14,3 +14,15 @@
 
 
 //Solution:
+
+function heroicInventoryTask(arr){
+
+    let myArr = [];
+
+    arr.map((x) =>{
+        let [name, level, items] = x.split(' / ');
+        myArr.push({name, level: Number(level), items: items ? items.split(', ') : [] })
+    })
+    console.log(JSON.stringify(myArr));
+}
+heroicInventoryTask(['Jake / 1000 / Gauss, HolidayGrenade'])
