@@ -9,5 +9,6 @@ function extract(content) {
         result.push(match[1]);
         match = pattern.exec(paragraph)
     }
+    
     return result.join("; ")
 }
