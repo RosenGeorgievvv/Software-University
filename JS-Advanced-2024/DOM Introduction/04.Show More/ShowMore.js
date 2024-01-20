@@ -2,6 +2,7 @@ function showText() {
     document.getElementById('text').style.display = 'inline';
     document.getElementById('more').style.display = 'none'
 }
+//secondway:
 
 function showText() {
     let text = document.querySelector("#text");
@@ -9,5 +10,5 @@ function showText() {
     
     let more = document.querySelector("#more");
     more.setAttribute('style', 'display:none;');
-    
+
 }
