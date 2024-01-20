@@ -5,6 +5,7 @@ function showText() {
 
 //secondway:
 
+
 function showText() {
     let text = document.querySelector("#text");
     text.setAttribute('style', 'display:inline;');
