@@ -9,5 +9,5 @@ function colorize() {
             row.style.background = 'teal'
         }
     }
-    
+
 }
