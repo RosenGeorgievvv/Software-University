@@ -7,7 +7,6 @@ function showText() {
 
 
 
-
 function showText() {
     let text = document.querySelector("#text");
     text.setAttribute('style', 'display:inline;');
