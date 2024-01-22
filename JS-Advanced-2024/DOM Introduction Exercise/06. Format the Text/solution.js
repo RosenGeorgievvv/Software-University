@@ -13,7 +13,6 @@ function solve() {
         arr.push(inputSplit[i + j]);
       }
     }
-    
     let paragraph = arr.join('. ') + '.';
     outputArea.innerHTML += `<p>${paragraph}</p>`;
   }
