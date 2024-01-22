@@ -8,6 +8,7 @@ function solve() {
   for (let i = 0; i < inputSplit.length; i += 3) {
     let arr = [];
 
+    
     for (let j = 0; j < 3; j++) {
       if (inputSplit[i + j]) {
         arr.push(inputSplit[i + j]);
