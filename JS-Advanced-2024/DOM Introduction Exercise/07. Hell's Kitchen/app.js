@@ -14,7 +14,7 @@ function solve() {
 
 
 
-   
+
    function getMsgEmp(workers) {
       return workers.map(w => `Name: ${w.worker} With Salary: ${w.salary}`).join(' ');
    }
