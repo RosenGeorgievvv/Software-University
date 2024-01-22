@@ -8,6 +8,7 @@ function solve() {
       document.querySelector('#workers>p').textContent = getMsgEmp(objWinner.workers);
    }
 
+
    
    function getMsgRest(objWinner) {
       return `Name: ${objWinner.name} Average Salary: ${objWinner.avgSalary.toFixed(2)} Best Salary: ${objWinner.maxSalary.toFixed(2)}`;
