@@ -15,7 +15,6 @@ function solve() {
           if (values.some(td => td.textContent.includes(searchText))) {
               row.className = 'select';
           }
-          
       });
       srchField.value = '';
   }
