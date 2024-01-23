@@ -6,5 +6,4 @@ function extractText() {
     for(let node of list){
         textarea.value += node.textContent + '\n';
     }
-
 }
