@@ -1,9 +1,9 @@
 function extractText() {
 
-    let list = document.querySelectorAll("ul#items")
-    let placeArea = document.getElementById('result');
+    let list = document.querySelectorAll('ul#items');
+    let textarea = document.getElementById('result');
 
     for(let node of list){
-        placeArea.value += node.textContent + '\n';
+        textarea.value += node.textContent + '\n';
     }
 }

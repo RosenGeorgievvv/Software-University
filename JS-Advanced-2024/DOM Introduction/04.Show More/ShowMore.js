@@ -13,3 +13,5 @@ function showText() {
     more.setAttribute('style', 'display:none;');
 
 }
+
+
