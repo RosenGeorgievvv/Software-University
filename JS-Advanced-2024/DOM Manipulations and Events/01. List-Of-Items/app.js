@@ -11,5 +11,4 @@ function addItem() {
    document.getElementById('items').appendChild(newLiElement);
 
    document.getElementById('newItemText').value = ''
-
 }
