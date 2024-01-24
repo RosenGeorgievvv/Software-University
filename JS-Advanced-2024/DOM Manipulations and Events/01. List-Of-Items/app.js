@@ -1,3 +1,3 @@
 function addItem() {
-    console.log('TODO:...');
+   let placeInput = document.getElementById("newItemText")
 }
