@@ -1,7 +1,7 @@
 function addItem() {
-   let placeInput = document.getElementById("newItemText");
+   let placeInput = document.getElementById("newItemText").value;
 
-   if(placeInput.value.length === 0){
+   if(placeInput.length === 0){
     return;
    }
    let newLiElement = document.createElement('li');
