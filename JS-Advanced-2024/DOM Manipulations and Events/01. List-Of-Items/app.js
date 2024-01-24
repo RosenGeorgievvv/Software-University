@@ -8,6 +8,5 @@ function addItem() {
 
    newLiElement.appendChild(document.createTextNode(placeInput));
    document.getElementById('items').appendChild(newLiElement);
-
    document.getElementById('newItemText').value = ''
 }
