@@ -4,7 +4,6 @@ function addItem() {
    if(placeInput.value.length === 0){
     return;
    }
-
    let newLiElement = document.createElement('li');
 
    newLiElement.appendChild(document.createTextNode(placeInput));
