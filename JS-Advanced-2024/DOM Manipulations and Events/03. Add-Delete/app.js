@@ -19,7 +19,6 @@ function addItem() {
 
 
 
-
    function onDelete(e){
     let deleteBtn = e.target;
     let liElement = deleteBtn.parentElement;
