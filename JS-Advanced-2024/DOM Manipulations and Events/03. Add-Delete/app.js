@@ -18,6 +18,7 @@ function addItem() {
    newLiElement.appendChild(deleteButton);
 
 
+
    
    function onDelete(e){
     let deleteBtn = e.target;
