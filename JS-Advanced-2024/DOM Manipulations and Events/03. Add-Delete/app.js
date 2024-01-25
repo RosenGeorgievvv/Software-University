@@ -22,5 +22,6 @@ function addItem() {
     let liElement = deleteBtn.parentElement;
     liElement.remove();
    }
+
    
 }
