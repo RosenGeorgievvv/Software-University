@@ -12,5 +12,7 @@ function attachGradientEvents() {
         document.getElementById('result').textContent = percent + "%";
     }
 
-    
+    function out(){
+        document.getElementById('result').textContent = '';
+    }
 }
