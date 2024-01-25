@@ -23,5 +23,4 @@ function addItem() {
     liElement.remove();
    }
 
-
 }
