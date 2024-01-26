@@ -11,6 +11,7 @@ function create(words) {
       divEl.appendChild(pEl);
       contentRef.appendChild(divEl);
    }
+   
 
 
    function clickHandler(event) {
