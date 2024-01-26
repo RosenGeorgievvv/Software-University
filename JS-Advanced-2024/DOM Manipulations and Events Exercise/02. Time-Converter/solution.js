@@ -1,29 +1,29 @@
 function attachEventsListeners() {
-    const buttons = Array.from(document.querySelectorAll("input[type='button]"));
 
-    for (let btn of buttons) {
-        btn.addEventListener('click', convertHandler)
+    const btns = Array.from(document.querySelectorAll("input[type='button']"));
 
+    for (let btn of btns) {
+        btn.addEventListener('click', convertHandler);
     }
 
     function convertHandler(e) {
-        let currentUnitInput = e.currentTarget.parentElement.children[1];
-        let value = Number(currentUnitInput.value);
-        let unit = currentUnitInput.id;
+        let currentInput = e.currentTarget.parentElement.children[1];
+        let value = Number(currentInput.value);
+        let unit = currentInput.id;
 
         switch (unit) {
-            case "days": propagateNewValue(value); break;
-            case "hours": propagateNewValue(value / 24); break;
-            case "minutes": propagateNewValue(value / 24 / 60); break;
-            case "seconds": propagateNewValue(value / 24 / 60 / 60); break;
+            case "days": propNewValue(value); break;
+            case "hours": propNewValue(value / 24); break;
+            case "minutes": propNewValue(value / 24 / 60); break;
+            case "seconds": propNewValue(value / 24 / 60 / 60); break;
         }
     }
 
-    function propagateNewValue(value){
+    function propNewValue(value){
         let inputs = document.querySelectorAll("input[type='text']");
-        inputs[0].value = days;
-        inputs[1].value = days * 24;
-        inputs[2].value = days * 24 * 60;
-        inputs[3].value = days * 24 * 60 * 60;
+        inputs[0].value = value;
+        inputs[1].value = value * 24;
+        inputs[2].value = value * 24 * 60;
+        inputs[3].value = value * 24 * 60 * 60;
     }
 }
