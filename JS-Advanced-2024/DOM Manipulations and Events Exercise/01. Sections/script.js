@@ -12,7 +12,6 @@ function create(words) {
       contentRef.appendChild(divEl);
    }
 
-
    function clickHandler(event) {
       let target = event.currentTarget
       let children = target.children;
