@@ -14,7 +14,6 @@ function create(words) {
 
 
 
-
    function clickHandler(event) {
       let target = event.currentTarget
       let children = target.children;
