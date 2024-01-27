@@ -10,3 +10,60 @@
 
 
 //Solution:
+
+function solve(data) {
+    function cars() {
+        let state = {};
+
+        function create(name, inherit, parentName) {
+            let obj = {};
+            state[name] = obj;
+            if (inherit) {
+                Object.setPrototypeOf(obj, state[parentName])
+            }
+        }
+
+        function set(name, propName, value) {
+            state[name][propName] = value;
+        }
+
+        function print(name) {
+            let obj = state[name];
+            let props = allProps(obj);
+            console.log(props
+                .map(e => `${e[0]}:${e[1]}`)
+                .join(',')
+            );
+        }
+
+        function allProps(obj) {
+            let props = Object.entries(obj)
+            getParentProps(obj);
+            return props;
+
+            function getParentProps(obj) {
+                let prototype = Object.getPrototypeOf(obj);
+                if (Object.getPrototypeOf(prototype)) {
+                    let parentProps = Object.entries(prototype);
+                    props = props.concat(parentProps);
+                    getParentProps(prototype);
+                }
+            }
+        }
+
+        return {
+            create,
+            set,
+            print
+        }
+    }
+
+    let processor = cars();
+
+    data.forEach(element => {
+        let els = element.split(' ');
+        processor[els.splice(0, 1)](...els);
+    });
+}
+
+solve(['create pesho', 'create gosho inherit pesho', 'create stamat inherit gosho', 'set pesho rank number1', 'set gosho nick goshko', 'print stamat']);
