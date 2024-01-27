@@ -8,3 +8,28 @@
 
 
 //Solution:
+
+
+function solve(cmds) {
+    
+    function proc() {
+        let arr = [];
+    }
+
+    function add(str) {
+        arr.push(str);
+    }
+    function remove(str) {
+        arr = arr.filter(x => x !== str);
+    }
+    function print() {
+        console.log(arr.join(', '));
+    }
+
+    return {
+        add,
+        remove,
+        print
+    }
+}
+let proc = 
