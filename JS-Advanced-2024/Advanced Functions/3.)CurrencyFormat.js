@@ -16,7 +16,6 @@ function currencyFormatter(separator, symbol, symbolFirst, value) {
     else return result + ' ' + symbol;
 }
 
-
 let dollarFormatter = formatterFunction(',', '$', true, currencyFormatter);
 console.log(dollarFormatter(5345));   // $ 5345,00
 console.log(dollarFormatter(3.1429)); // $ 3,14
