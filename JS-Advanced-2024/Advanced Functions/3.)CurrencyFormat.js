@@ -9,3 +9,9 @@ function formatterFunction(separator, symbol, firstSymbol, formatter){
     return (sum) => formatter(separator, symbol, firstSymbol, sum);
 }
 
+
+
+let dollarFormatter = createFormatter(',', '$', true, currencyFormatter);
+console.log(dollarFormatter(5345));   // $ 5345,00
+console.log(dollarFormatter(3.1429)); // $ 3,14
+console.log(dollarFormatter(2.709));  // $ 2,71
