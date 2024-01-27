@@ -11,25 +11,34 @@
 
 
 function solve(cmds) {
-    
     function proc() {
         let arr = [];
+
+        function add(srt) {
+            arr.push(srt);
+        }
+
+        function remove(str) {
+            arr = arr.filter(x=>x !== str);
+        }
+
+        function print() {
+            console.log(arr.join(','));
+        }
+        return {
+            add,
+            remove,
+            print
+        };
     }
 
-    function add(str) {
-        arr.push(str);
-    }
-    function remove(str) {
-        arr = arr.filter(x => x !== str);
-    }
-    function print() {
-        console.log(arr.join(', '));
-    }
+    let procVariable = proc();
 
-    return {
-        add,
-        remove,
-        print
-    }
+    cmds.forEach(e => {
+        let [command, value] = e.split(' ');
+        procVariable[command](value);
+    });
 }
-let proc = 
+
+solve(['add hello', 'add again', 'remove hello', 'add again', 'print']);
+solve(['add pesho', 'add george', 'add peter', 'remove peter','print']);
