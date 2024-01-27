@@ -4,3 +4,8 @@
 
 
 //Solution:
+
+function formatterFunction(separator, symbol, firstSymbol, formatter){
+    return (sum) => formatter(separator, symbol, firstSymbol, sum);
+}
+
