@@ -7,7 +7,6 @@ function solve(number){
     return function(num){
         return result + num;
     }
-
 }
 let add7 = solve(7);
 
