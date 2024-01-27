@@ -12,7 +12,6 @@ function solve(input, criteria){
     console.log(employees.map(i => `${counter++}. ${i.first_name} ${i.last_name} - ${i.email}`).join('\n'));
 }
 
-
 solve(`[{
     "id": "1",
     "first_name": "Ardine",
