@@ -16,7 +16,6 @@
 function add(num){
 
     function sum(a){
-
         num += a;
         return sum;
     }
