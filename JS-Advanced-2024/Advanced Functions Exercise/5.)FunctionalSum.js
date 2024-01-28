@@ -25,4 +25,5 @@ function add(num){
     }
     return sum;
 }
+
 console.log(add(1)(6)(-3).toString());
