@@ -21,3 +21,6 @@
 // · All selectors will point to single textbox elements.
 
 // · Use the given skeleton to solve this problem.
+
+//Solution:
+
