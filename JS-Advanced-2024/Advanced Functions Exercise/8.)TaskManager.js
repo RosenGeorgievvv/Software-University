@@ -21,3 +21,64 @@
 
 
 //Solution:
+
+function solve() {
+    let task = document.getElementById('task');
+    let description = document.getElementById('description');
+    let date = document.getElementById('date');
+
+    let [_,colOpen, colInProgress, colComplete] =
+        Array.from(document.querySelectorAll('section'))
+            .map(s=>s.children[1]);
+
+    document.getElementById('add').addEventListener('click', addTask);
+
+    function createElement(type, value, className) {
+        let element =  document.createElement(type);
+        element.textContent = value;
+        if (className){
+            element.classList.add(className);
+        }
+        return element
+    }
+
+    function addTask(ev) {
+        ev.preventDefault();
+        let article = document.createElement('article');
+        article.appendChild(createElement('h3', task.value));
+        article.appendChild(createElement('p', `Description: ${description.value}`));
+        article.appendChild(createElement('p', `Due Date: ${date.value}`));
+
+        let btnWrapper = document.createElement('div');
+        btnWrapper.classList.add('flex');
+
+        let btnStart = createElement('button', 'Start', 'green');
+        let btnDelete = createElement('button', 'Delete', 'red');
+        let btnFinish = createElement('button', 'Finish', 'orange');
+
+        btnStart.addEventListener('click', startHandler);
+        btnDelete.addEventListener('click', deleteHandler);
+        btnFinish.addEventListener('click', finishHandler);
+
+        btnWrapper.appendChild(btnStart);
+        btnWrapper.appendChild(btnDelete);
+
+        article.appendChild(btnWrapper);
+        colOpen.appendChild(article);
+
+        function startHandler() {
+            btnStart.remove();
+            btnWrapper.appendChild(btnFinish);
+            colInProgress.appendChild(article);
+        }
+
+        function deleteHandler() {
+            article.remove();
+        }
+
+        function finishHandler() {
+            btnWrapper.remove();
+            colComplete.appendChild(article);
+        }
+    }
+}
