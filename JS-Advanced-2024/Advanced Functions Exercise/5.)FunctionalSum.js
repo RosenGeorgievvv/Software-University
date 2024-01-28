@@ -9,3 +9,21 @@
 // Output
 
 // Your function needs to return itself with an updated context.
+
+
+//Solution:
+
+function add(num){
+
+    function sum(a){
+
+        num += a;
+        return sum;
+    }
+
+    sum.toString = function(){
+        return num.toString();
+    }
+    return sum;
+}
+console.log(add(1)(6)(-3).toString());
