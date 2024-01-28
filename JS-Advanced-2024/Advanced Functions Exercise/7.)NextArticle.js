@@ -12,3 +12,16 @@
 
 
 //Solution:
+
+
+function getArticles(articles) {
+    let art = articles
+
+    return ()=>{
+        if (art.length > 0){
+            let article = document.createElement('article');
+            article.textContent = art.shift();
+            document.getElementById('content').appendChild(article);
+        }
+    }
+}
