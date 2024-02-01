@@ -46,6 +46,5 @@ function cardsDeck(cards) {
         }
     }
 }
-
 cardsDeck(['AS', '10D', 'KH', '2C']);
 cardsDeck(['5S', '3D', 'QD', '1C']);
