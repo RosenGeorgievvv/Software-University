@@ -24,17 +24,17 @@ function validate() {
     }
 
     function correctPass(password) {
-        let regExp = /^\w{5,15}$/;
-        return regExp.test(password) && password.localeCompare(confirmPassword.value) === 0;
+        let regexp = /^\w{5,15}$/;
+        return regexp.test(password) && password.localeCompare(confirmPassword.value) === 0;
     }
 
     function correctCompanyInfo(companyNumber) {
-        let regExp = /^[0-9]{4}$/;
-        return regExp.test(companyNumber);
+        let regexp = /^[0-9]{4}$/;
+        return regexp.test(companyNumber);
     }
 
-    function validFields(ev) {
-        ev.preventDefault();
+    function validFields(e) {
+        e.preventDefault();
 
         if (!correctUsername(username.value)) {
             arr.push(username);
@@ -54,10 +54,8 @@ function validate() {
                 arr.push(companyNumber);
             }
         }
+        arr.forEach(fld => fld.style.borderColor = 'red');
 
-        arr.forEach(field => field.style.borderColor = 'red');
-
-        document.getElementById('valid').style.display =
-            arr.length ? 'none' : 'block';
+        document.getElementById('valid').style.display = arr.length ? 'none' : 'block';
     }
 }
