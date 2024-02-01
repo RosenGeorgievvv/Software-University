@@ -6,19 +6,19 @@
 
 // sumNumbers.js
 
-// function sum(arr) {
+function sum(arr) {
 
-// let sum = 0;
+let sum = 0;
 
-// for (let num of arr){
+for (let num of arr){
 
-// sum += Number(num);
+sum += Number(num);
 
-// }
+}
 
-// return sum;
+return sum;
 
-// }
+}
 
 // Your tests will be supplied with a function named 'sum()'. It should meet the following requirements:
 
@@ -29,4 +29,5 @@
 
 
 //Solution:
+
 
