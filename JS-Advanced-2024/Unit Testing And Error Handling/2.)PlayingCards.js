@@ -21,7 +21,7 @@
 
 //Solution:
 
-function cards(face, suit){
+function cards(face, suit) {
 
     const suits = {
         S: '\u2660',
@@ -31,19 +31,17 @@ function cards(face, suit){
     };
     const faces = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 
+    if (faces.indexOf(face) == -1) throw Error(`Invalid face ${face}!`);
+    if (!suits.hasOwnProperty(suit)) throw Error(`Invalid suit ${suit}!`);
 
-        if (faces.indexOf(face) == -1) throw Error(`Invalid face ${face}!`);
-        if (!suits.hasOwnProperty(suit)) throw Error(`Invalid suit ${suit}!`);
-
-        return {
-            face,
-            suit: suits[suit],
-            toString() {
-                return this.face + this.suit;
-            }
+    return {
+        face,
+        suit: suits[suit],
+        toString() {
+            return this.face + this.suit;
         }
+    }
 }
-
 cards('1', 'S');
 cards('A', 'S');
 cards('10', 'H');
