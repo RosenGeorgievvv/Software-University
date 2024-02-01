@@ -1,7 +1,7 @@
 const { assert } = require('chai');
 const { lookupChar } = require('../3.)CharLookup');
 
-describe('03-char-lookup Test Suit', () => {
+describe('CharLookup Test Suit', () => {
     it('Kalvados 4th index character is a', () => {
         assert.equal(lookupChar('Kalvados', 4), 'a');
     });

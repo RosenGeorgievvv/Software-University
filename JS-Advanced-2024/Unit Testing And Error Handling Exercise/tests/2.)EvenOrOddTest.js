@@ -1,7 +1,7 @@
 const { assert } = require('chai');
 const { isOddOrEven } = require('../2.)EvenOrOdd');
 
-describe('02-even-or-odd Test Suit', () => {
+describe('EvenOrOdd Test Suit', () => {
     it('even is even string', () => {
         assert.equal(isOddOrEven('even'), 'even');
     });
