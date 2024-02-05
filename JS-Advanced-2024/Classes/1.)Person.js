@@ -22,3 +22,4 @@
 
 // Submit the class definition as is, without wrapping it in any function.
 
+//Solution:
