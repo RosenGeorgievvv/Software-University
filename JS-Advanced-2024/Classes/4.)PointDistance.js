@@ -16,7 +16,6 @@ class Point{
 }
 
 let a1 = new Point(5, 5);
-
 let a2 = new Point(9, 8);
 
 console.log(Point.distance(a1, a2));
