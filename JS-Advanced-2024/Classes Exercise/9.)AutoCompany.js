@@ -1,9 +1,7 @@
-function solve(data) {
+function autoCompanyTask(data) {
     const brands = new Map();
 
-    data
-        .map(r => r.split(' | '))
-        .map(arr => ({ brand: arr[0], model: arr[1], producedCars: Number(arr[2]) }))
+    data.map(r => r.split(' | ')).map(arr => ({ brand: arr[0], model: arr[1], producedCars: Number(arr[2]) }))
         .forEach(car => {
             if (!brands.has(car.brand)) {
                 brands.set(car.brand, new Map());
@@ -17,10 +15,8 @@ function solve(data) {
         });
 
     return Array.from(brands).map(b => b[0] + '\n' + Array.from(b[1]).map(c => `###${c[0]} -> ${c[1]}`).join('\n')).join('\n');
-
-
 }
-console.log(solve(['Audi | Q7 | 1000',
+console.log(autoCompanyTask(['Audi | Q7 | 1000',
     'Audi | Q6 | 100',
     'BMW | X5 | 1000',
     'BMW | X6 | 100',
