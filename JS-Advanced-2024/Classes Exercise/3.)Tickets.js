@@ -27,8 +27,7 @@ function ticketsTask(tickets, orderBy) {
         status: (a, b) => a.status.localeCompare(b.status),
     };
 
-    return tickets.map(Ticket.getTicket)
-        .sort(sorts[orderBy]);
+    return tickets.map(Ticket.getTicket).sort(sorts[orderBy]);
 }
 
 console.log(ticketsTask(['Philadelphia|94.20|available',
