@@ -15,7 +15,6 @@
     Array.prototype.average = function () {
         return this.sum() / this.length;
     }
-
 })()
 
 
