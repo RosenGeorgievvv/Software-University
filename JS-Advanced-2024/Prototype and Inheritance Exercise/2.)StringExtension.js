@@ -32,7 +32,6 @@
         return str;
     };
 
-
 })()
 
 let str = 'my string';
