@@ -13,7 +13,6 @@ function extensibleObject() {
 
     return new ExtensibleObject();
 }
-
 const myObj = extensibleObject();
 console.log(myObj)
 const template = {
