@@ -25,7 +25,6 @@
             return this.toString().slice(0, indexOfSpace) + '...';
         }
     };
-
     String.format = function (str, ...params) {
         params.forEach((p, i) =>
             str = str.replace(`{${i}}`, p));
