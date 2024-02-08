@@ -31,7 +31,6 @@
         return str;
     };
 })()
-
 let str = 'my string';
 str = str.ensureStart('my');
 console.log(str);
