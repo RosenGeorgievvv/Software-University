@@ -31,7 +31,6 @@
             str = str.replace(`{${i}}`, p));
         return str;
     };
-
 })()
 
 let str = 'my string';
