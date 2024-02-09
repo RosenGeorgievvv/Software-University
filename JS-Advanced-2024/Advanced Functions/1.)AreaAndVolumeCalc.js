@@ -15,6 +15,5 @@ function solve(area, vol, input) {
             volume: vol.apply({ x, y, z })
         };
     });
-
     return result;
 }
