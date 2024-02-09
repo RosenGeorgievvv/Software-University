@@ -17,6 +17,5 @@ function solve(area, vol, input) {
     });
 
 
-
     return result;
 }
