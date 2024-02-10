@@ -12,6 +12,7 @@ function solve() {
     function onClick(e) {
         e.preventDefault();
 
+        
         let [firstName, lastName, checkIn, checkOut, peopleCount] = inputFields;
         if (!firstName.value || !lastName.value || !checkIn.value || !checkOut.value || !peopleCount.value) {
             return
