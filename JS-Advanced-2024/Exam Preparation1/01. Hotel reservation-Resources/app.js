@@ -11,7 +11,6 @@ function solve() {
     nextButton.addEventListener("click", onClick);
     function onClick(e) {
         e.preventDefault();
-
         let [firstName, lastName, checkIn, checkOut, peopleCount] = inputFields;
         if (!firstName.value || !lastName.value || !checkIn.value || !checkOut.value || !peopleCount.value) {
             return
