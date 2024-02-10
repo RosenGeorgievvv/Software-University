@@ -17,7 +17,6 @@ function solve() {
 
 
 
-
         if (!firstName.value || !lastName.value || !checkIn.value || !checkOut.value || !peopleCount.value) {
             return
         }
