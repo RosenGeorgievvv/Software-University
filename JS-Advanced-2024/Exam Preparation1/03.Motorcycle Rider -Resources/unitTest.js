@@ -53,11 +53,11 @@ describe('Test suite', function(){
 
     describe('otherSpendings functionality', () =>{
         it('return correct sum without discount', () =>{
-            expect(motorcycleRider.otherSpendings(['helmet', 'jacked'], ['engine oil', 'oil filter'], false)).to.equal('You spend $600 for equipment and consumables!')
+            expect(motorcycleRider.otherSpendings(['helmet', 'jacked'], ['engine oil', 'oil filter'], false)).to.equal('You spend $600.00 for equipment and consumables!')
         });
 
         it('return correct sum with discount', () =>{
-            expect(motorcycleRider.otherSpendings(['helmet', 'jacked'], ['engine oil', 'oil filter'], false)).to.equal('You spend $600 for equipment and consumables!')
+            expect(motorcycleRider.otherSpendings(['helmet', 'jacked'], ['engine oil', 'oil filter'], true)).to.equal('You spend $540.00 for equipment and consumables with 10% discount!')
         });
     });
 });
