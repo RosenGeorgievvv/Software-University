@@ -50,4 +50,14 @@ describe('Test suite', function(){
             expect(() => motorcycleRider.motorcycleShowroom(['50'], 50)).to.throw();
         });
     });
+
+    describe('otherSpendings functionality', () =>{
+        it('return correct sum without discount', () =>{
+            expect(motorcycleRider.otherSpendings(['helmet', 'jacked'], ['engine oil', 'oil filter'], false)).to.equal('You spend $600 for equipment and consumables!')
+        });
+
+        it('return correct sum with discount', () =>{
+            expect(motorcycleRider.otherSpendings(['helmet', 'jacked'], ['engine oil', 'oil filter'], false)).to.equal('You spend $600 for equipment and consumables!')
+        });
+    });
 });
