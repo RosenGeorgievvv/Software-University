@@ -21,6 +21,10 @@ class OnlineShop {
         this.warehouseSpace -= spaceRequired;
     }
 
+    quantityCheck(product, minimalQuantity){
+
+        
+    }
 }
 
 const myOnlineShop = new OnlineShop(500)
