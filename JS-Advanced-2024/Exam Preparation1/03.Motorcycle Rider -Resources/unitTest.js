@@ -59,5 +59,17 @@ describe('Test suite', function(){
         it('return correct sum with discount', () =>{
             expect(motorcycleRider.otherSpendings(['helmet', 'jacked'], ['engine oil', 'oil filter'], true)).to.equal('You spend $540.00 for equipment and consumables with 10% discount!')
         });
+
+        it('throws for non-array equipment', () =>{
+            expect(() => motorcycleRider.otherSpendings('helmet', ['engine oil', 'oil filter'], false)).to.throw();
+        });
+
+        it('throws for non-array consumables', () =>{
+            expect(() => motorcycleRider.otherSpendings(['helmet', 'jacked'], 'engine oil', false)).to.throw();
+        });
+
+        it('throws for non-boolean discount', () =>{
+            expect(() => motorcycleRider.otherSpendings(['helmet', 'jacked'], ['engine oil', 'oil filter'], 0)).to.throw();
+        });
     });
 });
