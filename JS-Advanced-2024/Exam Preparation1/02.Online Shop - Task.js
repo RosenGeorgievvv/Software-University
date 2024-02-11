@@ -1,12 +1,16 @@
 
 
 class OnlineShop {
+    warehouseSpace;
+    products = [];
+    sales = [];
 
     constructor(warehouseSpace) {
         this.warehouseSpace = warehouseSpace;
 
     }
 
+    loadingStore(product, quantity, )
 
 }
 const myOnlineShop = new OnlineShop(500)
