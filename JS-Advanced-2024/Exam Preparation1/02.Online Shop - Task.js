@@ -10,7 +10,9 @@ class OnlineShop {
 
     }
 
-    loadingStore(product, quantity, )
+    loadingStore(product, quantity, spaceRequired){
+        
+    }
 
 }
 const myOnlineShop = new OnlineShop(500)
