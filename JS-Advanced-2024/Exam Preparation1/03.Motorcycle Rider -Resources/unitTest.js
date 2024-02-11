@@ -29,6 +29,7 @@ describe('Test suite', function(){
         });
     });
 
+    
     describe('motorcycleShowroom functionality', () =>{
         it('returns 1 element from array',() =>{
             expect(motorcycleRider.motorcycleShowroom(['50'], 50)).to.equal('There are 1 available motorcycles matching your criteria!')
