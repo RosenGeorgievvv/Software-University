@@ -33,6 +33,10 @@ class OnlineShop {
         }
         if (info.quantity >= minimalQuantity) {
             return `You have enough from product ${product}.`
+        }else{
+            const diff = minimalQuantity - info.quantity;
+            info.quantity = minimalQuantity;
+            return `You added ${diff} more from the ${product} products.`
         }
     }
 }
