@@ -19,11 +19,12 @@ class OnlineShop {
             quantity
         });
         this.warehouseSpace -= spaceRequired;
+        return `The ${product} has been successfully delivered in the warehouse.`
     }
 
     quantityCheck(product, minimalQuantity){
 
-        
+
     }
 }
 
