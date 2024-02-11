@@ -30,31 +30,40 @@ class OnlineShop {
         }
         if (info.quantity >= minimalQuantity) {
             return `You have enough from product ${product}.`
-        }else{
+        } else {
             const diff = minimalQuantity - info.quantity;
             info.quantity = minimalQuantity;
             return `You added ${diff} more from the ${product} products.`
         }
     }
 
-    sellProduct(product){
-      const info = this.findProduct(product);
+    sellProduct(product) {
+        const info = this.findProduct(product);
 
-      info.quantity--;
+        info.quantity--;
 
-      this.sales.push({
-        product,
-        quantity: 1
-      });
-      return `The ${product} has been successfully sold.`
+        this.sales.push({
+            product,
+            quantity: 1
+        });
+        return `The ${product} has been successfully sold.`
     }
 
-    revision(){
-
+    revision() {
+        if (this.sales.length == 0) {
+            throw new Error('There are no sales today!');
+        }
+        const result = [
+            `You sold ${this.sales.length} products today!`,
+            'Products in the warehouse:'
+        ];
+        for (let { product, quantity } of this.products) {
+            result.push(`${product}-${quantity} more left`);
+        }
 
     }
 
-    findProduct(product){
+    findProduct(product) {
         const info = this.products.find(p => p.product == product);
 
         if (!info) {
