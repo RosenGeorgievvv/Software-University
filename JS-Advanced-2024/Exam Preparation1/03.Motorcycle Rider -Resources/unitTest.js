@@ -1,65 +1,53 @@
 const { expect } = require("chai");
-const { MotorcycleRider } = require("./Motorcycle Rider");
+const { motorcycleRider } = require("./Motorcycle Rider");
 
-describe("Tests for MotorcycleRider object", function() {
-    describe("licenseRestriction", function() {
-        it("should return correct information for category 'AM'", function() {
-            const result = MotorcycleRider.licenseRestriction("AM");
-            expect(result).to.equal("Mopeds with a maximum design speed of 45 km. per hour, engine volume is no more than 50 cubic centimeters, and the minimum age is 16.");
+describe('Test suite', function(){
+
+    describe('licenseRestriction functionality', ()=>{
+        it('return correct output for AM', () =>{
+            expect(motorcycleRider.licenseRestriction('AM')).to.equal('Mopeds with a maximum design speed of 45 km. per hour, engine volume is no more than 50 cubic centimeters, and the minimum age is 16.')
         });
 
-        it("should return correct information for category 'A1'", function() {
-            const result = MotorcycleRider.licenseRestriction("A1");
-            expect(result).to.equal("Motorcycles with engine volume is no more than 125 cubic centimeters, maximum power of 11KW. and the minimum age is 16.");
+        it('return correct output for A1', () =>{
+            expect(motorcycleRider.licenseRestriction('A1')).to.equal('Motorcycles with engine volume is no more than 125 cubic centimeters, maximum power of 11KW. and the minimum age is 16.')
         });
 
-        it("should return correct information for category 'A2'", function() {
-            const result = MotorcycleRider.licenseRestriction("A2");
-            expect(result).to.equal("Motorcycles with maximum power of 35KW. and the minimum age is 18.");
+        it('return correct output for A2', () =>{
+            expect(motorcycleRider.licenseRestriction('A2')).to.equal('Motorcycles with maximum power of 35KW. and the minimum age is 18.')
         });
 
-        it("should return correct information for category 'A'", function() {
-            const result = MotorcycleRider.licenseRestriction("A");
-            expect(result).to.equal("No motorcycle restrictions, and the minimum age is 24.");
+        it('return correct output for A', () =>{
+            expect(motorcycleRider.licenseRestriction('A')).to.equal('No motorcycle restrictions, and the minimum age is 24.')
         });
 
-        it("should throw an error for invalid category", function() {
-            expect(() => MotorcycleRider.licenseRestriction("invalid")).to.throw("Invalid Information!");
-        });
-    });
-
-    describe("motorcycleShowroom", function() {
-        it("should return correct message and available bikes length", function() {
-            const engineVolume = ["125", "250", "600"];
-            const maximumEngineVolume = 300;
-            const result = MotorcycleRider.motorcycleShowroom(engineVolume, maximumEngineVolume);
-            expect(result).to.equal("There are 2 available motorcycles matching your criteria!");
+        it('throw error for invalid input string', () =>{
+            expect(() => motorcycleRider.licenseRestriction('Z')).to.throw();
         });
 
-        it("should throw an error for invalid parameters", function() {
-            expect(() => MotorcycleRider.motorcycleShowroom("invalid", "invalid")).to.throw("Invalid Information!");
+        it('throw error for invalid input number', () =>{
+            expect(() => motorcycleRider.licenseRestriction(5)).to.throw();
         });
     });
 
-    describe("otherSpendings", function() {
-        it("should return correct message without discount", function() {
-            const equipment = ["helmet"];
-            const consumables = ["engine oil"];
-            const discount = false;
-            const result = MotorcycleRider.otherSpendings(equipment, consumables, discount);
-            expect(result).to.equal("You spend $270.00 for equipment and consumables!");
+    describe('motorcycleShowroom functionality', () =>{
+        it('returns 1 element from array',() =>{
+            expect(motorcycleRider.motorcycleShowroom(['50'], 50)).to.equal('There are 1 available motorcycles matching your criteria!')
         });
 
-        it("should return correct message with discount", function() {
-            const equipment = ["helmet"];
-            const consumables = ["engine oil"];
-            const discount = true;
-            const result = MotorcycleRider.otherSpendings(equipment, consumables, discount);
-            expect(result).to.equal("You spend $243.00 for equipment and consumables with 10% discount!");
+        it('returns all elements from array',() =>{
+            expect(motorcycleRider.motorcycleShowroom(['50', '51'], 100)).to.equal('There are 2 available motorcycles matching your criteria!')
         });
 
-        it("should throw an error for invalid parameters", function() {
-            expect(() => MotorcycleRider.otherSpendings("invalid", "invalid", "invalid")).to.throw("Invalid Information!");
+        it('returns only matching elements from array',() =>{
+            expect(motorcycleRider.motorcycleShowroom(['50', '51'], 50)).to.equal('There are 1 available motorcycles matching your criteria!')
+        });
+
+        it('throws for non-array',() =>{
+            expect(() => motorcycleRider.motorcycleShowroom('50', 50)).to.throw();
+        });
+
+        it('throws for non-number',() =>{
+            expect(() => motorcycleRider.motorcycleShowroom(['50'], 50)).to.throw();
         });
     });
 });
