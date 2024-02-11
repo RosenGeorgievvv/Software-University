@@ -23,11 +23,8 @@ class OnlineShop {
     }
 
     quantityCheck(product, minimalQuantity) {
-        const info = this.products.find(p => p.product == product);
+        const info = this.findProduct(product);
 
-        if (!info) {
-            throw new Error(`There is no ${product} in the warehouse.`);
-        }
         if (minimalQuantity <= 0) {
             throw new Error('The quantity cannot be zero or negative.')
         }
@@ -38,6 +35,33 @@ class OnlineShop {
             info.quantity = minimalQuantity;
             return `You added ${diff} more from the ${product} products.`
         }
+    }
+
+    sellProduct(product){
+      const info = this.findProduct(product);
+
+      info.quantity--;
+
+      this.sales.push({
+        product,
+        quantity: 1
+      });
+      return `The ${product} has been successfully sold.`
+    }
+
+    revision(){
+
+
+    }
+
+    findProduct(product){
+        const info = this.products.find(p => p.product == product);
+
+        if (!info) {
+            throw new Error(`There is no ${product} in the warehouse.`);
+        }
+
+        return info;
     }
 }
 
