@@ -10,8 +10,8 @@ class OnlineShop {
 
     }
 
-    loadingStore(product, quantity, spaceRequired){
-        if(this.warehouseSpace < spaceRequired){
+    loadingStore(product, quantity, spaceRequired) {
+        if (this.warehouseSpace < spaceRequired) {
             throw new Error('Not enough space in the warehouse.');
         }
         this.products.push({
@@ -22,9 +22,18 @@ class OnlineShop {
         return `The ${product} has been successfully delivered in the warehouse.`
     }
 
-    quantityCheck(product, minimalQuantity){
+    quantityCheck(product, minimalQuantity) {
+        const info = this.products.find(p => p.product == product);
 
-
+        if (!info) {
+            throw new Error(`There is no ${product} in the warehouse.`);
+        }
+        if (minimalQuantity <= 0) {
+            throw new Error('The quantity cannot be zero or negative.')
+        }
+        if (info.quantity >= minimalQuantity) {
+            return `You have enough from product ${product}.`
+        }
     }
 }
 
