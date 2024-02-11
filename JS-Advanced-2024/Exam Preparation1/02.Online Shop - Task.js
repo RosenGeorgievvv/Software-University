@@ -60,7 +60,7 @@ class OnlineShop {
         for (let { product, quantity } of this.products) {
             result.push(`${product}-${quantity} more left`);
         }
-
+        return result.join('\n');
     }
 
     findProduct(product) {
