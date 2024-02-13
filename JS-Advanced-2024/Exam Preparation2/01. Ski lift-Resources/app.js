@@ -29,6 +29,9 @@ function solve() {
         infoTicketUl.appendChild(ticket);
         toggleNextBtn();
 
+        firstNameInput.value = '';
+        
+
     }
 
     function createTicket(firstName, lastName, people, date, days){
@@ -42,6 +45,9 @@ function solve() {
         li.innerHTML += "</article>";
         li.innerHTML += `<button class="edit-btn">Edit</button>`
         li.innerHTML += `<button class="continue-btn">Continue</button>`
+
+
+
 
         return li
     }
