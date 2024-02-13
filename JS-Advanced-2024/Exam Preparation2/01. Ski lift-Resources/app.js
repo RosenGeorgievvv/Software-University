@@ -26,8 +26,9 @@ function solve() {
         }
 
         let ticket = createTicket(firstName, lastName, people, date, days);
-
         infoTicketUl.appendChild(ticket);
+        toggleNextBtn();
+
     }
 
     function createTicket(firstName, lastName, people, date, days){
@@ -39,10 +40,15 @@ function solve() {
         li.innerHTML += `<p>For ${days} days</p>`
         li.innerHTML += `<p>For ${people} people</p>`
         li.innerHTML += "</article>";
+        li.innerHTML += `<button class="edit-btn">Edit</button>`
+        li.innerHTML += `<button class="continue-btn">Continue</button>`
 
         return li
     }
 
+    function toggleNextBtn(){
+        nextButton.disabled = !nextButton.disabled
+    }
 
 }
 
