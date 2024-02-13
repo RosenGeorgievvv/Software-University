@@ -30,7 +30,10 @@ function solve() {
         toggleNextBtn();
 
         firstNameInput.value = '';
-        
+        lastNameInput.value = '';
+        peopleCount.value = '';
+        dateFrom.value = '';
+        daysCount.value = '';
 
     }
 
