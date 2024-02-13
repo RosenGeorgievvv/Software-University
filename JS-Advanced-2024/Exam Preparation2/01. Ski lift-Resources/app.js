@@ -8,6 +8,7 @@ function solve() {
     const dateFrom = document.getElementById('from-date');
     const daysCount = document.getElementById('days-count');
     const nextButton = document.getElementById('next-btn');
+    const infoTicketUl = document.querySelector("#info-ticket ul");
 
     nextButton.addEventListener('click', onClick);
 
@@ -24,6 +25,9 @@ function solve() {
             return;
         }
 
+        let ticket = createTicket(firstName, lastName, people, date, days);
+
+        infoTicketUl.appendChild(ticket)
     }
 
 
