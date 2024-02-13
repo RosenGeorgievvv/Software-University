@@ -10,6 +10,10 @@ const daysCount = document.getElementById('days-count');
 const nextButton = document.getElementById('next-btn');
 
 
+if(!firstNameInput.value || !lastNameInput.value || !peopleCount.value || !dateFrom.value || !daysCount.value){
+    return;
+}
+
 }
 
 
