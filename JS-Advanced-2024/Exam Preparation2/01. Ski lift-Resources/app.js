@@ -27,7 +27,20 @@ function solve() {
 
         let ticket = createTicket(firstName, lastName, people, date, days);
 
-        infoTicketUl.appendChild(ticket)
+        infoTicketUl.appendChild(ticket);
+    }
+
+    function createTicket(firstName, lastName, people, date, days){
+        let li = document.createElement('li');
+        li.classList.add('ticket');
+        li.innerHTML += "<article>"
+        li.innerHTML += `<h3>Name: ${firstName} ${lastName}</h3>`
+        li.innerHTML += `<p>From date: ${date}</p>`
+        li.innerHTML += `<p>For ${days} days</p>`
+        li.innerHTML += `<p>For ${people} people</p>`
+        li.innerHTML += "</article>";
+
+        return li
     }
 
 
