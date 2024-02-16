@@ -20,7 +20,6 @@ const findNewApartment = {
 
 
 
-
   isLargeEnough(apartments, minimalSquareMeters) {
     let resultArr = [];
     if (!Array.isArray(apartments) || typeof minimalSquareMeters !== "number" || apartments.length == 0) {
