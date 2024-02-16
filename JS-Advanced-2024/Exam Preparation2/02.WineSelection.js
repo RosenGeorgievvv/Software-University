@@ -17,7 +17,6 @@ class WineSelection {
         });
         return `You reserved a bottle of ${wineName} ${wineType} wine.`;
     }
-
     payWineBottle(wineName, price) {
         const wine = this.findWineByName(wineName);
         if (!wine) {
