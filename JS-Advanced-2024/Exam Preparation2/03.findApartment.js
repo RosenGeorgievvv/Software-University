@@ -16,6 +16,7 @@ const findNewApartment = {
   },
 
 
+
   
   isLargeEnough(apartments, minimalSquareMeters) {
     let resultArr = [];
