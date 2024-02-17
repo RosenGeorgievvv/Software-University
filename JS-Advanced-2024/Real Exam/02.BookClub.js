@@ -15,7 +15,7 @@ class BookClub {
         }
     }
 
-    
+
     addMember(name) {
         if (this.members.includes(name)) {
             return `Member ${name} is already a part of the book club.`;
