@@ -26,7 +26,6 @@ class BookClub {
 
 
 
-
     assignBookToMember(name, bookTitle) {
         let nameIndex = this.members.indexOf(name);
         if (nameIndex === -1) {
