@@ -20,6 +20,18 @@ describe('planYourTrip', () => {
         it('throw error for invalid destination', () => {
             expect(() => planYourTrip.choosingDestination('Beach', 'Summer', 2024)).to.throw('This destination is not what you are looking for.')
         });
+
+        it('throw an error if destination parameter is undefined', () => {
+            expect(() => planYourTrip.choosingDestination(undefined, 'Winter', 2024)).to.throw("Invalid Information!");
+        });
+
+        it('throw an error if season parameter is undefined', () => {
+            expect(() => planYourTrip.choosingDestination('Ski Resort', undefined, 2024)).to.throw("Invalid Information!");
+        });
+
+        it('throw an error if year parameter is undefined', () => {
+            expect(() => planYourTrip.choosingDestination('Ski Resort', 'Winter', undefined)).to.throw("Invalid Information!");
+        });
     });
 
     describe('exploreOptions', () => {
@@ -34,6 +46,15 @@ describe('planYourTrip', () => {
 
         it('throw error for invalid index', () => {
             expect(() => planYourTrip.exploreOptions(['Skiing', 'Snowboarding'], 2)).to.throw('Invalid Information!');
+        });
+
+        it('throw an error if activities parameter is undefined', () => {
+            expect(() => planYourTrip.exploreOptions(undefined, 1)).to.throw("Invalid Information!");
+        });
+
+        it('throw an error if activityIndex parameter is undefined', () => {
+            let activities = ["Skiing", "Snowboarding", "Winter Hiking"];
+            expect(() => planYourTrip.exploreOptions(activities, undefined)).to.throw("Invalid Information!");
         });
     });
 
@@ -56,16 +77,26 @@ describe('planYourTrip', () => {
             expect(() => planYourTrip.estimateExpenses(-100, 4)).to.throw('Invalid Information!');
         });
 
-        it('throw error for invalid fuel cost', () =>{
+        it('throw error for invalid fuel cost', () => {
             expect(() => planYourTrip.estimateExpenses(100, 'not a number')).to.throw('Invalid Information!');
         });
 
-        it('throw error for negative fuel cost', () =>{
+        it('throw error for negative fuel cost', () => {
             expect(() => planYourTrip.estimateExpenses(100, -4)).to.throw('Invalid Information!');
         });
 
-        it('throw error for zero fuel cost', () =>{
+        it('throw error for zero fuel cost', () => {
             expect(() => planYourTrip.estimateExpenses(100, 0)).to.throw('Invalid Information!')
+        });
+
+        it('throw error if distanceInKilometers parameter is undefined', () => {
+            expect(() => planYourTrip.estimateExpenses(undefined, 4)).to.throw("Invalid Information!");
+        });
+
+        it('throw error if fuelCostPerLiter parameter is undefined', () => {
+            expect(() => planYourTrip.estimateExpenses(100, undefined)).to.throw("Invalid Information!");
         });
     });
 });
+
+
