@@ -15,7 +15,6 @@ class BookClub {
         }
     }
 
-
     addMember(name) {
         if (this.members.includes(name)) {
             return `Member ${name} is already a part of the book club.`;
@@ -25,7 +24,7 @@ class BookClub {
         }
     }
 
-    
+
     assignBookToMember(name, bookTitle) {
         let nameIndex = this.members.indexOf(name);
         if (nameIndex === -1) {
