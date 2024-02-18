@@ -21,6 +21,7 @@ describe("Tests for findNewApartment object", function() {
         });
     });
 
+
     
     describe("isLargeEnough function", function() {
         it("Should return array of apartments with areas equal or bigger than minimalSquareMeters", function() {
