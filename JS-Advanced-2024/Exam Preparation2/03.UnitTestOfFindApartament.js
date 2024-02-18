@@ -29,6 +29,7 @@ describe("Tests for findNewApartment object", function() {
             expect(findNewApartment.isLargeEnough([40, 45], 50)).to.have.lengthOf(0);
         });
 
+        
         it("Should throw an error for invalid input", function() {
             expect(() => { findNewApartment.isLargeEnough("not an array", 50) }).to.throw(Error, "Invalid input!");
             expect(() => { findNewApartment.isLargeEnough([], 50) }).to.throw(Error, "Invalid input!");
