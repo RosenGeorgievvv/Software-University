@@ -7,7 +7,6 @@ describe("Tests for findNewApartment object", function() {
             expect(findNewApartment.isGoodLocation("Sofia", true)).to.equal("You can go on home tour!");
         });
 
-
         it("Should return 'There is no public transport in area.' for a good location without public transportation", function() {
             expect(findNewApartment.isGoodLocation("Plovdiv", false)).to.equal("There is no public transport in area.");
         });
