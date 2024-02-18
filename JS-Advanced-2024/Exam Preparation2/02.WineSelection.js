@@ -22,7 +22,6 @@ class WineSelection {
 
 
 
-
     payWineBottle(wineName, price) {
         const wine = this.findWineByName(wineName);
         if (!wine) {
