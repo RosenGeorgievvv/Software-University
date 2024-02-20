@@ -29,7 +29,6 @@ https://restcountries.com/v2/name/Bulgaria
         ],
 
        
-    
         "subregion": "Eastern Europe",
         "region": "Europe",
         "population": 6927288,
