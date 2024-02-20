@@ -16,7 +16,6 @@ https://restcountries.com/v2/name/Bulgaria
         "topLevelDomain": [
             ".bg"
         ],
-
         "alpha2Code": "BG",
         "alpha3Code": "BGR",
         "callingCodes": [
