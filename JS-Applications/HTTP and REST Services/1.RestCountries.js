@@ -19,7 +19,6 @@ https://restcountries.com/v2/name/Bulgaria
 
 
 
-
         "alpha2Code": "BG",
         "alpha3Code": "BGR",
         "callingCodes": [
