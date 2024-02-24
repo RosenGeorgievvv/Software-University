@@ -32,5 +32,4 @@ function createListItem({html_url, full_name}){
 	anchor.textContent = full_name;
 	item.appendChild(anchor);
 	return item;
-
 }
