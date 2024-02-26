@@ -1,27 +1,26 @@
 function getInfo() {
-
-    let inputField = document.getElementById('stopId');
-    let submitButton = document.getElementById('submit');
+    let baseUrl = 'http://localhost:3030/jsonstore/bus/businfo/';
+    let inputBusStop = document.getElementById('stopId');
     let stopName = document.getElementById('stopName');
-    let busesUl = document.getElementById('buses');
-    let url = 'http://localhost:3030/jsonstore/bus/businfo/:busId'
+    let busesList = document.getElementById('buses');
+    
+    busesList.innerHTML = '';
 
-    fetch(url + `/${inputField.value}`)
-    .then((response) => response.json())
-    .then((data) => {
-        stopName.textContent = data.name;
-        let busesCount = Object.keys(data.buses).length;
-        let listElement = document.createElement('li');
+ 
 
-        for(let [key, value] of Object.entries(data.buses)){
-            let newListElement = document.createElement('li');
-            newListElement.textContent = `Bus ${key} arrives at ${value} minutes`;
-            busesUl.appendChild(newListElement);
-        }
-    })
-    .catch((error) => busesUl.textContent = "Error");
+    fetch(baseUrl + `/${inputBusStop.value}`)
+        .then((res) => res.json())
+        .then((data) => {
+            stopName.textContent = data.name;
+            let numberOfBuses = Object.keys(data.buses).length;
+            let newLi = document.createElement('li');
 
-    inputField.value = '';
-    busesUl.innerHTML = '';
+
+            for (const [key, value] of Object.entries(data.buses)) {
+                let newLi = document.createElement('li');
+                newLi.textContent = `Bus ${key} arrives in ${value} minutes`;
+                busesList.appendChild(newLi);
+            }
+        })
+        .catch((error) => stopName.textContent = 'Error');
 }
-
