@@ -1,7 +1,13 @@
 function solve() {
 
+    let departure = document.getElementById('depart');
+    const arrival = document.getElementById('arrive');
+    const url = 'http://localhost:3030/jsonstore/bus/schedule'
+
+    
     function depart() {
-        console.log('Depart TODO...');
+        departure.addEventListener('click', fetch(url).then((response) => response.json()).then((data) => console.log(data)))
+       
     }
 
     function arrive() {
