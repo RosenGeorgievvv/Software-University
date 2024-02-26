@@ -1,17 +1,36 @@
 function solve() {
 
-    let departure = document.getElementById('depart');
-    const arrival = document.getElementById('arrive');
-    const url = 'http://localhost:3030/jsonstore/bus/schedule'
+    const infoSpanRef = document.querySelector('#info span');
+    const departBtn = document.getElementById('depart');
+    const arriveBtn = document.getElementById('arrive');
+    const url = 'http://localhost:3030/jsonstore/bus/schedule/';
+
+    const stop = {
+        currentStop: '',
+        nextStop: 'depot'
+    }
 
     
-    function depart() {
-        departure.addEventListener('click', fetch(url).then((response) => response.json()).then((data) => console.log(data)))
-              
+   async function depart() {
+        try {
+            const response = await fetch(url + stop.nextStop);
+        const data = await response.json();
+        stop.currentStop = data.name;
+        stop.nextStop = data.next;
+        infoSpanRef.textContent = `Next stop ${stop.currentStop}`;
+        departBtn.disabled = true;
+        arriveBtn.disabled = false; 
+        } catch (error) {
+            infoSpanRef.textContent = "Error";
+            departBtn.disabled = true;
+            arriveBtn.disabled = true;
+        }    
     }
 
     function arrive() {
-        console.log('Arrive TODO...');
+        infoSpanRef.textContent = `Arriving stop ${stop.currentStop}`;
+        departBtn.disabled = false;
+        arriveBtn.disabled = true;
     }
 
     return {
