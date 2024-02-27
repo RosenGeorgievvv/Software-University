@@ -10,7 +10,7 @@ function attachEvents() {
     const forecast = document.getElementById('forecast');
 
     document.getElementById('submit').addEventListener('click', getWeather);
-      
+       
     async function getWeather() {
         try {
             const url = `http://localhost:3030/jsonstore/forecaster/locations`;
