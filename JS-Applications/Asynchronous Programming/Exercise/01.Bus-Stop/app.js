@@ -5,6 +5,7 @@ function getInfo() {
     let busesList = document.getElementById('buses');
     
     busesList.innerHTML = '';
+    stopName.textContent = '';
 
  
 
