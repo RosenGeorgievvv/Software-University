@@ -13,8 +13,9 @@ function attachEvents() {
         let data = {
             method: 'POST',
             headers: {
-                
-            }
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({author: name, content: text})
         }
 
 
