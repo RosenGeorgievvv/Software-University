@@ -10,6 +10,12 @@ function attachEvents() {
         let name = nameRef.value;
         let text = textRef.value;
 
+        let data = {
+            method: 'POST',
+            headers: {
+                
+            }
+        }
 
 
     }
