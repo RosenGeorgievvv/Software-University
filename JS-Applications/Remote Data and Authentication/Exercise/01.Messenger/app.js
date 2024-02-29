@@ -4,7 +4,7 @@ function attachEvents() {
     const url = "http://localhost:3030/jsonstore/messenger";
 
 
-    function onSubmit(e) {
+    async function onSubmit(e) {
         let nameRef = document.querySelector("input[name='author']");
         let textRef = document.querySelector("input[name='content']");
         let name = nameRef.value;
@@ -15,14 +15,17 @@ function attachEvents() {
             headers: {
                 "Content-type": "application/json"
             },
-            body: JSON.stringify({author: name, content: text})
+            body: JSON.stringify({ author: name, content: text })
         }
 
+        let res = await fetch(url, data);
 
     }
 
-    function onLoadMsg(e) {
+    async function onLoadMsg(e) {
 
+        let response = await fetch(url);
+        let data = await response.json();
     }
 
 
