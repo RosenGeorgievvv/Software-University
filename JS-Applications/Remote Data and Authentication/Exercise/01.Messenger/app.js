@@ -26,9 +26,11 @@ function attachEvents() {
 
         let response = await fetch(url);
         let data = await response.json();
+        let textAreaRef = document.getElementById('messages');
+        Object.values(data).forEach(rec =>{
+            textAreaRef.value += `${rec.author}: ${rec.content}\n`;
+        })
     }
-
-
 }
 
 attachEvents();
