@@ -7,6 +7,25 @@ function attachEvents() {
     async function onCreateRecord(e){
         let personRef = document.getElementById('person');
         let phoneRef = document.getElementById('phone');
+
+        let person = personRef.value;
+        let phone = phoneRef.value;
+
+        if(!person || !phone){
+            return;
+        }
+
+        let data = {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({person, phone})
+        }
+        await fetch(url, data);
+        personRef.value = '';
+        phoneRef.value = '';
+        onLoadAllRecords();
     }
 
 
@@ -29,7 +48,6 @@ function attachEvents() {
         btn.addEventListener('click', onDelete);
         li.appendChild(btn);
         ulRef.appendChild(li);
-
 
     }
     async function onDelete(e) {
