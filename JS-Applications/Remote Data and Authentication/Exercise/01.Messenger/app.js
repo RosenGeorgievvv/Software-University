@@ -18,15 +18,17 @@ function attachEvents() {
             body: JSON.stringify({ author: name, content: text })
         }
 
-        let res = await fetch(url, data);
-
+        await fetch(url, data);
+        nameRef.value = '';
+        textRef.value = '';
     }
 
     async function onLoadMsg(e) {
-
+        let textAreaRef = document.getElementById('messages');
+        textAreaRef.value = '';
         let response = await fetch(url);
         let data = await response.json();
-        let textAreaRef = document.getElementById('messages');
+        
         Object.values(data).forEach(rec =>{
             textAreaRef.value += `${rec.author}: ${rec.content}\n`;
         })
