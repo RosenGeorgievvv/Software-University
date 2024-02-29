@@ -32,6 +32,7 @@ function attachEvents() {
         Object.values(data).forEach(rec =>{
             textAreaRef.value += `${rec.author}: ${rec.content}\n`;
         })
+        textAreaRef.value = textAreaRef.value.trim();
     }
 }
 
