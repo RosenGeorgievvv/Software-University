@@ -48,8 +48,8 @@ function attachEvents() {
         btn.addEventListener('click', onDelete);
         li.appendChild(btn);
         ulRef.appendChild(li);
-
     }
+    
     async function onDelete(e) {
         let id = e.target.dataset.id;
         await fetch(url + "/" + id, { method: "DELETE" });
