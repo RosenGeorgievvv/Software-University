@@ -1,6 +1,8 @@
 function attachEvents() {
   document.getElementById('refresh').addEventListener('click', onLoadMsg);
   document.getElementById('submit').addEventListener('click', onSubmit)
+const url = "http://localhost:3030/jsonstore/messenger";
+
 
 function onSubmit(e){
     let nameRef = document.querySelector("input[name='author']");
@@ -8,7 +10,7 @@ function onSubmit(e){
     let name = nameRef.value;
     let text = textRef.value;
 
-    
+
 
 }
 
