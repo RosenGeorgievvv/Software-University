@@ -9,7 +9,7 @@ submitBtn.addEventListener('click', onSubmitStudent);
 
 function onSubmitStudent({firstName, lastName, facultyNumber, grade}){
     
-
+ 
 }
 
 function createElement(type, text){
