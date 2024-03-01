@@ -8,7 +8,7 @@ submitBtn.addEventListener('click', onSubmitStudent);
 
 
 function onSubmitStudent({firstName, lastName, facultyNumber, grade}){
- 
+  
 
 }
 
