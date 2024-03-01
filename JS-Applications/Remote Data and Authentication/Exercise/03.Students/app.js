@@ -13,7 +13,7 @@ function onSubmitStudent({firstName, lastName, facultyNumber, grade}){
 }
 
 function createElement(type, text){
-     
+      
 }
 
 async function sendStudent(e){
