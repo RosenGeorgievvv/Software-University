@@ -1,1 +1,1 @@
-console.log('My requests...')
+document.getElementById('editForm').style.display = "none";
