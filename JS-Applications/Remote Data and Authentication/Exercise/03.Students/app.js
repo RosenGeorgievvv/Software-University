@@ -54,6 +54,5 @@ async function sendStudent(e){
         headers: { 'Content-type': 'application/json'},
         body: JSON.stringify({firstName, lastName, facultyNumber, grade})
     })
-
     return getStudents();
 }
