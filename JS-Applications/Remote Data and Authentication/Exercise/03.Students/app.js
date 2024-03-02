@@ -2,8 +2,6 @@
 const url = "http://localhost:3030/jsonstore/collections/students";
 const submitBtn = document.getElementById('submit');
 
-
-
 submitBtn.addEventListener('click', onSubmitStudent);
 
 async function getStudents(){
@@ -14,7 +12,6 @@ async function getStudents(){
 
     Object.values(data).map(onSubmitStudent).forEach((eachStudent) => tBody.append(eachStudent));
 }
-
 
 function onSubmitStudent({firstName, lastName, facultyNumber, grade}){
     const trElement = document.createElement('tr');
