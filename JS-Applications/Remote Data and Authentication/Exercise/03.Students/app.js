@@ -48,7 +48,7 @@ async function sendStudent(e){
         return alert('Grade and Faculty Number must be Number');
     }
 
-    if(firstName == '' || lastName == '' || facultyNumber == '' || grade = ''){
+    if(firstName == '' || lastName == '' || facultyNumber == '' || grade == ''){
         alert('All fields are required!');
     }
 
