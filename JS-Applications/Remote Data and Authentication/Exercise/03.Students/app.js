@@ -58,5 +58,5 @@ async function sendStudent(e){
         body: JSON.stringify({firstName, lastName, facultyNumber, grade})
     })
 
-    return 
+    return getStudents();
 }
