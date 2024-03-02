@@ -28,8 +28,11 @@ function onSubmitStudent({firstName, lastName, facultyNumber, grade}){
 }
 
 function createElement(type, text){
-            
+    const element = document.createElement(type);
+    element.textContent = text;
     
+    return element;
+
 }
 
 async function sendStudent(e){
