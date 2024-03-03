@@ -17,7 +17,7 @@ const years = [...document.querySelectorAll('.monthCalendar')].reduce((a, c) => 
     a[c.id] = c;
     return a;
 }, {});
-   
+    
 const months = [...document.querySelectorAll('.daysCalendar')].reduce((a, c) => {
     a[c.id] = c;
     return a;
