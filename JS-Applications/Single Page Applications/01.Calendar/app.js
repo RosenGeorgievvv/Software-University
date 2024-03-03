@@ -12,7 +12,7 @@ const monthsOfYear = {
     Nov: 11,
     Dec: 12,
 }
-   
+    
 const years = [...document.querySelectorAll('.monthCalendar')].reduce((a, c) => {
     a[c.id] = c;
     return a;
