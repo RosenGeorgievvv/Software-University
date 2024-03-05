@@ -1,7 +1,7 @@
 document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
 
-const userNav = document.querySelector("li.user");
-const guestNav = document.querySelector('li.guest');
+const userNav = document.querySelectorAll("li.user");
+const guestNav = document.querySelectorAll('li.guest');
 
 const userData = JSON.parse(sessionStorage.getItem("userData"));
 
@@ -12,7 +12,7 @@ function updateNav(){
     });
     
     guestNav.forEach(li =>{
-        li.style.display = ' none'
+        li.style.display = 'none'
     }); 
 
   }else{
@@ -23,6 +23,7 @@ function updateNav(){
     guestNav.forEach(li => {
         li.style.display = 'block';
     });
-    
+
   }
 }
+updateNav();
