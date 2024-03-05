@@ -13,9 +13,16 @@ function updateNav(){
     
     guestNav.forEach(li =>{
         li.style.display = ' none'
-    });
+    }); 
+
   }else{
-    userNav.style.display = 'none';
-    guestNav.style.display = 'block';
+    userNav.forEach(li => {
+        li.style.display = 'none';
+    });
+
+    guestNav.forEach(li => {
+        li.style.display = 'block';
+    });
+    
   }
 }
