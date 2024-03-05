@@ -1,4 +1,5 @@
 import { showRegisterView } from "./register.js";
+import { showHome } from "./home.js";
 
 document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
 
@@ -9,7 +10,8 @@ document.querySelector('nav').addEventListener('click', onNavigate)
 const userData = JSON.parse(sessionStorage.getItem("userData"));
 
 const routes = {
-    "/register": showRegisterView
+    "/register": showRegisterView,
+    "/home": showHome
 }
 
 function onNavigate(e){
