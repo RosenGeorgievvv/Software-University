@@ -13,7 +13,7 @@ const routes = {
     "/register": showRegisterView,
     "/home": showHome
 }
-                  
+                   
 function onNavigate(e){
     if(e.target.tagName !== "A" || !e.target.href){
         return;
