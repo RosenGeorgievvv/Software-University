@@ -23,7 +23,7 @@ function onNavigate(e){
     const path = url.pathname;
     routes[path]();
 }
-       
+        
 function updateNav(){
   if(userData){
     userNav.forEach(li =>{
