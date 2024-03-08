@@ -25,4 +25,4 @@ function createListItem({commit: {author: {name}, message}}) {
     item.textContent = `${name}: ${message}`;
 
     return item;
-}
+};

@@ -1,10 +1,9 @@
 function loadRepos() {
-    let button = document.querySelector('#load');
-    button.addEventListener('click', function loadRepos() {
-
-        let url = 'https://api.github.com/users/testnakov/repos';
+    const button = document.getElementById('load');
+    button.addEventListener('click', function laodRepos() {
+        const url = 'https://api.github.com/users/testnakov/repos';
         const httpRequest = new XMLHttpRequest();
-        httpRequest.addEventListener('readystatechange', function () {
+        httpRequest.addEventListener('readystatechange', () => {
             if (httpRequest.readyState == 4 && httpRequest.status == 200) {
                 document.getElementById('res').textContent = httpRequest.responseText;
             }
