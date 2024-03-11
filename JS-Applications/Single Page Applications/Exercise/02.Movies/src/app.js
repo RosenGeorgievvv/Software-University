@@ -1,48 +1,20 @@
-import { showRegisterView } from "./register.js";
-import { showHome } from "./home.js";
+import { onNavigate } from "./links.js";
+import { add } from "./views/addMovie.js";
+import { showHome } from "./views/home.js";
+import { login } from "./views/login.js";
+import { register } from "./views/register.js";
 
-document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
 
-const userNav = document.querySelectorAll("li.user");
-const guestNav = document.querySelectorAll('li.guest');
-document.querySelector('nav').addEventListener('click', onNavigate)
+showHome();
 
-const userData = JSON.parse(sessionStorage.getItem("userData"));
+document.getElementById('login-form').addEventListener('submit', login);
+document.getElementById('register-form').addEventListener('submit', register);
 
-const routes = {
-    "/register": showRegisterView,
-    "/home": showHome
-}
-         
-function onNavigate(e){
-    if(e.target.tagName !== "A" || !e.target.href){
+document.querySelector('#add-movie-form').addEventListener('submit', add);
+
+document.querySelectorAll('a').forEach(link => {
+    if (link.id == 'welcome-msg') {
         return;
     }
-    e.preventDefault();
-    const url = new URL(e.target.href);
-    const path = url.pathname;
-    routes[path]();
-} 
-  
-function updateNav(){
-  if(userData){
-    userNav.forEach(li =>{
-        li.style.display = 'block'
-    });
-    
-    guestNav.forEach(li =>{
-        li.style.display = 'none'
-    }); 
-
-  }else{
-    userNav.forEach(li => {
-        li.style.display = 'none';
-    });
-
-    guestNav.forEach(li => {
-        li.style.display = 'block';
-    });
-
-  }
-}
-updateNav();
+    link.addEventListener('click', onNavigate);
+})
