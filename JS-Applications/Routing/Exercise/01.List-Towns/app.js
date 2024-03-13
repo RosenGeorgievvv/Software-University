@@ -1,12 +1,22 @@
-import { html, render } from 'https://esm.run/lit-html@1';
+import { html, render } from "../node_modules/lit-html/lit-html.js";
 
-//take DOM elements
-const form = document.querySelector('form');
+const form = document.querySelector('.content');
 const root = document.getElementById('root');
 
-form.addEventListener('click', onClick);
+form.addEventListener('submit', onSubmit);
 
-function onClick(e){
-    e.preventDefault()
+function onSubmit(e) {
+    e.preventDefault();
+    const towns = (new FormData(form)).get('towns');
+
+    if (towns == '') {
+        return;
+    }
+    render(createTemplate(towns), root);
+    form.reset();
 }
 
+const createTemplate = (towns) => html`
+<ul>
+    ${towns.split(', ').map(town => html`<li>${town}</li>`)}
+</ul>`;
