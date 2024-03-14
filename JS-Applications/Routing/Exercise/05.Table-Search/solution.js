@@ -14,7 +14,7 @@ const rowTemplate = (person) => html`
          <td>${person.course}</td>
       </tr>
       `;
-         
+          
 await loadPeopleInfo();
 
 async function loadPeopleInfo() {
