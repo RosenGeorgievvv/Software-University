@@ -34,7 +34,7 @@ async function request(method, url, body) {
     const headers = {
         'Content-Type': 'application/json'
     };
-    const options = {
+    const options = { 
         method: method
     };
     if (body) {
