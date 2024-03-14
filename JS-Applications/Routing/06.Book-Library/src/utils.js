@@ -1,4 +1,4 @@
-import { render } from "../node_modules/lit-html/lit-html.js";
+import { render } from "lit-html/lit-html.js";
 import { bookRowTemplate } from "./components/book.js";
 import { editFormTemplate } from "./components/editForm.js";
 import { getBookById, getBooks, updateBook } from "./data/data.js";

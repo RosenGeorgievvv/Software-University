@@ -1,4 +1,4 @@
-import { html } from "../../node_modules/lit-html/lit-html.js";
+import { html } from "lit-html/lit-html.js";
 import { edit } from "../views/edit.js";
 
 export const editFormTemplate = (book) => html`

@@ -1,4 +1,4 @@
-import { render } from "../node_modules/lit-html/lit-html.js";
+import { render } from "lit-html/lit-html.js";
 import { layoutTemplate } from "./components/layout.js";
 import { setBookIds } from "./utils.js";
 
