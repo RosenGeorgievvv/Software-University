@@ -15,7 +15,6 @@ const rowTemplate = (person) => html`
       </tr>
       `;
 
-
 await loadPeopleInfo();
 
 async function loadPeopleInfo() {
