@@ -29,7 +29,7 @@ async function get(url) {
 async function post(url, body) {
     return request('POST', url, body);
 }
-    
+
 async function request(method, url, body) {
     const headers = {
         'Content-Type': 'application/json'
