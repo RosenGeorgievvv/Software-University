@@ -1,7 +1,6 @@
 {
   "name": "software-university",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +11,8 @@
   "dependencies": {
     "chai": "^5.0.3",
     "lit-html": "^3.1.2",
-    "mocha": "^10.2.0"
-  }
+    "mocha": "^10.2.0",
+    "page.js": "^4.13.3"
+  },
+  "description": ""
 }
