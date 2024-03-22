@@ -20,7 +20,7 @@ const createTemplate = (onCreate) => html`
         </div>
     </section>
 `;
-       
+        
 export async function showCreatePage(ctx) {
     ctx.render(createTemplate(createSubmitHandler(onCreate)));
 
