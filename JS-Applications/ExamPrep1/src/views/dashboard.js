@@ -14,7 +14,7 @@ const eventTemplate = (event) => html`
         <a class="details-btn" href="/details/${event._id}">Details</a>
     </div>
 `;
-
+ 
 export async function showDashboardPage(ctx) {
     const events = await getAllEvents();
 
