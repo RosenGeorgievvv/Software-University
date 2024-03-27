@@ -12,7 +12,7 @@ import { showRegisterPage } from './views/register.js';
 
 const root = document.getElementById('wrapper');
 
-page(decorateContext); 
+page(decorateContext);  
 page('/index.html', '/');
 page('/', showHomePage);
 page('/create', showCreatePage);
