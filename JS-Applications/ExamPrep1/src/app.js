@@ -20,7 +20,7 @@ page('/dashboard', showDashboardPage);
 page('/details/:id', showDetailsPage);
 page('/details/:id/edit', showEditPage);
 page('/register', showRegisterPage);
-page('/login', showLoginPage); 
+page('/login', showLoginPage);  
 page('/logout', logoutAction);      
 
 page.start();
