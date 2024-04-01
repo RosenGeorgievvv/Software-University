@@ -19,6 +19,6 @@ page('/register', showRegisterView)
 page('/login', showLoginView);
 page('/logout', logoutView);
 
-   
+    
 page.start();
 updateNav();
