@@ -8,7 +8,7 @@ import { showHomeView } from './views/homeView.js';
 import { showLoginView } from './views/loginView.js';
 import { logoutView } from './views/logoutView.js';
 import { showRegisterView } from './views/registerView.js';
-   
+    
      
 page('/', showHomeView);
 page('/dashboard', showDashboardView);
