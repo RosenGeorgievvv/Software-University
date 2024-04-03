@@ -43,7 +43,7 @@ async function request(method, url, data) {
     throw err;
   }
 }
- 
+  
 export const get = (url) => request('get', url)
 export const post = (url, data) => request('post', url, data);
 export const put = (url, data) => request('put', url, data)
