@@ -19,4 +19,4 @@ function onSubmit(e) {
 const createTemplate = (towns) => html`
 <ul>
     ${towns.split(', ').map(town => html`<li>${town}</li>`)}
-</ul>`;   
+</ul>`;    
