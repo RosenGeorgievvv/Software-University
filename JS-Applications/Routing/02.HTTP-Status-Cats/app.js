@@ -18,7 +18,7 @@ const template = (cats) => html`
         </div>
     </li>`)}
 </ul>`;
-   
+    
 function toggleStatus(id){
     debugger
     const changeStyle = document.getElementById(id);
