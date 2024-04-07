@@ -3,7 +3,7 @@ import { cats } from "./catSeeder.js";
 console.log(cats);
 
 const allCatsField = document.getElementById('allCats');
-
+ 
 const template = (cats) => html`
 <ul>
     ${cats.map(cat => html`
