@@ -15,7 +15,7 @@ function onSubmit(e) {
     render(createTemplate(towns), root);
     form.reset();
 }
-
+ 
 const createTemplate = (towns) => html`
 <ul>
     ${towns.split(', ').map(town => html`<li>${town}</li>`)}
