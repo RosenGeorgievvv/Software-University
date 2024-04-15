@@ -1,3 +1,5 @@
+import { formatDate } from "../utils/dateUtils";
+
 const UserListItem = ({
     firstName,
     lastName,
@@ -16,7 +18,7 @@ const UserListItem = ({
             <td>{lastName}</td>
             <td>{email}</td>
             <td>{phoneNumber}</td>
-            <td>{createdAt}</td>
+            <td>{formatDate(createdAt)}</td>
 
             <td className="actions">
                 <button className="btn edit-btn" title="Edit">
