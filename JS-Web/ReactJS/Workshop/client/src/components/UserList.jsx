@@ -1,13 +1,14 @@
 import Search from "./Search";
-import Table from "./Table";
+import UserListTable from "./UserListTable";
 
 const UserList = () => {
-  return (
-    <section className="card users-container">
-      <Search />
-      <Table />
-      <button className="btn-add btn">Add new user</button>
-    </section>
-  );
+    return (
+        <section className="card users-container">
+            <Search />
+            
+            <UserListTable />
+        </section>
+    );
 };
+
 export default UserList;
