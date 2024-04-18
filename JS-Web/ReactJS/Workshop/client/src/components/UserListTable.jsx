@@ -48,7 +48,7 @@ const UserListTable = () => {
         <CreateUserModal
           hideModal={hideCreateUserModal}
           onUserCreate={userCreateHandler}
-        />       
+        /> 
       )}
 
       {showInfo && (
