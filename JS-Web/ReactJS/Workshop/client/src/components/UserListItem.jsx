@@ -7,6 +7,7 @@ const UserListItem = ({
     phoneNumber,
     createdAt,
     imageUrl,
+    onUserInfoClick,
 }) => {
     
     return (

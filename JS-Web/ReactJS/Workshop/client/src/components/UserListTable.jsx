@@ -29,16 +29,16 @@ const UserListTable = () => {
     setShowCreate(false);
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData);
-    
+
     const result = await userService.create(data);
-    
-    setUsers(state => [...state, result]);
+
+    setUsers((state) => [...state, result]);
     setShowCreate(false);
   };
 
-  const userInfoClickHandler = (userId) =>{
-co
-  }
+  const userInfoClickHandler = (userId) => {
+    console.log(userId);
+  };
 
   return (
     <div className="table-wrapper">
@@ -46,11 +46,10 @@ co
         <CreateUserModal
           hideModal={hideCreateUserModal}
           onUserCreate={userCreateHandler}
-          onUserInfoClick={userInfoClickHandler}
         />
       )}
 
-{showInfo && <UserInfoModal onClose={() => setShowInfo(false)} />}
+      {showInfo && <UserInfoModal onClose={() => setShowInfo(false)} />}
 
       <table className="table">
         <thead>
@@ -160,6 +159,7 @@ co
               imageUrl={user.imageUrl}
               lastName={user.lastName}
               phoneNumber={user.phoneNumber}
+              onUserInfoClick={userInfoClickHandler}
             />
           ))}
         </tbody>
