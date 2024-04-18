@@ -36,12 +36,17 @@ const UserListTable = () => {
     setShowCreate(false);
   };
 
+  const userInfoClickHandler = (userId) =>{
+co
+  }
+
   return (
     <div className="table-wrapper">
       {showCreate && (
         <CreateUserModal
           hideModal={hideCreateUserModal}
           onUserCreate={userCreateHandler}
+          onUserInfoClick={userInfoClickHandler}
         />
       )}
 
