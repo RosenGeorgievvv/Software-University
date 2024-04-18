@@ -7,6 +7,7 @@ import UserInfoModal from "./UserInfoModal";
 const UserListTable = () => {
   const [users, setUsers] = useState([]);
   const [showCreate, setShowCreate] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
 
   useEffect(() => {
     userService
@@ -44,7 +45,7 @@ const UserListTable = () => {
         />
       )}
 
-{showInfo && <UserInfoModal onClose={} />}
+{showInfo && <UserInfoModal onClose={() => setShowInfo(false)} />}
 
       <table className="table">
         <thead>
