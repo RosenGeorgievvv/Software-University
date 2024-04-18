@@ -22,12 +22,14 @@ const UserListTable = () => {
     setShowCreate(false);
   };
 
-  const userCreateHandler = (e) => {
+  const userCreateHandler = async (e) => {
     e.preventDefault();
     setShowCreate(false);
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData);
-    console.log(data)
+    
+    const result = await userService.create(data);
+    setShowCreate(false);
   };
 
   return (
