@@ -44,7 +44,7 @@ const UserListTable = () => {
         />
       )}
 
-{showInfo && <UserInfoModal  />}
+{showInfo && <UserInfoModal onClose={} />}
 
       <table className="table">
         <thead>
