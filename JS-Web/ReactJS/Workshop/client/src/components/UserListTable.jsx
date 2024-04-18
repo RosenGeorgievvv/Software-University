@@ -153,6 +153,7 @@ const UserListTable = () => {
             <UserListItem
               key={user._id}
               userId={user._id}
+              userId={user._id}
               createdAt={user.createdAt}
               email={user.email}
               firstName={user.firstName}
