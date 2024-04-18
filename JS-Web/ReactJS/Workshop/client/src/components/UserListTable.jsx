@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import * as userService from "../services/userService";
 import UserListItem from "./UserListItem";
 import CreateUserModal from "./CreateUserModal";
+import UserInfoModal from "./UserInfoModal";
 
 const UserListTable = () => {
   const [users, setUsers] = useState([]);
@@ -42,6 +43,9 @@ const UserListTable = () => {
           onUserCreate={userCreateHandler}
         />
       )}
+
+{showInfo && <UserInfoModal  />}
+
       <table className="table">
         <thead>
           <tr>
