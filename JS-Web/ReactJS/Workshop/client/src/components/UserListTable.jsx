@@ -9,6 +9,7 @@ const UserListTable = () => {
   const [showCreate, setShowCreate] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
   const [selectedUser, setSelectedUser] = useState(null);
+  const [showDelete, setShowDetele] = useState(false);
 
   useEffect(() => {
     userService
@@ -57,6 +58,8 @@ const UserListTable = () => {
           userId={selectedUser}
         />
       )}
+
+      {showDelete && <userDeleteModal />}
 
       <table className="table">
         <thead>
