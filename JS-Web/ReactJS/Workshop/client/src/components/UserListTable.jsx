@@ -8,6 +8,7 @@ const UserListTable = () => {
   const [users, setUsers] = useState([]);
   const [showCreate, setShowCreate] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
+  const [selectedUser, setSelectedUser] = useState(null);
 
   useEffect(() => {
     userService
@@ -36,8 +37,9 @@ const UserListTable = () => {
     setShowCreate(false);
   };
 
-  const userInfoClickHandler = (userId) => {
-    console.log(userId);
+  const userInfoClickHandler = async (userId) => {
+    setSelectedUser(userId);
+    setShowInfo(true);
   };
 
   return (
@@ -49,7 +51,12 @@ const UserListTable = () => {
         />
       )}
 
-      {showInfo && <UserInfoModal onClose={() => setShowInfo(false)} />}
+      {showInfo && (
+        <UserInfoModal
+          onClose={() => setShowInfo(false)}
+          userId={selectedUser}
+        />
+      )}
 
       <table className="table">
         <thead>
@@ -152,7 +159,6 @@ const UserListTable = () => {
           {users.map((user) => (
             <UserListItem
               key={user._id}
-              userId={user._id}
               userId={user._id}
               createdAt={user.createdAt}
               email={user.email}
