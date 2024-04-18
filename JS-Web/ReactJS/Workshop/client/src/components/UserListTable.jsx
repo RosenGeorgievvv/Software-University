@@ -29,6 +29,8 @@ const UserListTable = () => {
     const data = Object.fromEntries(formData);
     
     const result = await userService.create(data);
+    
+    setUsers(state => [...state, result]);
     setShowCreate(false);
   };
 
