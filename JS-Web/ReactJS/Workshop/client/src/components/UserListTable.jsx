@@ -3,6 +3,7 @@ import * as userService from "../services/userService";
 import UserListItem from "./UserListItem";
 import CreateUserModal from "./CreateUserModal";
 import UserInfoModal from "./UserInfoModal";
+import UserDeleteModal from "./UserDeleteModal";
 
 const UserListTable = () => {
   const [users, setUsers] = useState([]);
@@ -43,6 +44,17 @@ const UserListTable = () => {
     setShowInfo(true);
   };
 
+  const deleteUserClickHandler = (userId) =>{
+    setSelectedUser(userId);
+    setShowDetele(true);
+  }
+
+  const deleteUserHandler = async () =>{
+    console.log("Delete user");
+  }
+
+
+
   return (
     <div className="table-wrapper">
       {showCreate && (
@@ -59,7 +71,12 @@ const UserListTable = () => {
         />
       )}
 
-      {showDelete && <userDeleteModal />}
+      {showDelete && (
+      <UserDeleteModal  
+      onClose={() => setShowDetele(false)}
+      onDelete={deleteUserHandler}
+      />
+      )}
 
       <table className="table">
         <thead>
@@ -170,6 +187,7 @@ const UserListTable = () => {
               lastName={user.lastName}
               phoneNumber={user.phoneNumber}
               onUserInfoClick={userInfoClickHandler}
+              onDeleteClick={deleteUserClickHandler}
             />
           ))}
         </tbody>
