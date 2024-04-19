@@ -82,7 +82,7 @@ const UserListTable = () => {
       onClose={() => setShowDetele(false)}
       onDelete={deleteUserHandler}
       />
-      )}   
+      )}    
 
       {isLoading && <Spinner />} 
 
