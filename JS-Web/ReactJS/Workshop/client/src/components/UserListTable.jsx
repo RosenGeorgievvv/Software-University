@@ -50,7 +50,9 @@ const UserListTable = () => {
   }
 
   const deleteUserHandler = async () =>{
-    console.log("Delete user");
+    const result = await userService.remove(selectedUser);
+    setUsers(state => state.filter(user => user._id !== selectedUser));
+    setShowDetele(false);
   }
 
 
