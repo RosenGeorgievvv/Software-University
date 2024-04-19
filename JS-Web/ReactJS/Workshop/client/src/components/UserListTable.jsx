@@ -75,7 +75,7 @@ const UserListTable = () => {
           onClose={() => setShowInfo(false)}
           userId={selectedUser}
         />
-      )}
+      )} 
 
       {showDelete && (
       <UserDeleteModal  
