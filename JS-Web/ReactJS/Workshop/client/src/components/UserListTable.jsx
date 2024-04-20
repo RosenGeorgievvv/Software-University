@@ -83,7 +83,7 @@ const UserListTable = () => {
       onDelete={deleteUserHandler}
       />
       )}    
-  
+   
       {isLoading && <Spinner />} 
 
       <table className="table">
