@@ -87,7 +87,7 @@ const UserListTable = () => {
       {isLoading && <Spinner />} 
 
       <table className="table">
-        <thead>           
+        <thead>            
           <tr>
             <th>Image</th>
             <th>
