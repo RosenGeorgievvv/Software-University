@@ -85,7 +85,7 @@ const UserListTable = () => {
       )}    
          
       {isLoading && <Spinner />} 
-
+ 
       <table className="table">
         <thead>
           <tr>
