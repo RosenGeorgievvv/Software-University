@@ -11,7 +11,7 @@ function App() {
         <UserList /> 
       </main>  
       <Footer /> 
-    </div>    
+    </div>     
   );          
 } 
 
