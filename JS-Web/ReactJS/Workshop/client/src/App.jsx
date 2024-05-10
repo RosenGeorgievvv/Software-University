@@ -12,7 +12,7 @@ function App() {
       </main>
       <Footer />
     </div> 
-  );      
+  );
 } 
 
 export default App;
