@@ -4,4 +4,4 @@ const server = http.createServer(() =>{
     console.log('Request received');
 })
 
-Server.listen(3000);
+server.listen(3000);
