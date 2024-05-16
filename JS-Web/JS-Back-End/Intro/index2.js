@@ -5,7 +5,7 @@ const server = http.createServer((request, response) =>{
     console.log(request.url);
     console.log(request.headers);
 
-    response.write();
+    response.write('Hello World!');
     response.end();
 })
 
