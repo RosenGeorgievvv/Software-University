@@ -13,6 +13,7 @@ http
     
     if (typeof route == 'function') {
       route(req, res);
+      return;
     }else if(staticFileHandler(req, res)){
         return;
     } else {
@@ -21,4 +22,4 @@ http
       res.end();
     }
   })
-  .listen(4000);
+  .listen(2000);

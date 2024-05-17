@@ -6,7 +6,3 @@ function homeHandler(req, res){
       res.write(html);
       res.end();
 }
-
-module.exports ={
-    homeHandler
-}
