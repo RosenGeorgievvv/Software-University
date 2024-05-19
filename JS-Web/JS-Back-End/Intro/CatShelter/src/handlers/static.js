@@ -10,7 +10,7 @@ function staticFileHandler(req, res) {
     res.end();
     return true;
   }
- 
+  
   return false;
 }
 
