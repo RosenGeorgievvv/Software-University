@@ -6,7 +6,6 @@ const routes = {
     '/': homeHandler,
     'index.html': homeHandler
 }
-
 http
   .createServer((req, res) => {
     const route = routes[req.url];
