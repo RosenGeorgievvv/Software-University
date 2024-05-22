@@ -2,7 +2,9 @@ const express = require('express');
 const handlebards = require('express-handlebars');
 
 const app = express();
-const hbs = handlebards.create();
+const hbs = handlebards.create({
+    extname: '.hbs'
+});
 
 app.engine('.handlebars', hbs.engine);
 app.set('view engine', '.handlebars');
