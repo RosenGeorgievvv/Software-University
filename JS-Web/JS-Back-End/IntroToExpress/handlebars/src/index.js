@@ -3,9 +3,10 @@ const handlebards = require('express-handlebars');
 
 const app = express();
 const hbs = handlebards.create({
-    extname: '.hbs'
+    extname: '.hbs',
+    defaultLayout: 'default'
 });
-
+ 
 app.engine('.handlebars', hbs.engine);
 app.set('view engine', '.handlebars');
 
