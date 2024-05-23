@@ -4,9 +4,13 @@ module.exports = {
     catalogController: (req, res) => {
         res.render('catalog', { parts: data});
     },
-    detailsController: (res, req) => {
+    detailsController: (req, res) => {
         const { id } = req.params;
-        const partData = data[Number(id)];
-        res.render('details', )
+        const partData = data.find(p => p.id == id);
+
+        if(!partData){
+            res.redirect('/404');
+        }
+        res.render('details', partData);
     }
 }
