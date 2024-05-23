@@ -9,8 +9,8 @@ const hbs = handlebards.create({
     defaultLayout: 'default'
 });
  
-app.engine('.handlebars', hbs.engine);
-app.set('view engine', '.handlebars');
+app.engine('.hbs', hbs.engine);
+app.set('view engine', '.hbs');
 
 app.get('/', homeController);
 app.get('/catalog', catalogController);
