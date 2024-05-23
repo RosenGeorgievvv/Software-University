@@ -1,0 +1,33 @@
+[
+    {
+      "id": "1",
+      "name": "Cat Collar",
+      "description": "A stylish and adjustable cat collar with a bell.",
+      "price": 12.99
+    },
+    {
+      "id": "2",
+      "name": "Cat Scratching Post",
+      "description": "Durable scratching post to keep your cat's claws in good shape.",
+      "price": 34.50
+    },
+    {
+      "id": "3",
+      "name": "Cat Bed",
+      "description": "Comfortable and cozy bed for your cat to rest and sleep.",
+      "price": 45.00
+    },
+    {
+      "id": "4",
+      "name": "Cat Toy Mouse",
+      "description": "Interactive toy mouse to keep your cat entertained for hours.",
+      "price": 8.75
+    },
+    {
+      "id": "5",
+      "name": "Cat Litter Box",
+      "description": "High-quality litter box with easy cleaning features.",
+      "price": 27.99
+    }
+  ]
+  
