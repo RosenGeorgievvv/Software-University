@@ -1,5 +1,5 @@
 module.exports ={
     homeController: (req, res) =>{
-        res.render('home');
+        res.render('home', {user: 'Rosen Georgiev'});
     }
 }
