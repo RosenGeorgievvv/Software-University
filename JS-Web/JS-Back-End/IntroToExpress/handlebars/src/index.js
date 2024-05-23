@@ -13,6 +13,9 @@ const hbs = handlebards.create({
 app.engine('.hbs', hbs.engine);
 app.set('view engine', '.hbs');
 
+app.use('/static', express.static('static'));
+app.use(express.urlencoded({extended: true}));
+
 app.get('/', homeController);
 app.get('/catalog', catalogController);
 app.get('/catalog/:id', detailsController);

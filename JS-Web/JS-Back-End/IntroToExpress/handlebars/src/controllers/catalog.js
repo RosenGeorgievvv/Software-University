@@ -1,16 +1,17 @@
-const data = require('../../data/catalog.json');
+const { getParts, getPartById} = require('../services/parts');
 
 module.exports = {
     catalogController: (req, res) => {
-        res.render('catalog', { parts: data});
+        const parts = getParts();
+        res.render('catalog', { parts });
     },
     detailsController: (req, res) => {
         const { id } = req.params;
-        const partData = data.find(p => p.id == id);
+        const part = getPartById(id);
 
-        if(!partData){
+        if(!part){
             res.redirect('/404');
         }
-        res.render('details', partData);
+        res.render('details', part);
     }
 }
